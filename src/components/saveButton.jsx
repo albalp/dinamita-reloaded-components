@@ -8,13 +8,13 @@ const SaveButton = ({ beforeSave, backgroundColor, size, label, ...props }) => {
   const mode = beforeSave ? 'storybook-button--beforeSave' : 'storybook-button--afterSave';
   return (
     <div>
-      <Button variant="contained" data-aos="zoom-in"
+      <button variant="contained" data-aos="zoom-in"
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
       style={backgroundColor && { backgroundColor }}
       {...props}
       >
         {label}
-      </Button>
+      </button>
     </div>
   );
 };

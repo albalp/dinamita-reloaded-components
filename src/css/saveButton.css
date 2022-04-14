@@ -1,19 +1,21 @@
 .storybook-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   border: 0;
-  border-radius: 3em;
+  border-radius: 8px;
   cursor: pointer;
   display: inline-block;
   line-height: 1;
 }
+.storybook-button--border-radius {
+  border-radius: 3rem;
+}
 .storybook-button--beforeSave {
   color: white;
-  background-color: #1ea7fd;
-  background-color: red;
+  background-color: #0069CB;
 }
 .storybook-button--afterSave {
-  color: #333;
+  color: #0069CB;
   background-color: transparent;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
 }

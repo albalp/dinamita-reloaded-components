@@ -14,22 +14,22 @@ const Template = (args) => <SaveButton {...args} />;
 export const beforeSave = Template.bind({});
 beforeSave.args = {
   beforeSave: true,
-  label: 'Save',
+  label: 'save',
 };
 
 export const afterSave = Template.bind({});
 afterSave.args = {
-  label: 'Save',
+  label: 'save',
 };
 
 export const Large = Template.bind({});
 Large.args = {
   size: 'large',
-  label: 'Save',
+  label: 'save',
 };
 
 export const Small = Template.bind({});
 Small.args = {
   size: 'small',
-  label: 'Save',
+  label: 'save',
 };

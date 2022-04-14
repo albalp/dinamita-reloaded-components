@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import AOS from "aos";
 import '../css/saveButton.css';
 
-const SaveButton = ({ beforeSave, backgroundColor, size, label, borderRadius, onClick, ...props}) => {
+const SaveButton = ({ beforeSave, backgroundColor, size, label, borderRadius,onClick, ...props}) => {
   const mode = beforeSave ? 'storybook-button--beforeSave' : 'storybook-button--afterSave';
   const radius = borderRadius && 'storybook-button--border-radius';
   function Prueba() {
@@ -11,7 +11,9 @@ const SaveButton = ({ beforeSave, backgroundColor, size, label, borderRadius, on
   }
   return (
     <div>
-      <button onClick={Prueba} variant="contained" data-aos="zoom-in"
+      <button variant="contained" data-aos="zoom-in"
+      onClick={Prueba}
+      role="button"
       className={['storybook-button', `storybook-button--${size}`, mode, radius].join(' ')}
       style={backgroundColor && { backgroundColor }}
       {...props}

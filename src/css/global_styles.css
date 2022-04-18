@@ -1,0 +1,83 @@
+/* Variables */
+
+:root {
+
+    /* Colors */
+    --primary-color: rgb(30, 167, 253);
+    --primary-color-hover: rgb(29, 133, 197);
+    --success-color: rgb(99, 222, 120);
+    --success-color-hover: rgb(77, 163, 91);
+    --danger-color: rgb(237, 83, 83);
+    --danger-color-hover: rgb(200, 70, 70);
+    --dark-color: rgb(61, 61, 61);
+    --white-color: #fff;
+    --disabled-color: rgba(14, 14, 14, 0.16);
+    
+    --primary-color-disabled: rgba(29, 133, 197, 0.531);
+    --success-color-disabled: rgb(77, 163, 91, 0.531);
+    --danger-color-disabled: rgb(237, 83, 83, 0.531);
+    
+
+    /* Font */
+    --font: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-color: #333;
+    
+    /* Sizes */
+    --fs-12: 0.75rem; /*12px*/
+    --fs-13: 0.8125rem; /*13px*/
+    --fs-14: 0.875rem; /*14px*/
+    --fs-15: 0.9375rem; /*15px*/
+    --fs-16: 1rem; /*16px*/
+
+    /* Radius */
+    --radius: 5px;
+    --radius-48: 3rem;
+    --radius-100: 100%;
+
+    /* Shadows */
+    --shadow: 0px 0px 5px 0px rgba(204,204,204,0.38);
+    --shadow-down: 0px 5px 5px 0px rgba(204,204,204,0.38);
+    --shadow-up: 0px -5px 5px 0px rgba(204,204,204,0.38);
+    --shadow-right: 5px 0px 5px 0px rgba(204,204,204,0.38);
+    --shadow-left: -5px 0px 5px 0px rgba(204,204,204,0.38);
+
+    /* Others */
+    --transition: 0.2s ease;
+
+}
+
+/* Normalization styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--font-color);
+    font-size: var(--fs-15);
+}
+
+button,
+select,
+input,
+textarea {
+    border: 1px solid transparent;
+    outline: none;
+    transition: var(--transition);
+    font-family: var(--font);
+    font-size: var(--fs-15);
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+a { text-decoration: none; }
+
+ul, li { list-style: none; }

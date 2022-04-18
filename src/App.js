@@ -1,9 +1,9 @@
-import Calendary from './components/Calendary';
+import Calendar from './components/Calendar';
 
 function App() {
   return (
     <div>
-      <Calendary />
+      <Calendar />
     </div>
   );
 }

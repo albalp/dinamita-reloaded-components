@@ -1,9 +1,9 @@
-import SaveButton from './components/saveButton';
+import Calendary from './components/Calendary';
 
 function App() {
   return (
     <div>
-      <SaveButton />
+      <Calendary />
     </div>
   );
 }

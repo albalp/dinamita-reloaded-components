@@ -1,33 +1,116 @@
+/* Global Styles */
+@import './global_styles.css';
+
+/* Default styles */
 .storybook-button {
-  font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  border: 0;
-  border-radius: 8px;
-  cursor: pointer;
-  display: inline-block;
+  border-radius: var(--radius);
   line-height: 1;
+  transition: var(--transition);
 }
-.storybook-button--border-radius {
-  border-radius: 3rem;
+
+.storybook-button:hover {
+  background-color: var(--dark-color);
+  color: var(--white-color);
 }
+
+/* Button before save variant */
 .storybook-button--beforeSave {
-  color: white;
-  background-color: #0069CB;
+  color: var(--white-color);
+  background-color: var(--primary-color);
 }
+
+.storybook-button--beforeSave:hover {
+  background-color: var(--primary-color-hover);
+}
+
+/* Button after save variant */
 .storybook-button--afterSave {
-  color: #0069CB;
+  color: var(--font-color);
   background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+  box-shadow: var(--shadow-down);
 }
+
+.storybook-button--afterSave:hover {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+
+/* Button primary variant */
+.storybook-button--primary {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.storybook-button--primary:hover {
+  background-color: var(--primary-color-hover);
+}
+
+/* Button success variant */
+.storybook-button--success {
+  color: var(--white-color);
+  background-color: var(--success-color);
+}
+
+.storybook-button--success:hover {
+  background-color: var(--success-color-hover);
+}
+
+/* Button danger variant */
+.storybook-button--danger {
+  color: var(--white-color);
+  background-color: var(--danger-color);
+}
+
+.storybook-button--danger:hover {
+  background-color: var(--danger-color-hover);
+}
+
+/* Button small variant */
 .storybook-button--small {
-  font-size: 12px;
+  font-size: var(--fs-12);
   padding: 10px 16px;
 }
+
+/* Button medium variant */
 .storybook-button--medium {
-  font-size: 14px;
+  font-size: var(--fs-14);
   padding: 11px 20px;
 }
+
+/* Button large variant */
 .storybook-button--large {
-  font-size: 16px;
+  font-size: var(--fs-16);
   padding: 12px 24px;
+}
+
+/* Button rounded variant */
+.storybook-button--border-radius { border-radius: var(--radius-48); }
+
+/* Button label and icon varian */
+.storybook-button svg {
+  font-size: var(--fs-14);
+}
+
+/* Button disabled */
+.storybook-button:disabled {
+  background: var(--disabled-color);
+  color: var(--font-color);
+  cursor: no-drop;
+}
+
+.storybook-button--primary:disabled {
+  background-color: var(--primary-color-disabled);
+}
+
+.storybook-button--danger:disabled {
+  background-color: var(--danger-color-disabled);
+}
+
+.storybook-button--beforeSave:disabled {
+  background-color: var(--primary-color-disabled);
+}
+
+.storybook-button--success:disabled {
+  background-color: var(--success-color-disabled);
 }

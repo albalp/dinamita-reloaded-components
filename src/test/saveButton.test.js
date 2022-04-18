@@ -8,20 +8,21 @@ import SaveButton from '../components/saveButton.jsx';
 describe("Button tests", ()=>{
     const saveData = jest.fn()
     render(<SaveButton />);
-    const button = screen.getByRole('button', { name: /save/i });
+    const button = screen.getByRole('button');
     
-    it('Should render', () =>{
-
+    //Prueba unitaria
+    it('Should render it exists', () =>{
         expect(button).toBeInTheDocument();
     });
 
-    it('Should ', () =>{
+    /*
+    it('Should be called', () =>{
         render(<button onClick={saveData}>save</button>);
         fireEvent.click(button)
         //user.click(button)
 
         //expect();
-    })
+    })*/
 
 })
 

@@ -77,3 +77,9 @@ export const ButtonIcon = Template.bind({});
 ButtonIcon.args = {
   icon: <DarkModeOutlinedIcon/>
 }
+
+export const ButtonDisabled = Template.bind({});
+ButtonDisabled.args = {
+  label: 'Disabled',
+  disabled: true
+}

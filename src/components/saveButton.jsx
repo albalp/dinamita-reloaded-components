@@ -8,7 +8,7 @@ const SaveButton = ({ beforeSave, backgroundColor, size, label, borderRadius, va
 
   return (
     <div>
-      <button variant="contained" data-aos="zoom-in" role="button" className={['storybook-button', `storybook-button--${size}`, `storybook-button--${variant}`, mode, radius].join(' ')} style={backgroundColor && { backgroundColor }} {...props}>
+      <button variant="contained" data-aos="zoom-in" className={['storybook-button', `storybook-button--${size}`, `storybook-button--${variant}`, mode, radius].join(' ')} style={backgroundColor && { backgroundColor }} {...props}>
         {icon && icon}
         {label}
       </button>
@@ -22,7 +22,7 @@ SaveButton.propTypes = {
   beforeSave: PropTypes.bool,
   borderRadius: PropTypes.bool,
   backgroundColor: PropTypes.string,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   variant: PropTypes.oneOf(['primary', 'success', 'danger', 'default']),
   disabled: PropTypes.bool,

@@ -1,8 +1,7 @@
 import React from 'react';
-import SaveButton from '../components/SaveButton';
-import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
-import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import { action } from '@storybook/addon-actions';
+import SaveButton from '../components/SaveButton';
+import { BiCheck, BiMoon } from "react-icons/bi";
 
 export default {
   title: 'Save/Button',
@@ -70,12 +69,12 @@ ButtonDanger.args = {
 export const ButtonLabelAndIcon = Template.bind({});
 ButtonLabelAndIcon.args = {
   label: 'Save',
-  icon: <CheckOutlinedIcon/>
+  icon: <BiCheck/>
 }
 
 export const ButtonIcon = Template.bind({});
 ButtonIcon.args = {
-  icon: <DarkModeOutlinedIcon/>
+  icon: <BiMoon/>
 }
 
 export const ButtonDisabled = Template.bind({});

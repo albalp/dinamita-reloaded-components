@@ -1,20 +1,35 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import PropTypes from 'prop-types';
 import Button from './SaveButton';
 import '../css/calendar.css';
 
-const Calendar = function () {
+const Calendar = function ({dark, shadow, backgroundColor, size, variant}) {
+
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+    let currentDate = new Date();
+    // let monthNumber = currentDate.getMonth();
+    // let currentYear = currentDate.getFullYear();
+    // let currentDay = currentDate.getDate();
+
+    const [monthNumber, setMonthNumber] = useState(currentDate.getMonth());
+    const [month, setMonth] = useState(months[monthNumber]);
+    const [year, setYear] = useState(currentDate.getFullYear());
+    const [currentDay, setCurrentDay] = useState(currentDate.getDate());
+
+   
 
     return (
-        <div className="calendar">
+        <div className={`calendar ${shadow && 'calendar--shadow'} ${dark && 'calendar--dark'} calendar-size--${size}`} style={backgroundColor && { backgroundColor }}>
             <div className="calendar-header">
                 <div className="calendar-header-date">
-                    <h3 className="calendar-header-date-month">April</h3>
-                    <p className="calendar-header-date-year">2022</p>
+                    <h3 className="calendar-header-date-month">{month}</h3>
+                    <p className="calendar-header-date-year">{year}</p>
                 </div>
                 <div className="calendar-header-actions">
-                    <Button icon={<BiChevronLeft/>} size="small"  borderRadius />
-                    <Button icon={<BiChevronRight/>} size="small" borderRadius />
+                    <Button shadow={dark ? false : true} icon={<BiChevronLeft/>} size="small"  borderRadius/>
+                    <Button shadow={dark ? false : true} icon={<BiChevronRight/>} size="small" borderRadius/>
                 </div>
             </div>
             <div className="calendar-week">
@@ -27,40 +42,58 @@ const Calendar = function () {
                 <div className="calendar-week-day">Sund</div>
             </div>
             <div className="calendar-month">
-                <div className="calendar-month-day">1</div>
-                <div className="calendar-month-day">2</div>
-                <div className="calendar-month-day">3</div>
-                <div className="calendar-month-day">4</div>
-                <div className="calendar-month-day">5</div>
-                <div className="calendar-month-day">6</div>
-                <div className="calendar-month-day">7</div>
-                <div className="calendar-month-day">8</div>
-                <div className="calendar-month-day">9</div>
-                <div className="calendar-month-day">10</div>
-                <div className="calendar-month-day">11</div>
-                <div className="calendar-month-day">12</div>
-                <div className="calendar-month-day">13</div>
-                <div className="calendar-month-day">14</div>
-                <div className="calendar-month-day">15</div>
-                <div className="calendar-month-day">16</div>
-                <div className="calendar-month-day">17</div>
-                <div className="calendar-month-day">18</div>
-                <div className="calendar-month-day">19</div>
-                <div className="calendar-month-day">20</div>
-                <div className="calendar-month-day">21</div>
-                <div className="calendar-month-day">22</div>
-                <div className="calendar-month-day">23</div>
-                <div className="calendar-month-day">24</div>
-                <div className="calendar-month-day">25</div>
-                <div className="calendar-month-day">26</div>
-                <div className="calendar-month-day">27</div>
-                <div className="calendar-month-day">28</div>
-                <div className="calendar-month-day">29</div>
-                <div className="calendar-month-day">30</div>
-                <div className="calendar-month-day">31</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>1</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>2</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>3</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>4</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>5</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>6</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>7</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>8</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>9</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>10</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>11</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>12</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>13</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>14</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>15</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>16</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>17</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>18</div>
+                <div className={` calendar-month-day calendar-month-day--${variant} calendar-month-day--active`}>19</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>20</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>21</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>22</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>23</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>24</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>25</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>26</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>27</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>28</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>29</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>30</div>
+                <div className={` calendar-month-day calendar-month-day--${variant}`}>31</div>
             </div>
         </div>
     );
 }
+
+Calendar.propTypes = {
+    backgroundColor: PropTypes.string,
+    dark: PropTypes.bool,
+    shadow: PropTypes.bool,
+    weather: PropTypes.bool,
+    size: PropTypes.oneOf(['small', 'medium', 'large', 'default']),
+    variant: PropTypes.oneOf(['circle', 'square', 'default']),
+};
+
+Calendar.defaultProps = {
+    backgroundColor: null,
+    dark: false,
+    shadow: true,
+    weather: false,
+    size: 'default',
+    variant: 'default',
+  };
 
 export default Calendar;

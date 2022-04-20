@@ -2,13 +2,14 @@ import PropTypes from 'prop-types';
 import AOS from "aos";
 import '../css/saveButton.css';
 
-const SaveButton = ({ beforeSave, backgroundColor, size, label, borderRadius, variant,  icon , ...props}) => {
+const SaveButton = ({ beforeSave, backgroundColor, size, label, borderRadius, variant,  icon, shadow , ...props}) => {
   const mode = beforeSave ? 'storybook-button--beforeSave' : 'storybook-button--afterSave';
   const radius = borderRadius && 'storybook-button--border-radius';
+  const shadowButton = shadow && 'storybook-button--shadow';
 
   return (
     <div>
-      <button variant="contained" data-aos="zoom-in" className={['storybook-button', `storybook-button--${size}`, `storybook-button--${variant}`, mode, radius].join(' ')} style={backgroundColor && { backgroundColor }} {...props}>
+      <button data-aos="zoom-in" className={['storybook-button', `storybook-button--${size}`, `storybook-button--${variant}`, mode, radius, shadowButton].join(' ')} style={backgroundColor && { backgroundColor }} {...props}>
         {icon && icon}
         {label}
       </button>
@@ -26,6 +27,7 @@ SaveButton.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   variant: PropTypes.oneOf(['primary', 'success', 'danger', 'default']),
   disabled: PropTypes.bool,
+  shadow: PropTypes.bool,
   onClick: PropTypes.func
 };
 
@@ -37,6 +39,7 @@ SaveButton.defaultProps = {
   variant: 'default',
   label: '',
   disabled: false,
+  shadow: true,
   onClick: undefined
 };
 

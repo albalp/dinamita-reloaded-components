@@ -7,6 +7,7 @@
   border-radius: var(--radius);
   line-height: 1;
   transition: var(--transition);
+  background-color: var(--white-color);
 }
 
 .storybook-button:hover {
@@ -28,12 +29,23 @@
 .storybook-button--afterSave {
   color: var(--font-color);
   background-color: transparent;
-  box-shadow: var(--shadow-down);
 }
 
 .storybook-button--afterSave:hover {
   background-color: var(--dark-color);
   color: var(--white-color);
+}
+
+/* Button default variant */
+
+.storybook-button--default {
+  color: var(--dark-color);
+  background-color: var(--white-color);
+}
+
+.storybook-button--default:hover {
+  color: var(--white-color);
+  background-color: var(--dark-gray-color);
 }
 
 /* Button primary variant */
@@ -91,6 +103,9 @@
 .storybook-button svg {
   font-size: var(--fs-14);
 }
+
+/* Button shadow */
+.storybook-button--shadow { box-shadow: var(--shadow-down);}
 
 /* Button disabled */
 .storybook-button:disabled {

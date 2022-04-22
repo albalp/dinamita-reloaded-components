@@ -1,13 +1,21 @@
+import AOS from "aos";
+import SaveButton from './components/saveButton';
+import AddTaskIcon from '@mui/icons-material/AddTask';
+import Modals from './components/modal/modals';
 
-import Modal from './components/modal/modal';
 function App() {
-  
+  function Clicked(){
+    console.log("Clicked!");
+  }
 
   return (
     <div>
-      <Modal />
+      <SaveButton variant="success" label="Guardar" borderRadius icon={<AddTaskIcon/>} onClick={Clicked} />
+      <Modals />
     </div>
   );
 }
 
 export default App;
+
+AOS.init();

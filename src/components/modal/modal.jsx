@@ -1,22 +1,21 @@
-//import PropTypes from 'prop-types';
-import AOS from "aos";
-import './modal.css';
-import SaveButton from '../../components/saveButton';
-import AddTaskIcon from '@mui/icons-material/AddTask';
+import "./modal.css";
 
-const Modal = () => {
-    function Clicked(){
-        console.log("Clicked!");
-      }
+//destructuración-manda datos
+const Modal = ({ children, isOpen, closeModal }) => {
+    //Para que no se cierre cuando se de click dentro del modal
+  const handleModalContainerClick = (e) => e.stopPropagation();
 
   return (
-    <div data-aos="zoom-in" className="modal-all">
-        <SaveButton variant="success" label="Guardar" borderRadius icon={<AddTaskIcon/>} onClick={Clicked} />
-    </div>
+      //clase dinamica
+    <article className={`modal ${isOpen && "is-open"}`} onClick={closeModal} >
+      <div className="modal-container" onClick={handleModalContainerClick}>
+        <button className="modal-close" onClick={closeModal}>
+          X
+        </button>
+        {children}
+      </div>
+    </article>
   );
 };
 
 export default Modal;
-
-
-AOS.init();

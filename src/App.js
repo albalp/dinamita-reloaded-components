@@ -1,5 +1,6 @@
 import SaveButton from './components/saveButton';
 import AddTaskIcon from '@mui/icons-material/AddTask';
+import Header from './components/header';
 
 function App() {
   function Clicked(){
@@ -8,7 +9,8 @@ function App() {
 
   return (
     <div>
-      <SaveButton variant="success" label="Guardar" borderRadius icon={<AddTaskIcon/>} onClick={Clicked} />
+      <Header />
+      <SaveButton variant="danger" label="Cancel" borderRadius icon={<AddTaskIcon/>} onClick={Clicked} />
     </div>
   );
 }

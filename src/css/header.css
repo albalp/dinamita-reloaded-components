@@ -1,0 +1,6 @@
+@import './global_styles.css';
+
+.header{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}

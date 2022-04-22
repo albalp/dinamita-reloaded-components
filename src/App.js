@@ -1,18 +1,13 @@
-import SaveButton from './components/saveButton';
-import AddTaskIcon from '@mui/icons-material/AddTask';
 
+import Modal from './components/modal/modal';
 function App() {
-  function Clicked(){
-    console.log("Clicked!");
-  }
+  
 
   return (
     <div>
-      <SaveButton variant="success" label="Guardar" borderRadius icon={<AddTaskIcon/>} onClick={Clicked} />
+      <Modal />
     </div>
   );
 }
-
-
 
 export default App;

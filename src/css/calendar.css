@@ -69,18 +69,34 @@
     cursor: pointer;
     transition: var(--transition);
     border-radius: var(--radius);
+    border: 1px solid transparent;
 }
 
 .calendar-month-day:hover {
-    background-color: var(--primary-color);
     border-color: var(--primary-color);
-    color: var(--white-color);
+    color: var(--primary-color);
     transform: translateY(-3px);
 }
 
 .calendar-month-day--active {
     background: var(--primary-color);
     color: var(--white-color);
+    border-color: var(--primary-color);
+}
+
+.calendar-month-day--active:hover {
+    color: var(--white-color);
+}
+
+.calendar-month-day--before {
+    color: transparent;
+    visibility: hidden;
+}
+
+.calendar-month-day--selected {
+    background: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 /* Variants */
@@ -148,6 +164,14 @@
 .calendar-month-day--square {
     border: 1px solid #ccc;
     border-radius: var(--radius);
+}
+
+.calendar-month-day--circle.calendar-month-day--selected,
+.calendar-month-day--square.calendar-month-day--selected,
+.calendar-month-day--circle.calendar-month-day--active,
+.calendar-month-day--square.calendar-month-day--active
+ {
+    border-color: var(--primary-color);
 }
 
 /* Responsive design */

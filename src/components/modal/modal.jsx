@@ -1,4 +1,4 @@
-import "./modal.css";
+import "../modal/css/modal.css";
 import SaveButton from '../../components/saveButton';
 import CloseIcon from '@mui/icons-material/Close';
 

@@ -1,4 +1,4 @@
-import "./column.css";
+import '../modal/css/column.css'
 
 //destructuración-manda datos
 const Column = ({ children }) => {

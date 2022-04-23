@@ -1,4 +1,4 @@
-import "./row.css";
+import "./css/row.css";
 
 //destructuración-manda datos
 const Row = ({ children }) => {

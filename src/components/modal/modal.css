@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
     min-height: 100vh;
-    background-color: rgba(0,0,0,0.75);
+    background-color: rgba(0, 0, 0, 0.75);
     display: none;
     justify-content: center;
     align-items: center;
@@ -18,9 +18,10 @@
 .modal-container {
     position: relative;
     padding: 1rem;
+    padding-top: 4rem;
     background-color: white;
-    max-width: 1920px;
-    max-height: 1080px;
+    max-width: 800px;
+    max-height: 400px;
     overflow-y: auto;
     border-radius: 10px;
 }
@@ -31,14 +32,15 @@
     right: 1rem;
 }
 
-@media screen and (max-width: 360px){
+
+@media screen and (max-width: 360px) {
     .modal-container {
         max-width: 360px;
         max-height: 640px;
     }
 }
 
-@media screen and (max-width: 1366px){
+@media screen and (max-width: 1366px) {
     .modal-container {
         max-width: 1366px;
         max-height: 768px;

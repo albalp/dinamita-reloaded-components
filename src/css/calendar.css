@@ -57,6 +57,7 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 10px;
+    padding-bottom: 10px;
 }
 
 .calendar-month-day {
@@ -97,6 +98,23 @@
     background: transparent;
     border-color: var(--primary-color);
     color: var(--primary-color);
+}
+
+/* Calendar Legend */
+.calendar-legend {
+    width: 100%;
+    color: var(--danger-color);
+    font-size: var(--fs-11);
+    overflow: hidden;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.calendar-legend.activated {
+    padding: 10px 0;
+    height: 30px;
 }
 
 /* Variants */

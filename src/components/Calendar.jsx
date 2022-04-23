@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import { BiChevronLeft, BiChevronRight, BiCalendar } from "react-icons/bi";
 import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
 import Button from './SaveButton';
@@ -16,16 +16,7 @@ const Calendar = function ({dark, shadow, backgroundColor, size, variant}) {
     const [currentDay, setCurrentDay] = useState(currentDate.getDate());
     const [daysMonth, setDaysMonth] = useState([]);
     const [beforeDaysMonth, setBeforeDaysMonth] = useState([]);
-    const [dateSelected, setDateSelected] = useState({day: null, date: null});
-
-    const [calendar, setCalendar] = useState({
-        year: currentDate.getFullYear(),
-        monthNumber: currentDate.getMonth(),
-        currentDay: currentDate.getDate(),
-        daysMonth: [],
-        daySelected: null,
-        dateSelected: null
-    })
+    const [dateSelected, setDateSelected] = useState(null);
 
     let days = [];
     let daysBefore = [];
@@ -61,8 +52,8 @@ const Calendar = function ({dark, shadow, backgroundColor, size, variant}) {
     }
 
     const startDay = () => {
-        let start = new Date(year, monthNumber, 1);
-        return ((start.getDay() - 1) === -1) ? 6 : start.getDay()-1;
+        let start = new Date(year, monthNumber, 0);
+        return start.getDay();
     }
 
     const getTotalDays = (month) => {
@@ -98,7 +89,7 @@ const Calendar = function ({dark, shadow, backgroundColor, size, variant}) {
             }
         }
 
-        for(let i = startDay(); i > 0; i--) {
+        for(let i = startDay(); i >= 0; i--) {
             daysBefore.push(i);
             setBeforeDaysMonth(daysBefore);
         }
@@ -108,13 +99,17 @@ const Calendar = function ({dark, shadow, backgroundColor, size, variant}) {
         
         let newDate = new Date(year, monthNumber, parseInt(e.target.textContent));
 
-        setDateSelected({
-            ...dateSelected,
-            day: parseInt(e.target.textContent),
-            date: newDate
-        });
+        setDateSelected(newDate);
+  
     };
 
+    const resetDate = () => {
+        setDateSelected(null);
+        setMonthNumber(currentDate.getMonth());
+        setYear(currentDate.getFullYear());
+
+    }
+    
     const isLeap = () => (((year % 100 !== 0) && (year % 4 === 0)) || (year % 400 === 0));
 
     return (
@@ -130,32 +125,34 @@ const Calendar = function ({dark, shadow, backgroundColor, size, variant}) {
                 </div>
             </div>
             <div className="calendar-week">
+                <div className="calendar-week-day">Sund</div>
                 <div className="calendar-week-day">Mon</div>
                 <div className="calendar-week-day">Tues</div>
                 <div className="calendar-week-day">Wed</div>
                 <div className="calendar-week-day">Thurs</div>
                 <div className="calendar-week-day">Frid</div>
                 <div className="calendar-week-day">Sat</div>
-                <div className="calendar-week-day">Sund</div>
             </div>
             
             <div className="calendar-month">
 
                 {
-                    beforeDaysMonth.map(beforeDay => <div key={uuidv4()} onClick={selectDate} className={` calendar-month-day calendar-month-day--${variant} calendar-month-day--before`}>{beforeDay}</div>)
+                    beforeDaysMonth.length !== 7 && beforeDaysMonth.map(beforeDay => <div key={uuidv4()} onClick={selectDate} className={` calendar-month-day calendar-month-day--${variant} calendar-month-day--before`}>{beforeDay}</div>)
+
                 }
                 
                 {
                     daysMonth.map(day => (
-                        day === currentDay && monthNumber === currentDate.getMonth()
+                        day === currentDay && monthNumber === currentDate.getMonth() && year === currentDate.getFullYear()
                         ? <div key={uuidv4()} onClick={selectDate} className={` calendar-month-day calendar-month-day--${variant} calendar-month-day--active`}>{day}</div>
-                        : day === dateSelected.day && dateSelected.date && monthNumber === dateSelected.date.getMonth()
+                        : dateSelected && day === dateSelected.getDate() && monthNumber === dateSelected.getMonth()
                             ? <div key={uuidv4()} onClick={selectDate} className={` calendar-month-day calendar-month-day--${variant} calendar-month-day--selected`}>{day}</div>
                             : <div key={uuidv4()} onClick={selectDate} className={` calendar-month-day calendar-month-day--${variant}`}>{day}</div>
                     ))
                 }
             </div>
-            {/* <span>You are selecting a date different to current</span> */}
+            <Button onClick={resetDate} shadow={dark ? false : true} label="Today" icon={<BiCalendar/>} size="small" borderRadius/>    
+            <div className={`calendar-legend ${dateSelected && (dateSelected.getDate() !== currentDate.getDate() || dateSelected.getMonth() !== currentDate.getMonth() || dateSelected.getFullYear() !== currentDate.getFullYear()) && 'activated'}`}>You are selecting a date different to current</div>
         </div>
     );
 }

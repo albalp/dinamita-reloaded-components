@@ -5,7 +5,7 @@ const Column = ({ children }) => {
 
   return (
       //clase dinamica
-    <div className="column .row:after">
+    <div className="column">
             {children}
     </div>
   );

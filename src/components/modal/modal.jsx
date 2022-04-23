@@ -1,4 +1,6 @@
 import "./modal.css";
+import SaveButton from '../../components/saveButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 //destructuración-manda datos
 const Modal = ({ children, isOpen, closeModal }) => {
@@ -7,14 +9,12 @@ const Modal = ({ children, isOpen, closeModal }) => {
 
   return (
       //clase dinamica
-    <article className={`modal ${isOpen && "is-open"}`} onClick={closeModal} >
+    <div className={`modal ${isOpen && "is-open"}`} onClick={closeModal} >
       <div className="modal-container" onClick={handleModalContainerClick}>
-        <button className="modal-close" onClick={closeModal}>
-          X
-        </button>
+        <SaveButton className="modal-close" onClick={closeModal} icon={<CloseIcon/>}  />
             {children}
       </div>
-    </article>
+    </div>
   );
 };
 

@@ -1,12 +1,14 @@
 .column {
     float: left;
     width: 400px;
-    height: 400px;
+    max-height: 400px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+@media screen and (max-width: 360px) {
+    .column {
+        max-height: auto;
+        max-width: 320px;
+    }
 }
+
+

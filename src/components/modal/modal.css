@@ -19,15 +19,28 @@
     position: relative;
     padding: 1rem;
     background-color: white;
-    min-width: 800px;
     max-width: 1920px;
-    min-height: 480px;
     max-height: 1080px;
     overflow-y: auto;
+    border-radius: 10px;
 }
 
 .modal-close {
     position: absolute;
     top: 1rem;
     right: 1rem;
+}
+
+@media screen and (max-width: 360px){
+    .modal-container {
+        max-width: 360px;
+        max-height: 640px;
+    }
+}
+
+@media screen and (max-width: 1366px){
+    .modal-container {
+        max-width: 1366px;
+        max-height: 768px;
+    }
 }

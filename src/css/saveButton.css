@@ -1,13 +1,14 @@
 /* Global Styles */
 @import './global_styles.css';
 
-/* Default styles */
+/* Default styles 
+ ---------------------------------*/
 .storybook-button {
   font-weight: 700;
   border-radius: var(--radius);
   line-height: 1;
-  transition: var(--transition);
   background-color: var(--white-color);
+  transition: var(--transition);
 }
 
 .storybook-button:hover {
@@ -15,7 +16,8 @@
   color: var(--white-color);
 }
 
-/* Button before save variant */
+/* Button before save variant 
+ ---------------------------------*/
 .storybook-button--beforeSave {
   color: var(--white-color);
   background-color: var(--primary-color);
@@ -25,7 +27,8 @@
   background-color: var(--primary-color-hover);
 }
 
-/* Button after save variant */
+/* Button after save variant 
+ ---------------------------------*/
 .storybook-button--afterSave {
   color: var(--font-color);
   background-color: transparent;
@@ -36,7 +39,8 @@
   color: var(--white-color);
 }
 
-/* Button default variant */
+/* Button default variant 
+ ---------------------------------*/
 
 .storybook-button--default {
   color: var(--dark-color);
@@ -48,7 +52,8 @@
   background-color: var(--dark-gray-color);
 }
 
-/* Button primary variant */
+/* Button primary variant 
+ ---------------------------------*/
 .storybook-button--primary {
   color: var(--white-color);
   background-color: var(--primary-color);
@@ -58,7 +63,8 @@
   background-color: var(--primary-color-hover);
 }
 
-/* Button success variant */
+/* Button success variant 
+ ---------------------------------*/
 .storybook-button--success {
   color: var(--white-color);
   background-color: var(--success-color);
@@ -68,7 +74,8 @@
   background-color: var(--success-color-hover);
 }
 
-/* Button danger variant */
+/* Button danger variant 
+ ---------------------------------*/
 .storybook-button--danger {
   color: var(--white-color);
   background-color: var(--danger-color);
@@ -78,36 +85,41 @@
   background-color: var(--danger-color-hover);
 }
 
-/* Button small variant */
+/* Button small variant 
+ ---------------------------------*/
 .storybook-button--small {
   font-size: var(--fs-12);
   padding: 10px 16px;
 }
 
-/* Button medium variant */
+/* Button medium variant 
+ ---------------------------------*/
 .storybook-button--medium {
   font-size: var(--fs-14);
   padding: 11px 20px;
 }
 
-/* Button large variant */
+/* Button large variant 
+ ---------------------------------*/
 .storybook-button--large {
   font-size: var(--fs-16);
   padding: 12px 24px;
 }
 
-/* Button rounded variant */
+/* Button rounded variant 
+ ---------------------------------*/
 .storybook-button--border-radius { border-radius: var(--radius-48); }
 
-/* Button label and icon varian */
-.storybook-button svg {
-  font-size: var(--fs-14);
-}
+/* Button label and icon varian 
+ ---------------------------------*/
+.storybook-button svg {font-size: var(--fs-14);}
 
-/* Button shadow */
+/* Button shadow 
+ ---------------------------------*/
 .storybook-button--shadow { box-shadow: var(--shadow-down);}
 
-/* Button disabled */
+/* Button disabled 
+ ---------------------------------*/
 .storybook-button:disabled {
   background: var(--disabled-color);
   color: var(--font-color);

@@ -1,6 +1,8 @@
 /* Global Styled */
 @import './global_styles';
 
+/* Calendar
+---------------------------- */
 .calendar {
     width: 100%;
     padding: 20px;
@@ -9,7 +11,8 @@
     background-color: var(--white-color);
     margin: auto;
 }
-
+/* Calendar Header
+-------------------------------------- */
 .calendar-header {
     display: flex;
     justify-content: space-between;
@@ -40,6 +43,8 @@
     cursor: pointer;
 }
 
+/* Calendar Week
+--------------------------------- */
 .calendar-week {
     width: 100%;
     display: grid;
@@ -48,10 +53,10 @@
     gap: 10px;
 }
 
-.calendar-week-day {
-    font-size: var(--fs-13) 
-}
+.calendar-week-day {font-size: var(--fs-13);}
 
+/* Calendar Month
+-------------------------------- */
 .calendar-month {
     width: 100%;
     display: grid;
@@ -61,12 +66,12 @@
 }
 
 .calendar-month-day {
+    width: 30px;
+    height: 30px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     font-size: var(--fs-11);
-    width: 30px;
-    height: 30px;
     cursor: pointer;
     transition: var(--transition);
     border-radius: var(--radius);
@@ -100,7 +105,8 @@
     color: var(--primary-color);
 }
 
-/* Calendar Legend */
+/* Calendar Legend
+--------------------------------- */
 .calendar-legend {
     width: 100%;
     color: var(--danger-color);
@@ -117,9 +123,10 @@
     height: 30px;
 }
 
-/* Variants */
+/*------- VARIANTS -------*/
 
-/* Calendar Dark variant*/
+/* Calendar Dark variant
+---------------------------------*/
 .calendar--dark { 
     background-color: var(--dark-color);
     color: var(--white-color);
@@ -130,12 +137,14 @@
     color:var(--white-color);
 }
 
- .calendar--dark button .calendar-header-actions-action { box-shadow: var(--shadow-down-dark); }
+.calendar--dark button .calendar-header-actions-action { box-shadow: var(--shadow-down-dark); }
 
- /* Calendar Shadow variant*/
+ /* Calendar Shadow variant
+ ---------------------------------*/
 .calendar--shadow { box-shadow: var(--shadow); }
 
-/* Calendar small variant */
+/* Calendar small variant 
+ ---------------------------------*/
 .calendar-size--small { max-width: 300px; }
 
 .calendar-size--small .calendar-month-day {
@@ -143,7 +152,8 @@
     height: 30px;
 }
 
-/* Calendar medium variant */
+/* Calendar medium variant 
+ ---------------------------------*/
 .calendar-size--medium { max-width: 600px; }
 
 .calendar-size--medium .calendar-month-day {
@@ -151,7 +161,8 @@
     height: 35px;
 }
 
-/* Calendar large variant */
+/* Calendar large variant 
+ ---------------------------------*/
 .calendar-size--large { max-width: 800px; }
 
 .calendar-size--large .calendar-month-day {
@@ -160,25 +171,28 @@
 }
 
 
-/* Calendar default variant */
+/* Calendar default variant 
+ ---------------------------------*/
 .calendar-size--default { width: 100%; }
 
 .calendar-size--default .calendar-month-day {
     width: 100%;
-    height: 50px;
+    height: 45px;
 }
 
 .calendar-size--default .calendar-month-day--circle {
     border-radius: var(--radius-48);
 }
 
-/* Calendar circle variant */
+/* Calendar circle variant 
+ ---------------------------------*/
 .calendar-month-day--circle {
     border: 1px solid #ccc;
     border-radius: var(--radius-100);
 }
 
-/* Calendar circle variant */
+/* Calendar circle variant 
+ ---------------------------------*/
 .calendar-month-day--square {
     border: 1px solid #ccc;
     border-radius: var(--radius);
@@ -192,7 +206,7 @@
     border-color: var(--primary-color);
 }
 
-/* Responsive design */
+/* --------- RESPONSIVE DESIGN --------- */
 
 @media only screen and (max-width: 500px) {
     .calendar,

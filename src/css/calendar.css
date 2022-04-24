@@ -23,7 +23,7 @@
 .calendar-header-date {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .calendar-header-date-month, 
@@ -108,6 +108,7 @@
 /* Calendar Legend
 --------------------------------- */
 .calendar-legend {
+    display: block;
     width: 100%;
     color: var(--danger-color);
     font-size: var(--fs-11);

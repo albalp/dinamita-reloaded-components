@@ -17,8 +17,8 @@ const Calendar = function ({dark, shadow, backgroundColor, size, variant}) {
                     <p className="calendar-header-date-year">{calendar.year}</p>
                 </div>
                 <div className="calendar-header-actions">
-                    <Button onClick={prevMonth} shadow={dark ? false : true} icon={<BiChevronLeft/>} size="small"  borderRadius/>
-                    <Button onClick={nextMonth} shadow={dark ? false : true} icon={<BiChevronRight/>} size="small" borderRadius/>
+                    <Button className="calendar-header-actions-action-prev" onClick={prevMonth} shadow={dark ? false : true} icon={<BiChevronLeft/>} size="small"  borderRadius/>
+                    <Button className="calendar-header-actions-action-next" onClick={nextMonth} shadow={dark ? false : true} icon={<BiChevronRight/>} size="small" borderRadius/>
                 </div>
             </div>
             <div className="calendar-week">
@@ -31,7 +31,7 @@ const Calendar = function ({dark, shadow, backgroundColor, size, variant}) {
                 <div className="calendar-week-day">Sat</div>
             </div>
             <Days calendar={calendar} daysMonth={daysMonth} daysPreviousMonth={daysPreviousMonth} selectDate={selectDate} variant={variant} currentDate={currentDate} monthNumber={monthNumber}/>
-            <div className="calendar-fo">
+            <div className="calendar-footer">
                 <Button onClick={resetDate} shadow={dark ? false : true} label="Today" icon={<BiCalendar/>} size="small" borderRadius/>    
                 <span className={`calendar-legend ${calendar.dateSelected && (calendar.dateSelected.getDate() !== currentDate.getDate() || calendar.dateSelected.getMonth() !== currentDate.getMonth() || calendar.dateSelected.getFullYear() !== currentDate.getFullYear()) && 'activated'}`}>You are selecting a date different to current</span>
             </div>

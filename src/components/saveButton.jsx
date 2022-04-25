@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import AOS from "aos";
 import '../css/saveButton.css';
 
-const SaveButton = ({ beforeSave, backgroundColor, size, label, borderRadius, variant,  icon, shadow , ...props}) => {
+const SaveButton = ({ beforeSave, backgroundColor, size, label, borderRadius, variant,  icon, shadow, className, ...props}) => {
   const mode = beforeSave ? 'storybook-button--beforeSave' : 'storybook-button--afterSave';
   const radius = borderRadius && 'storybook-button--border-radius';
   const shadowButton = shadow && 'storybook-button--shadow';
 
   return (
     <div>
-      <button data-aos="zoom-in" className={['storybook-button', `storybook-button--${size}`, `storybook-button--${variant}`, mode, radius, shadowButton].join(' ')} style={backgroundColor && { backgroundColor }} {...props}>
+      <button data-aos="zoom-in" className={['storybook-button', `storybook-button--${size}`, `storybook-button--${variant}`, mode, radius, shadowButton,  className].join(' ')} style={backgroundColor && { backgroundColor }} {...props}>
         {icon && icon}
         {label}
       </button>

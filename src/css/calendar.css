@@ -7,9 +7,9 @@
     width: 100%;
     padding: 20px;
     border-radius: var(--radius);
-    transition: var(--transition);
     background-color: var(--white-color);
     margin: auto;
+    transition: var(--transition);
 }
 /* Calendar Header
 -------------------------------------- */
@@ -32,10 +32,25 @@
     color: var(--primary-color);
 }
 
+.calendar-header-date-month { font-weight: 400; }
+.calendar-header-date-year { font-weight: 700; }
+
 .calendar-header-actions {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.calendar-header-actions button:hover { transition: var(--transition); }
+
+.calendar-header-actions-action-prev:hover svg {
+    transform: translateX(-3px);
+    transition: var(--transition);
+}
+
+.calendar-header-actions-action-next:hover svg {
+    transform: translateX(3px);
+    transition: var(--transition);
 }
 
 .calendar-header-actions-arrow {
@@ -53,7 +68,11 @@
     gap: 10px;
 }
 
-.calendar-week-day {font-size: var(--fs-13);}
+.calendar-week-day {
+    font-size: var(--fs-13);
+    text-align: center;
+    margin: auto;
+}
 
 /* Calendar Month
 -------------------------------- */
@@ -63,6 +82,7 @@
     grid-template-columns: repeat(7, 1fr);
     gap: 10px;
     padding-bottom: 10px;
+    transition: var(--transition);
 }
 
 .calendar-month-day {
@@ -76,6 +96,8 @@
     transition: var(--transition);
     border-radius: var(--radius);
     border: 1px solid transparent;
+    animation: show 0.5s ease;
+    margin: auto;
 }
 
 .calendar-month-day:hover {
@@ -124,6 +146,15 @@
     height: 30px;
 }
 
+/* Calendar Footer
+--------------------------------- */
+.calendar-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 /*------- VARIANTS -------*/
 
 /* Calendar Dark variant
@@ -139,6 +170,8 @@
 }
 
 .calendar--dark button .calendar-header-actions-action { box-shadow: var(--shadow-down-dark); }
+
+.calendar--dark .calendar-week-day { color: rgb(171, 171, 171); }
 
  /* Calendar Shadow variant
  ---------------------------------*/
@@ -177,8 +210,13 @@
 .calendar-size--default { width: 100%; }
 
 .calendar-size--default .calendar-month-day {
-    width: 100%;
+    width: 50%;
     height: 45px;
+}
+
+.calendar-size--default .calendar-week-day {
+    width: 50%;
+    text-align: center;
 }
 
 .calendar-size--default .calendar-month-day--circle {

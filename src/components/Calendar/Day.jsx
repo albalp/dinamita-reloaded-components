@@ -1,6 +1,5 @@
-import React from 'react'
 
-const Day = ({ handleClick, day }) => {
+const Day = ({ handleClick, day, calendar, monthNumber, currentDate, variant }) => {
 
     let classDay = '';
 
@@ -11,12 +10,11 @@ const Day = ({ handleClick, day }) => {
     }else {
         classDay = '';
     }
-    
 
   return (
       
     <div onClick={handleClick} className={` calendar-month-day calendar-month-day--${variant} ${classDay}`}>{day}</div>
-    
+
   )
 }
 

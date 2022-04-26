@@ -94,13 +94,55 @@ describe('<Calendar> - Functionality', () => {
     test('Should to select a new date when do click in a day of the month', () => {
         
         const day = screen.getByText(10);
-        
+
         fireEvent.click(day);
 
         const daySelected = screen.getByText(10);
 
-         console.log(daySelected.classList.contains('.calendar-month-day--selected'));
+        expect(daySelected).toHaveClass('calendar-month-day--selected');
         
+    });
+
+    test('Should to show the legend when the user select a date different to the current date', () =>{
+
+        let dayValue = (currentDate.getDate() + 1 >= 28) ? 28 : currentDate.getDate() + 1;
+        const daySelected = screen.getByText(dayValue);
+        const legend = screen.getByText(/You are selecting a date different to current/i);
+
+        fireEvent.click(daySelected);
+        expect(legend).toHaveClass('activated');
+
+    });
+
+    test('Should to hidde the legend when the user select the current date', () => {
+
+        let dayValue = (currentDate.getDate() + 1 >= 28) ? 28 : currentDate.getDate() + 1;
+        const daySelected = screen.getByText(dayValue);
+        const legend = screen.getByText(/You are selecting a date different to current/i);
+        
+        fireEvent.click(daySelected);
+
+        const currentDay = screen.getByText(currentDate.getDate());
+        fireEvent.click(currentDay);
+
+        expect(legend).not.toHaveClass('activated');
+
+    });
+
+    test('Should to reset the date selected to current date', () => {
+
+        let dayValue = (currentDate.getDate() + 1 >= 28) ? 28 : currentDate.getDate() + 1;
+        const buttonReset = screen.getByRole('button', {name: 'button reset date'});
+        const daySelected = screen.getByText(dayValue);
+        
+        fireEvent.click(daySelected);
+        
+        fireEvent.click(buttonReset);
+        
+        const dayNotSelected = screen.getByText(dayValue);
+
+        expect(dayNotSelected).not.toHaveClass('calendar-month-day--selected');
+
     });
 
 });

@@ -3,7 +3,7 @@ import Calendar from './components/Calendar/Calendar';
 function App() {
   return (
     <div>
-      <Calendar size="small"/>
+      <Calendar/>
     </div>
   );
 }

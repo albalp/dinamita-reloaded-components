@@ -105,7 +105,6 @@ export const useCalendar = () => {
             ...calendar,
             dateSelected: newDate
         });
-  
     };
 
     const resetDate = () => {
@@ -151,6 +150,8 @@ export const useCalendar = () => {
 
         }
     }
+
+    console.log(calendar.dateSelected);
 
     return {
         months: months,

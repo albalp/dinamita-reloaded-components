@@ -31,14 +31,14 @@ const DropdownReact = (  ) => {
   };
 
   return (
-    <div className="dropdown-container">
+    <div className="dropdown">
       <p>Project</p>
-      <div onClick={toggling} className="dropdown-header">
-        <input  type="text"  value={selectedOption}></input>
+      <div onClick={toggling} className={`select ${isOpen ? 'active' : ''}`}>
+        <input  type="text" className="input-option" placeholder={selectedOption}></input>
         <MdArrowDropDown />
       </div>
       {isOpen && (
-        <ul>
+        <ul className="dropdown-menu">
           {dropdownOptions.map(option =>(
             <li key={option.value} onClick={onOptionClicked(option.label)}>
               {option.label}

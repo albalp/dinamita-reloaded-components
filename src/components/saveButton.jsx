@@ -37,7 +37,7 @@ SaveButton.defaultProps = {
   backgroundColor: null,
   size: 'medium',
   variant: 'success',
-  label: '',
+  label: 'jj',
   disabled: false,
   onClick: undefined
 };

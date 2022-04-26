@@ -95,7 +95,7 @@
 /* Button disabled */
 .storybook-button:disabled {
   background: var(--disabled-color);
-  color: var(--font-color);
+  color: var(--white-color);
   cursor: no-drop;
 }
 

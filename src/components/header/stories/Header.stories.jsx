@@ -9,16 +9,17 @@ export default {
 const Template = (args) => <Header {...args} />;
 
 export const BorderAll = Template.bind({})
-BorderAll.args = {
-  label : 'Border header',
-  variant : 'sb-border'
-}
-
 export const Primary = Template.bind({})
 Primary.args = {
   label : 'Classic header',
   variant : 'primary',
 }
+
+BorderAll.args = {
+  label : 'Border header',
+  variant : 'sb-border'
+}
+
 
 
 

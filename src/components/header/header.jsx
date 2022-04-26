@@ -4,9 +4,9 @@ const Header = ({borderRadius, backgroundColor, label, size, variant, ...props})
     
     return(
         <div>
-            <header  className={`header ${variant}`} style={backgroundColor && { backgroundColor }} {...props} >
+            <div className={`header ${variant}`} style={backgroundColor && { backgroundColor }} {...props} >
                 {label}
-            </header>
+            </div>
         </div>
     );
 }

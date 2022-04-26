@@ -134,16 +134,17 @@
     width: 100%;
     color: var(--danger-color);
     font-size: var(--fs-11);
-    overflow: hidden;
     height: 0;
     padding: 0;
     overflow: hidden;
     transition: var(--transition);
+    visibility: hidden;
 }
 
 .calendar-legend.activated {
     padding: 10px 0;
     height: 30px;
+    visibility: visible;
 }
 
 /* Calendar Footer

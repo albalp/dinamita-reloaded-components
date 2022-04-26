@@ -14,7 +14,7 @@
     --danger-color-hover: rgb(200, 70, 70);
     --dark-color: rgb(61, 61, 61);
     --dark-gray-color: rgb(79, 78, 78);
-    --white-color: #fff;
+    --white-color: rgb(255, 255, 255);
     --disabled-color: rgba(14, 14, 14, 0.16);
     
     --primary-color-disabled: rgba(29, 133, 197, 0.531);

@@ -1,7 +1,19 @@
 .column {
     float: left;
-    width: 400px;
-    max-height: 400px;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            300px,
+            1fr
+        )
+    );
+    gap: 16px;
+}
+
+.qc3{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
 }
 
 @media screen and (max-width: 360px) {

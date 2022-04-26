@@ -1,3 +1,6 @@
+*{
+    margin: 2px;
+}
 .modal {
     position: fixed;
     z-index: 999;
@@ -25,6 +28,28 @@
     overflow-y: auto;
     border-radius: 10px;
 }
+
+/* Modal rounded variant */
+.storybook-modal--border-radius {
+    border-radius: 48px;
+}
+
+/* Modal  variant */
+.storybook-modal--light {
+    color: black;
+    background-color: white;
+}
+
+.storybook-modal--dark {
+    color: white;
+    background-color: black;
+}
+
+/* Modal small variant */
+.storybook-modal--small {
+    max-height: 200px;
+    max-width: 400px;
+  }
 
 .modal-close {
     position: absolute;

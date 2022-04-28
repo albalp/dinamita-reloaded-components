@@ -151,7 +151,7 @@ export const useCalendar = () => {
         }
     }
 
-    console.log(calendar.dateSelected);
+    // console.log(calendar.dateSelected);
 
     return {
         months: months,

@@ -40,7 +40,7 @@ describe('<Calendar> - Current date should be correct', () => {
     test('Month shown should be the current month', () => {
         
         const currentMonth = months[currentDate.getMonth()];
-        const month = screen.getByText(/April/i);
+        const month = screen.getByText(months[currentDate.getMonth()]);
         
         expect(month).toHaveTextContent(currentMonth);
     });
@@ -48,7 +48,7 @@ describe('<Calendar> - Current date should be correct', () => {
     test('Year shown should be the current year', () => {
         
         const currentYear = currentDate.getFullYear();
-        const year = screen.getByText(/2022/);
+        const year = screen.getByText(currentDate.getFullYear());
         
         expect(parseInt(year.textContent)).toEqual(currentYear);
     });
@@ -103,6 +103,38 @@ describe('<Calendar> - Functionality', () => {
         
     });
 
+    test('Should to decrement year when month is january and the user do click in the button previous month', () => {
+
+        const buttonPrevious = screen.getByRole('button', {name: 'button previous month'});
+        const month = screen.getByText(months[currentDate.getMonth()]);
+        const year = screen.getByText(/2022/);
+        
+        for(let i = currentDate.getMonth(); i >= 0; i--) {
+            
+            fireEvent.click(buttonPrevious);
+        }
+
+        expect(month).toHaveTextContent(/December/);
+        expect(year).toHaveTextContent(currentDate.getFullYear() - 1);
+        
+    });
+
+    test('Should to increment year when month is december and the user do click in the button next month', () => {
+
+        const buttonNext = screen.getByRole('button', {name: 'button next month'});
+        const month = screen.getByText(months[currentDate.getMonth()]);
+        const year = screen.getByText(/2022/);
+        
+        for(let i = currentDate.getMonth(); i <= 11; i++) {
+            
+            fireEvent.click(buttonNext);
+        }
+
+        expect(month).toHaveTextContent(/January/);
+        expect(year).toHaveTextContent(currentDate.getFullYear() + 1);
+        
+    });
+
     test('Should to show the legend when the user select a date different to the current date', () =>{
 
         let dayValue = (currentDate.getDate() + 1 >= 28) ? 28 : currentDate.getDate() + 1;
@@ -110,6 +142,7 @@ describe('<Calendar> - Functionality', () => {
         const legend = screen.getByText(/You are selecting a date different to current/i);
 
         fireEvent.click(daySelected);
+        
         expect(legend).toHaveClass('activated');
 
     });
@@ -118,11 +151,12 @@ describe('<Calendar> - Functionality', () => {
 
         let dayValue = (currentDate.getDate() + 1 >= 28) ? 28 : currentDate.getDate() + 1;
         const daySelected = screen.getByText(dayValue);
-        const legend = screen.getByText(/You are selecting a date different to current/i);
+        const legend = screen.queryByText(/You are selecting a date different to current/i);
         
         fireEvent.click(daySelected);
-
+        
         const currentDay = screen.getByText(currentDate.getDate());
+
         fireEvent.click(currentDay);
 
         expect(legend).not.toHaveClass('activated');

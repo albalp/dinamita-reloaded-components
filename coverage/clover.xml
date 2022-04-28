@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1651082742882" clover="3.2.0">
+  <project timestamp="1651082742882" name="All files">
+    <metrics statements="76" coveredstatements="70" conditionals="40" coveredconditionals="32" methods="11" coveredmethods="11" elements="127" coveredelements="113" complexity="0" loc="76" ncloc="76" packages="2" files="2" classes="2"/>
+    <package name="components.Calendar">
+      <metrics statements="5" coveredstatements="5" conditionals="18" coveredconditionals="13" methods="1" coveredmethods="1"/>
+      <file name="Calendar.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\components\Calendar\Calendar.jsx">
+        <metrics statements="5" coveredstatements="5" conditionals="18" coveredconditionals="13" methods="1" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="59" type="stmt"/>
+        <line num="12" count="59" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="hooks">
+      <metrics statements="71" coveredstatements="65" conditionals="22" coveredconditionals="19" methods="10" coveredmethods="10"/>
+      <file name="useCalendar.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\hooks\useCalendar.jsx">
+        <metrics statements="71" coveredstatements="65" conditionals="22" coveredconditionals="19" methods="10" coveredmethods="10"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="59" type="stmt"/>
+        <line num="7" count="59" type="stmt"/>
+        <line num="8" count="59" type="stmt"/>
+        <line num="9" count="59" type="stmt"/>
+        <line num="10" count="59" type="stmt"/>
+        <line num="11" count="59" type="stmt"/>
+        <line num="12" count="59" type="stmt"/>
+        <line num="14" count="59" type="stmt"/>
+        <line num="21" count="59" type="stmt"/>
+        <line num="22" count="27" type="stmt"/>
+        <line num="25" count="59" type="cond" truecount="3" falsecount="0"/>
+        <line num="27" count="59" type="stmt"/>
+        <line num="28" count="26" type="stmt"/>
+        <line num="29" count="26" type="stmt"/>
+        <line num="32" count="59" type="stmt"/>
+        <line num="33" count="26" type="stmt"/>
+        <line num="34" count="791" type="stmt"/>
+        <line num="36" count="791" type="stmt"/>
+        <line num="42" count="59" type="stmt"/>
+        <line num="44" count="27" type="stmt"/>
+        <line num="46" count="27" type="cond" truecount="12" falsecount="3"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="69" count="2" type="stmt"/>
+        <line num="70" count="2" type="stmt"/>
+        <line num="72" count="12" type="stmt"/>
+        <line num="73" count="12" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="78" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="82" count="1" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="90" count="1" type="stmt"/>
+        <line num="93" count="26" type="stmt"/>
+        <line num="94" count="119" type="stmt"/>
+        <line num="96" count="119" type="stmt"/>
+        <line num="100" count="59" type="stmt"/>
+        <line num="102" count="5" type="stmt"/>
+        <line num="104" count="5" type="stmt"/>
+        <line num="110" count="59" type="stmt"/>
+        <line num="111" count="1" type="stmt"/>
+        <line num="112" count="1" type="stmt"/>
+        <line num="120" count="59" type="stmt"/>
+        <line num="121" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="123" count="4" type="stmt"/>
+        <line num="127" count="1" type="stmt"/>
+        <line num="129" count="1" type="stmt"/>
+        <line num="137" count="59" type="stmt"/>
+        <line num="138" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="140" count="9" type="stmt"/>
+        <line num="144" count="1" type="stmt"/>
+        <line num="146" count="1" type="stmt"/>
+        <line num="156" count="59" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

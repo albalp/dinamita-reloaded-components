@@ -96,7 +96,7 @@
     transition: var(--transition);
     border-radius: var(--radius);
     border: 1px solid transparent;
-    animation: show 0.5s ease;
+    /* animation: show 0.5s ease; */
     margin: auto;
 }
 

@@ -172,7 +172,7 @@
 
 .calendar--dark button .calendar-header-actions-action { box-shadow: var(--shadow-down-dark); }
 
-.calendar--dark .calendar-week-day { color: rgb(171, 171, 171); }
+.calendar--dark .calendar-week-day { color: var(--dark-letter-color); }
 
  /* Calendar Shadow variant
  ---------------------------------*/

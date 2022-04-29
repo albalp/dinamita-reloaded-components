@@ -1,5 +1,5 @@
-/* Google Fonts - Raleway */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+/* Google Fonts - Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
 
 /* Variables */
 
@@ -14,17 +14,20 @@
     --danger-color-hover: rgb(200, 70, 70);
     --dark-color: rgb(61, 61, 61);
     --dark-gray-color: rgb(79, 78, 78);
+    --dark-letter-color: rgb(171, 171, 171);
     --white-color: rgb(255, 255, 255);
+    --white-gray-color: rgb(245, 245, 245);
     --disabled-color: rgba(14, 14, 14, 0.16);
     
     --primary-color-disabled: rgba(29, 133, 197, 0.531);
     --success-color-disabled: rgb(77, 163, 91, 0.531);
     --danger-color-disabled: rgb(237, 83, 83, 0.531);
+    --border-color: rgb(226, 226, 226);
     
 
     /* Font */
     --font:  'Raleway', sans-serif;
-    --font-color: #333;
+    --font-color: rgb(99, 99, 99);
     
     /* Sizes */
     --fs-10: 0.625rem; /*10px*/
@@ -34,6 +37,9 @@
     --fs-14: 0.875rem; /*14px*/
     --fs-15: 0.9375rem; /*15px*/
     --fs-16: 1rem; /*16px*/
+    --fs-20: 1.25rem; /*20px*/
+    --fs-25: 1.5625rem; /*25px*/
+    --fs-30: 1.875rem; /*30px*/
 
     /* Radius */
     --radius: 5px;

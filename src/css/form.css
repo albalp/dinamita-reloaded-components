@@ -20,6 +20,9 @@
     font-size: var(--fs-25);
     padding: 5px 0;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 /* Form Text 
@@ -271,20 +274,3 @@
 .form.backgroundImage {
     color: var(--white-color);
 }
-
-/* Form Background Image - Dark
-------------------------------*/
-
-.form.dark.backgroundImage input {
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.form.dark.backgroundImage input:focus {
-    background: transparent;
-    border-color: var(--dark-gray-color);
-}
-
-/* Form Background Image - Dark
-------------------------------*/
-.form.borderRadius .form-alert{border-radius: var(--radius-48);}
-.form.borderRadius .form-button{border-radius: var(--radius-48);}

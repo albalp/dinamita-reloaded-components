@@ -5,7 +5,7 @@ function App() {
   
   return (
 
-    <Form title="Create a new customer" labelButton="Create" size="small" text="Here you can add the information to create and register him in your database">
+    <Form>
         <div className="input-container">
                 <div className="input-content">
                     <input type="email" className="input-content-control" placeholder="Email address" autoComplete="off" />

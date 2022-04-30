@@ -94,23 +94,23 @@
 
 /* Input Width
 ------------------------------*/
-.input-container--small {
+.input-container-width--small {
     width: 25%;
 }
 
-.input-container--medium {
+.input-container-width--medium {
     width: 50%;
 }
 
-.input-container--large {
+.input-container-width--large {
     width: 75%;
 }
 
-.input-container--all {
+.input-container-width--all {
     width: 100%;
 }
 
-/* Input dark
+/* Input Dark
 ------------------------------*/
 .input-control.dark {
     background: var(--dark-color);
@@ -122,10 +122,23 @@
     background: var(--dark-gray-color);
 }
 
+/* Input Light
+------------------------------*/
+.input-control.light {
+    background: var(--border-color);
+    color: var(--font-color);
+    border-color: var(--border-color);
+}
+
+.input-control.light:focus {
+    background: var(--white-color);
+}
+
 /* Input Secondary Variant
 ------------------------------*/
 .input-control-variant--secondary {
     background: transparent;
+    z-index: 99;
 }
 
 .input-control-variant--secondary ~ label {
@@ -140,12 +153,16 @@
     transform: translateY(-140%);
     background-color: var(--white-color);
     font-size: var(--fs-12);
+    z-index: 99;
+    color: var(--primary-color);
 }
 
 .input-control-variant--secondary.activated ~ label {
     transform: translateY(-140%);
     background-color: var(--white-color);
     font-size: var(--fs-12);
+    z-index: 99;
+    color: var(--primary-color);
 }
 
 /* Input Secondary Variant Size
@@ -171,11 +188,11 @@
 }
 
 .input-control-variant--secondary.dark:focus ~ label {
-    background-color: var(--dark-color);
+    background-color: var(--dark-background-color);
     color: var(--white-color);
 }
 
 .input-control-variant--secondary.dark.activated ~ label {
-    background-color: var(--dark-color);
+    background-color: var(--dark-background-color);
     color: var(--white-color);
 }

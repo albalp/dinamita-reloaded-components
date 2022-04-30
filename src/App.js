@@ -3,10 +3,12 @@ import Input from './components/Form/Input';
 
 function App() {
   
+  const greet = () => {console.log('Hello Irving Guapo');}
+
   return (
 
     <Form size="small">
-      <Input placeholder="Hello world"/>
+
     </Form>
   );
 }

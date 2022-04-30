@@ -5,6 +5,9 @@
 ------------------------------*/
 .input-container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .input-content {
@@ -112,26 +115,26 @@
 
 /* Input Dark
 ------------------------------*/
-.input-control.dark {
+.input-container.dark .input-control {
     background: var(--dark-color);
     color: var(--white-color);
     border-color: var(--dark-gray-color);
 }
 
-.input-control.dark:focus {
+.input-container.dark .input-control:focus {
     background: var(--dark-gray-color);
 }
 
 /* Input Light
 ------------------------------*/
-.input-control.light {
-    background: var(--border-color);
+.input-container.light .input-control {
+    background-color: var(--border-color);
     color: var(--font-color);
     border-color: var(--border-color);
 }
 
-.input-control.light:focus {
-    background: var(--white-color);
+.input-container.light .input-control:focus {
+    background-color: var(--white-color);
 }
 
 /* Input Secondary Variant
@@ -181,18 +184,41 @@
 
 /* Input Secondary Variant Dark
 ------------------------------*/
-.input-control-variant--secondary.dark,
-.input-control-variant--secondary.dark:focus {
+.input-container.dark .input-control-variant--secondary,
+.input-container.dark .input-control-variant--secondary:focus {
     background-color: transparent;
+    color: var(--white-color);
+}
+
+.input-container.dark .input-control-variant--secondary:focus ~ label {
+    background-color: var(--dark-background-color);
+    color: var(--white-color);
+}
+
+.input-container.dark .input-control-variant--secondary.activated ~ label {
+    background-color: var(--dark-background-color);
+    color: var(--white-color);
+}
+
+/* Input Secondary Variant Light
+------------------------------*/
+.input-container.light .input-control-variant--secondary,
+.input-container.light .input-control-variant--secondary:focus {
+    background-color: transparent;
+    color: var(--font-color);
+    border-color: var(--border-color);
+}
+
+.input-container.light .input-control-variant--secondary:focus ~ label {
+    background-color: rgb(248, 248, 248);
     color: var(--font-color);
 }
 
-.input-control-variant--secondary.dark:focus ~ label {
-    background-color: var(--dark-background-color);
-    color: var(--white-color);
+.input-container.light .input-control-variant--secondary.activated ~ label {
+    background-color: rgb(248, 248, 248);
+    color: var(--font-color);
 }
 
-.input-control-variant--secondary.dark.activated ~ label {
-    background-color: var(--dark-background-color);
-    color: var(--white-color);
-}
+/* Input Label Variant
+------------------------------*/
+.input-container.dark.input-control-variant--label label {color: var(--white-color); }

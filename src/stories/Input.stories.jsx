@@ -84,3 +84,8 @@ InputSecondary.args = {
     secondaryPlaceholder: 'Input secondary',
     secondary: true
 }
+
+export const InputLabel = Template.bind({});
+InputLabel.args = {
+    label: 'Email address'
+}

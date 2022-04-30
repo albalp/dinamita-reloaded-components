@@ -6,9 +6,8 @@ function App() {
   
   return (
 
-    <Form variant="grid">
-        <Input/>
-        <Input/>
+    <Form size="small">
+      
     </Form>
   );
 }

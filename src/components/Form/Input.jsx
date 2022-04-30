@@ -36,7 +36,8 @@ Input.propTypes = {
   dark: PropTypes.bool,
   light: PropTypes.bool,
   secondary: PropTypes.bool,
-  secondaryPlaceholder: PropTypes.string
+  secondaryPlaceholder: PropTypes.string,
+  onChange: PropTypes.func
 };
 
 Input.defaultProps = {
@@ -46,5 +47,6 @@ Input.defaultProps = {
   dark: false,
   light: false,
   secondary: false,
-  secondaryPlaceholder: null
+  secondaryPlaceholder: null,
+  onChange: null
 };

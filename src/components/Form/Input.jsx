@@ -18,7 +18,7 @@ const Input = ({ icon, rounded, size, width, dark, light, secondary, secondaryPl
   return (
    <>
      {!secondary && !label &&
-      <div className={`input-container input-container-width--${width} ${dark && 'dark'} ${light && 'light'}`}>
+      <div data-testid="input-default" className={`input-container input-container-width--${width} ${dark && 'dark'} ${light && 'light'}`}>
           <div className={`input-content input-content-size--${size} `}>
             <input {...props} onChange={handleChange}  className={`input-control ${icon && 'input-control--icon'} ${rounded && 'rounded'}  ${className && className}`} autoComplete="off"/>
             {icon}
@@ -30,7 +30,7 @@ const Input = ({ icon, rounded, size, width, dark, light, secondary, secondaryPl
      }
     
     {secondary && !label &&
-      <div className={`input-container input-container-width--${width} ${dark && 'dark'} ${light && 'light'}`}>
+      <div data-testid="input-secondary" className={`input-container input-container-width--${width} ${dark && 'dark'} ${light && 'light'}`}>
         <div className={`input-content input-content-size--${size} `}>
           <input {...props} onChange={handleChange}  className={`input-control ${rounded && 'rounded'} ${secondary && 'input-control-variant--secondary'}`} autoComplete='off'/>
           <label htmlFor="">{secondaryPlaceholder}</label>
@@ -42,7 +42,7 @@ const Input = ({ icon, rounded, size, width, dark, light, secondary, secondaryPl
     }
 
   {label && !secondary &&
-      <div className={`input-container input-container-width--${width} ${dark && 'dark'} ${light && 'light'} ${label && 'input-control-variant--label'}`}>
+      <div data-testid="input-label" className={`input-container input-container-width--${width} ${dark && 'dark'} ${light && 'light'} ${label && 'input-control-variant--label'}`}>
         <label htmlFor="">{label}:</label>
           <div className={`input-content input-content-size--${size} `}>
             <input {...props} onChange={handleChange}  className={`input-control ${rounded && 'rounded'} ${className && className}`} autoComplete="off"/>

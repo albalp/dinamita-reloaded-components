@@ -15,6 +15,7 @@
     --dark-color: rgb(61, 61, 61);
     --dark-gray-color: rgb(79, 78, 78);
     --dark-letter-color: rgb(171, 171, 171);
+    --dark-background-color: rgb(51, 51, 51);
     --white-color: rgb(255, 255, 255);
     --white-gray-color: rgb(245, 245, 245);
     --disabled-color: rgba(14, 14, 14, 0.16);
@@ -22,12 +23,12 @@
     --primary-color-disabled: rgba(29, 133, 197, 0.531);
     --success-color-disabled: rgb(77, 163, 91, 0.531);
     --danger-color-disabled: rgb(237, 83, 83, 0.531);
-    --border-color: rgb(226, 226, 226);
+    --border-color: rgb(236, 236, 236);
     
 
     /* Font */
     --font:  'Raleway', sans-serif;
-    --font-color: rgb(99, 99, 99);
+    --font-color: rgb(113, 113, 113);
     
     /* Sizes */
     --fs-10: 0.625rem; /*10px*/
@@ -42,7 +43,7 @@
     --fs-30: 1.875rem; /*30px*/
 
     /* Radius */
-    --radius: 5px;
+    --radius: 8px;
     --radius-48: 3rem;
     --radius-100: 100%;
 

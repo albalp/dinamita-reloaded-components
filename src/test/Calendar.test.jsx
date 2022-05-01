@@ -10,13 +10,15 @@ beforeEach(() => {
 
 describe('<Calendar/> - Render elements of component in the interface', () => {
 
+    const currentDate = new Date();
+
     test('Are in the document calendar component', () => {
 
         const buttonPrevious = screen.getByRole('button', {name: 'button previous month'});
         const buttonNext = screen.getByRole('button', {name: 'button next month'});
         const buttonReset = screen.getByRole('button', {name: 'button reset date'});
-        const month = screen.getByText(/April/i);
-        const year = screen.getByText(/2022/);
+        const month = screen.getByText(months[currentDate.getMonth()]);
+        const year = screen.getByText(currentDate.getFullYear());
         const sund = screen.getByText(/Sund/i);
         const day = screen.getByText('10');
         const legend = screen.getByText(/You are selecting a date different to current/i);

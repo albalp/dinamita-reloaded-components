@@ -221,4 +221,10 @@
 
 /* Input Label Variant
 ------------------------------*/
-.input-container.dark.input-control-variant--label label {color: var(--white-color); }
+.input-container.dark.input-control-variant--label label { color: var(--white-color); }
+
+.input-container.input-control-variant--label label { font-size: var(--fs-13); }
+
+.input-container.dark.input-control-variant--label .input-control { background-color: transparent; }
+
+.input-container.input-control-variant--label .input-control { background-color: transparent; }

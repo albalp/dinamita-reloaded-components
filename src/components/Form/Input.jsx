@@ -43,9 +43,9 @@ const Input = ({ icon, rounded, size, width, dark, light, secondary, secondaryPl
 
   {label && !secondary &&
       <div data-testid="input-label" className={`input-container input-container-width--${width} ${dark && 'dark'} ${light && 'light'} ${label && 'input-control-variant--label'}`}>
-        <label htmlFor="">{label}:</label>
+        <label htmlFor={label.toLowerCase()}>{label}:</label>
           <div className={`input-content input-content-size--${size} `}>
-            <input {...props} onChange={handleChange}  className={`input-control ${rounded && 'rounded'} ${className && className}`} autoComplete="off"/>
+            <input id={label.toLowerCase()} {...props} onChange={handleChange}  className={`input-control ${rounded && 'rounded'} ${className && className}`} autoComplete="off"/>
             {icon}
           </div>
           {legend && 

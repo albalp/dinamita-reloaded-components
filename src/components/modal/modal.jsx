@@ -2,6 +2,7 @@ import "../modal/css/modal.css";
 import PropTypes from 'prop-types';
 import SaveButton from '../../components/saveButton';
 import CloseIcon from '@mui/icons-material/Close';
+import "../modal/css/grid.css";
 
 //destructuración-manda datos
 const Modal = ({ children, isOpen, closeModal, size, backgroundColor, borderRadius, variant, ...props }) => {
@@ -17,7 +18,12 @@ const Modal = ({ children, isOpen, closeModal, size, backgroundColor, borderRadi
       className={['modal-container',`storybook-modal--${size}`, `storybook-modal--${variant}`,radius].join(' ')} style={backgroundColor && { backgroundColor }} {...props}
       onClick={handleModalContainerClick}>
         <SaveButton className="modal-close" onClick={closeModal} icon={<CloseIcon/>}  />
-            {children}
+        <div className="column">
+        {children}
+          <div className="row">
+          </div>
+        </div>
+            
       </div>
     </div>
   );

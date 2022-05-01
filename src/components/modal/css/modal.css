@@ -12,6 +12,7 @@
     display: none;
     justify-content: center;
     align-items: center;
+    display: flex;
 }
 
 .modal.is-open {
@@ -21,7 +22,7 @@
 .modal-container {
     position: relative;
     padding: 1rem;
-    padding-top: 4rem;
+    padding-top: 2rem;
     background-color: white;
     max-width: 800px;
     max-height: 400px;

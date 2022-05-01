@@ -5,7 +5,7 @@ const Form = ({ variant, title, size, buttonSize, buttonPosition, buttonWidth, b
 
   return (
     <form className={`form form-size--${size} ${dark && 'dark'} ${shadow && 'shadow'} ${borderRadius && borderRadius} ${className && className}`} style={backgroundColor && { backgroundColor }}>
-      <h2 className="form-title">{title ? title : 'Login'}</h2>
+      <h2 className="form-title">{title && title}</h2>
       <p className="form-text">{text && text}</p>
       <div className={`form-inputs-container form-variant--${variant}`}>
           {children}

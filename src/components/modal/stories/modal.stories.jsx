@@ -1,28 +1,33 @@
 import React from 'react';
-import Modals from '../modals';
+import Modal from '../modal';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Modal',
-  component: Modals,
+  component: Modal,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
 };
 
-const Template = (args) => <Modals {...args} />;
+const Template = (args) => <Modal {...args} />;
 
+export const LightOrDark = Template.bind({});
+LightOrDark.args = {
+  modeLoD: true
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  size: 'large'
+};
+
+export const Medium = Template.bind({});
+Medium.args = {
+  size: 'medium'
+};
 
 export const Small = Template.bind({});
 Small.args = {
-  size: 'small',
+  size: 'small'
 };
-
-export const ModalLight = Template.bind({});
-ModalLight.args = {
-  variant: 'light'
-}
-
-export const ModalDark= Template.bind({});
-ModalDark.args = {
-  variant: 'dark'
-}

@@ -19,10 +19,16 @@
     display: flex;
 }
 
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
 .modal-container {
     position: relative;
     padding: 1rem;
-    padding-top: 2rem;
+    padding-top: 3rem;
     background-color: white;
     max-width: 800px;
     max-height: 400px;
@@ -32,7 +38,7 @@
 
 /* Modal rounded variant */
 .storybook-modal--border-radius {
-    border-radius: 48px;
+    border-radius: 0%;
 }
 
 /* Modal  variant */
@@ -48,27 +54,21 @@
 
 /* Modal small variant */
 .storybook-modal--small {
-    max-height: 200px;
-    max-width: 400px;
-  }
-
-.modal-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    max-height: auto;
+    min-width: 360px;
+    max-width: 360px;
 }
 
-
-@media screen and (max-width: 360px) {
-    .modal-container {
-        max-width: 360px;
-        max-height: 640px;
-    }
+/* Modal medium variant */
+.storybook-modal--medium {
+    max-height: auto;
+    min-width: 720px;
+    max-width: 720px;
 }
 
-@media screen and (max-width: 1366px) {
-    .modal-container {
-        max-width: 1366px;
-        max-height: 768px;
-    }
+/* Modal large variant */
+.storybook-modal--large {
+    max-height: auto;
+    min-width: 1080px;
+    max-width: 1080px;
 }

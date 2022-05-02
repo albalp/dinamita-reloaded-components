@@ -4,11 +4,11 @@ import Form from '../components/Form/Form';
 
 describe('<Form> - Rendering form component in the application', () => {
 
-    render( <Form/> );
+    render( <Form title="Login"/> );
 
     test('Should be in the document when the application is loaded', () => {
 
-        const form = screen.getByRole('form');
+        const form = screen.getByText(/Login/i);
 
         expect(form).toBeInTheDocument();
     });
@@ -21,9 +21,9 @@ describe('<Form> - Testing of the submit event', () => {
 
         const mockHandler = jest.fn();
         
-        render( <Form onSubmit={mockHandler}/> );
+        render( <Form title="Login" onSubmit={mockHandler}/> );
     
-        const form = screen.getByRole('form');
+        const form = screen.getByText(/Login/i);
 
         fireEvent.submit(form);
 

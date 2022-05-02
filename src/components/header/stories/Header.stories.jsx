@@ -18,6 +18,7 @@ Primary.args = {
 BorderAll.args = {
   label : 'Border header',
   variant : 'sb-border'
+  
 }
 
 

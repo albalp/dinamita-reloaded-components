@@ -199,3 +199,23 @@ export const FormButtonComponent = () => {
         </Form>
     );
 }
+
+export const FormInvalidInput = () => {
+    return(
+        <Form size="small" title="Button component" buttonComponent={<Button label="Hello"/>}>
+            <Input type="text" name="lastmame" placeholder="Lastname" legend="Invalid lastname" valid={false}/>
+            <Input type="number" name="Phone" placeholder="Phone"/>
+            <Input type="email" name="email" placeholder="Email address"/>
+        </Form>
+    );
+}
+
+export const FormDarkInvalidInput = () => {
+    return(
+        <Form size="small" title="Button component" buttonComponent={<Button label="Hello" dark  shadow={false}/>} dark>
+            <Input type="text" name="lastmame" placeholder="Lastname" legend="Invalid lastname" valid={false} dark/>
+            <Input type="number" name="Phone" placeholder="Phone" dark/>
+            <Input type="email" name="email" placeholder="Email address" dark/>
+        </Form>
+    );
+}

@@ -32,12 +32,14 @@ Modal.propTypes = {
   borderRadius: PropTypes.bool,
   backgroundColor: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  modeLoD: PropTypes.bool
+  modeLoD: PropTypes.bool,
+  isOpen: PropTypes.bool
 };
 
 Modal.defaultProps = {
   borderRadius: false,
   backgroundColor: null,
   size: 'medium',
-  modeLoD: true
+  modeLoD: true,
+  isOpen: true
 };

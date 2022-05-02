@@ -43,7 +43,10 @@ function App() {
       <Input name="lastname" onChange={inputsValidations} placeholder="Lastname" legend="Invalid lastname" icon={<BiUser/>} value={initialForm.lastname.value} valid={initialForm.lastname.valid}/>
       <Input name="email" onChange={inputsValidations} type="email" label="Email address" legend="Invalid email" value={initialForm.email.value} valid={initialForm.email.valid}/>
       <Input name="password" onChange={inputsValidations} type="password" legend="Invalid password" secondary secondaryPlaceholder="Password" value={initialForm.password.value} valid={initialForm.password.valid}/>
-      <Checkbox label="Male" value="male" />
+      <Checkbox label="Male" value="male" secondary />
+      <Checkbox label="Female" value="female" />
+      <Checkbox label="Unknown" value="unknown"  tertiary/>
+      <Checkbox label="Other" value="other" rounded/>
     </Form>
   );
 }

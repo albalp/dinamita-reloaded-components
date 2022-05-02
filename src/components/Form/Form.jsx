@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import "../../css/form.css";
 
-const Form = ({ variant, title, size, buttonSize, buttonPosition, buttonWidth, buttonRounded, labelButton, alert, shadow, dark, className, borderRadius, backgroundColor, search, text, children, buttonComponent}) => {
+const Form = ({ variant, title, size, buttonSize, buttonPosition, buttonWidth, buttonRounded, labelButton, alert, shadow, dark, className, borderRadius, backgroundColor, search, text, children, buttonComponent, ...props}) => {
 
   return (
     <>
       {!search && 
-        <form className={`form form-size--${size} ${dark && 'dark'} ${shadow && 'shadow'} ${borderRadius && borderRadius} ${className && className} `} style={backgroundColor && { backgroundColor }}>
+        <form {...props} role="form" data-label="form" className={`form form-size--${size} ${dark && 'dark'} ${shadow && 'shadow'} ${borderRadius && borderRadius} ${className && className} `} style={backgroundColor && { backgroundColor }}>
             <h2 className="form-title">{title && title}</h2>
             <p className="form-text">{text && text}</p>
             <div className={`form-inputs-container form-variant--${variant}`}>
@@ -20,7 +20,7 @@ const Form = ({ variant, title, size, buttonSize, buttonPosition, buttonWidth, b
     }
 
     {search && 
-      <form className={`form form-size--${size} ${dark && 'dark'} ${shadow && 'shadow'} ${borderRadius && borderRadius} ${className && className} ${search && 'search'} `} style={backgroundColor && { backgroundColor }}>
+      <form {...props} role="form" data-label="form" className={`form form-size--${size} ${dark && 'dark'} ${shadow && 'shadow'} ${borderRadius && borderRadius} ${className && className} ${search && 'search'} `} style={backgroundColor && { backgroundColor }}>
         <div className={`form-inputs-container form-variant--${variant}`}>
             {children}
         </div>

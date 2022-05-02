@@ -16,7 +16,7 @@ const Modal = ({ children, isOpen, closeModal, size, backgroundColor, borderRadi
     <div onClick={closeModal} className={`modal ${isOpen && "is-open"}`} >
       <div onClick={handleModalContainerClick}
       className={['modal-container',`storybook-modal--${size}`, mode, radius].join(' ')} style={backgroundColor && { backgroundColor }} {...props}>
-        <SaveButton onClick={closeModal} className="modal-close"  icon={<CloseIcon/>}  />
+        <SaveButton onClick={closeModal} className="modal-close" label="Cerrar"  icon={<CloseIcon/>}  />
         <div className="column">
         {children}
           <div className="row"></div>

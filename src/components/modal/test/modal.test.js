@@ -1,47 +1,28 @@
-import React, {useEffect} from 'react'
 import ReactDOM from 'react-dom'
-import {render, fireEvent} from '@testing-library/react'
+import {render, fireEvent} from '@testing-library/react';
+import Modals from '../modals';
 
-const modalRoot = document.createElement('div')
-modalRoot.setAttribute('id', 'modal-root')
-document.body.appendChild(modalRoot)
-
-const Modal = ({onClose, children}) => {
-  const el = document.createElement('div')
-
-  useEffect(() => {
-    modalRoot.appendChild(el)
-
-    return () => modalRoot.removeChild(el)
-  })
+const Prueba = () => {
 
   return ReactDOM.createPortal(
-    <div onClick={onClose}>
-      <div onClick={e => e.stopPropagation()}>
-        {children}
-        <hr />
-        <button onClick={onClose}>Close</button>
-      </div>
-    </div>,
-    el,
+    <Modals />
   )
 }
 
-test('modal shows the children and a close button', () => {
-  // Arrange
-  const handleClose = jest.fn()
-
+test('modal shows the children', () => {
   // Act
   const {getByText} = render(
-    <Modal onClose={handleClose}>
-      <div>test</div>
-    </Modal>,
+    <Modals />,
   )
   // Assert
-  expect(getByText('test')).toBeTruthy()
+  expect(getByText('Calendar')).toBeTruthy()
+})
 
+test('modal close with button', () => {
+  // Arrange
+  const handleClose = jest.fn()
   // Act
-  fireEvent.click(getByText(/close/i))
+  fireEvent.click(getByText(/Cerrar/i))
 
   // Assert
   expect(handleClose).toHaveBeenCalledTimes(1)

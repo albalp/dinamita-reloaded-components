@@ -227,3 +227,17 @@
 /* Form Button Rounded
 ------------------------------*/
 .form-button.rounded { border-radius: var(--radius-48); }
+
+/* Form Search
+------------------------------*/
+.form.search {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.form.search .form-inputs-container {
+    width: 100%;
+}

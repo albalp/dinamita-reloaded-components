@@ -1,15 +1,19 @@
 import Form from '../components/Form/Form';
 import Input from '../components/Form/Input';
 import Button from '../components/SaveButton';
+import { BiSearch } from "react-icons/bi";
 
 export default {
     title: 'form/form',
-    component: Form
+    component: Form,
+    argTypes: {
+        backgroundColor: { control: 'color' },
+      },
 }
 
-export const FormDefault = () => {
+export const FormDefault = (args) => {
     return(
-        <Form size="small" title="Default">
+        <Form {...args} size="small" title="Default">
             <Input type="text" name="name" placeholder="Name"/>
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
@@ -17,20 +21,9 @@ export const FormDefault = () => {
     );
 }
 
-export const FormGrid = () => {
+export const FormGrid = (args) => {
     return(
-        <Form size="small" title="Grid" variant="grid">
-            <Input type="text" name="name" placeholder="Name"/>
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
-}
-
-export const FormFlex = () => {
-    return(
-        <Form size="small" title="Flex" variant="flex">
+        <Form {...args} size="small" title="Grid" variant="grid">
             <Input type="text" name="name" placeholder="Name"/>
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
@@ -39,9 +32,9 @@ export const FormFlex = () => {
     );
 }
 
-export const FormSmall = () => {
+export const FormFlex = (args) => {
     return(
-        <Form size="small" title="Small">
+        <Form {...args} size="small" title="Flex" variant="flex">
             <Input type="text" name="name" placeholder="Name"/>
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
@@ -50,9 +43,9 @@ export const FormSmall = () => {
     );
 }
 
-export const FormMedium = () => {
+export const FormSmall = (args) => {
     return(
-        <Form size="medium" title="Medium">
+        <Form {...args} size="small" title="Small">
             <Input type="text" name="name" placeholder="Name"/>
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
@@ -61,9 +54,9 @@ export const FormMedium = () => {
     );
 }
 
-export const FormLarge = () => {
+export const FormMedium = (args) => {
     return(
-        <Form size="large" title="Large">
+        <Form {...args} size="medium" title="Medium">
             <Input type="text" name="name" placeholder="Name"/>
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
@@ -72,9 +65,20 @@ export const FormLarge = () => {
     );
 }
 
-export const FormDark = () => {
+export const FormLarge = (args) => {
     return(
-        <Form size="small" title="Dark" dark>
+        <Form {...args} size="large" title="Large">
+            <Input type="text" name="name" placeholder="Name"/>
+            <Input type="text" name="lastmame" placeholder="Lastname"/>
+            <Input type="number" name="Phone" placeholder="Phone"/>
+            <Input type="email" name="email" placeholder="Email address"/>
+        </Form>
+    );
+}
+
+export const FormDark = (args) => {
+    return(
+        <Form {...args} size="small" title="Dark" dark>
             <Input type="text" name="name" placeholder="Name" dark/>
             <Input type="text" name="lastmame" placeholder="Lastname" dark/>
             <Input type="number" name="Phone" placeholder="Phone" dark/>
@@ -83,9 +87,9 @@ export const FormDark = () => {
     );
 }
 
-export const FormButtonSizeSmall = () => {
+export const FormButtonSizeSmall = (args) => {
     return(
-        <Form size="small" title="Button Small" buttonSize="small">
+        <Form {...args} size="small" title="Button Small" buttonSize="small">
             <Input type="text" name="name" placeholder="Name"/>
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
@@ -94,9 +98,9 @@ export const FormButtonSizeSmall = () => {
     );
 }
 
-export const FormButtonSizeMedium = () => {
+export const FormButtonSizeMedium = (args) => {
     return(
-        <Form size="small" title="Button Medium" buttonSize="medium">
+        <Form {...args} size="small" title="Button Medium" buttonSize="medium">
             <Input type="text" name="name" placeholder="Name"/>
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
@@ -105,9 +109,9 @@ export const FormButtonSizeMedium = () => {
     );
 }
 
-export const FormButtonSizeLarge = () => {
+export const FormButtonSizeLarge = (args) => {
     return(
-        <Form size="small" title="Button Large" buttonSize="large">
+        <Form {...args} size="small" title="Button Large" buttonSize="large">
             <Input type="text" name="name" placeholder="Name"/>
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
@@ -116,9 +120,9 @@ export const FormButtonSizeLarge = () => {
     );
 }
 
-export const FormButtonWidthSmall = () => {
+export const FormButtonWidthSmall = (args) => {
     return(
-        <Form size="small" title="Button Small" buttonWidth="small">
+        <Form {...args} size="small" title="Button Small" buttonWidth="small">
             <Input type="text" name="name" placeholder="Name"/>
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
@@ -127,9 +131,9 @@ export const FormButtonWidthSmall = () => {
     );
 }
 
-export const FormButtonWidthMedium = () => {
+export const FormButtonWidthMedium = (args) => {
     return(
-        <Form size="small" title="Button Medium" buttonWidth="medium">
+        <Form {...args} size="small" title="Button Medium" buttonWidth="medium">
             <Input type="text" name="name" placeholder="Name"/>
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
@@ -138,9 +142,9 @@ export const FormButtonWidthMedium = () => {
     );
 }
 
-export const FormLeftButton = () => {
+export const FormLeftButton = (args) => {
     return(
-        <Form size="small" title="Button Left" buttonPosition="left">
+        <Form {...args} size="small" title="Button Left" buttonPosition="left">
             <Input type="text" name="name" placeholder="Name"/>
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
@@ -149,9 +153,9 @@ export const FormLeftButton = () => {
     );
 }
 
-export const FormCenterButton = () => {
+export const FormCenterButton = (args) => {
     return(
-        <Form size="small" title="Button Center" buttonPosition="center">
+        <Form {...args} size="small" title="Button Center" buttonPosition="center">
             <Input type="text" name="name" placeholder="Name"/>
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
@@ -160,9 +164,9 @@ export const FormCenterButton = () => {
     );
 }
 
-export const FormRightButton = () => {
+export const FormRightButton = (args) => {
     return(
-        <Form size="small" title="Button Right" buttonPosition="right">
+        <Form {...args} size="small" title="Button Right" buttonPosition="right">
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
             <Input type="email" name="email" placeholder="Email address"/>
@@ -170,9 +174,9 @@ export const FormRightButton = () => {
     );
 }
 
-export const FormLabelButton = () => {
+export const FormLabelButton = (args) => {
     return(
-        <Form size="small" title="Button Label" labelButton="Create">
+        <Form {...args} size="small" title="Button Label" labelButton="Create">
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
             <Input type="email" name="email" placeholder="Email address"/>
@@ -180,9 +184,9 @@ export const FormLabelButton = () => {
     );
 }
 
-export const FormText = () => {
+export const FormText = (args) => {
     return(
-        <Form size="small" title="Button Text" text="You can add a text in this part">
+        <Form {...args} size="small" title="Button Text" text="You can add a text in this part">
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
             <Input type="email" name="email" placeholder="Email address"/>
@@ -190,9 +194,9 @@ export const FormText = () => {
     );
 }
 
-export const FormButtonComponent = () => {
+export const FormButtonComponent = (args) => {
     return(
-        <Form size="small" title="Button component" buttonComponent={<Button label="Hello"/>}>
+        <Form {...args} size="small" title="Button component" buttonComponent={<Button label="Hello"/>}>
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
             <Input type="email" name="email" placeholder="Email address"/>
@@ -200,9 +204,9 @@ export const FormButtonComponent = () => {
     );
 }
 
-export const FormInvalidInput = () => {
+export const FormInvalidInput = (args) => {
     return(
-        <Form size="small" title="Button component" buttonComponent={<Button label="Hello"/>}>
+        <Form {...args} size="small" title="Button component" buttonComponent={<Button label="Hello"/>}>
             <Input type="text" name="lastmame" placeholder="Lastname" legend="Invalid lastname" valid={false}/>
             <Input type="number" name="Phone" placeholder="Phone"/>
             <Input type="email" name="email" placeholder="Email address"/>
@@ -210,12 +214,20 @@ export const FormInvalidInput = () => {
     );
 }
 
-export const FormDarkInvalidInput = () => {
+export const FormDarkInvalidInput = (args) => {
     return(
-        <Form size="small" title="Button component" buttonComponent={<Button label="Hello" dark  shadow={false}/>} dark>
+        <Form {...args} size="small" title="Button component" buttonComponent={<Button label="Hello" shadow={false}/>} dark>
             <Input type="text" name="lastmame" placeholder="Lastname" legend="Invalid lastname" valid={false} dark/>
             <Input type="number" name="Phone" placeholder="Phone" dark/>
             <Input type="email" name="email" placeholder="Email address" dark/>
+        </Form>
+    );
+}
+
+export const FormSearch = (args) => {
+    return(
+        <Form {...args} size="small" search variant="flex" buttonWidth="small">
+            <Input type="text" name="search" placeholder="Search" icon={<BiSearch/>}/>
         </Form>
     );
 }

@@ -1,20 +1,35 @@
 import PropTypes from 'prop-types';
 import "../../css/form.css";
 
-const Form = ({ variant, title, size, buttonSize, buttonPosition, buttonWidth, buttonRounded, labelButton, alert, shadow, dark, className, borderRadius, backgroundColor, text, children, buttonComponent}) => {
+const Form = ({ variant, title, size, buttonSize, buttonPosition, buttonWidth, buttonRounded, labelButton, alert, shadow, dark, className, borderRadius, backgroundColor, search, text, children, buttonComponent}) => {
 
   return (
-    <form className={`form form-size--${size} ${dark && 'dark'} ${shadow && 'shadow'} ${borderRadius && borderRadius} ${className && className}`} style={backgroundColor && { backgroundColor }}>
-      <h2 className="form-title">{title && title}</h2>
-      <p className="form-text">{text && text}</p>
-      <div className={`form-inputs-container form-variant--${variant}`}>
-          {children}
-      </div>
-      <div className={`form-footer form-button-position--${buttonPosition}`}>
-         {buttonComponent ? buttonComponent : <button className={`form-button form-button-size--${buttonSize} form-button-width--${buttonWidth} ${buttonRounded && 'rounded'}`}>{labelButton ? labelButton : 'Ok'}</button>}
-      </div>
-      {alert && <div className="form-alert ">{alert}</div>}
-    </form>
+    <>
+      {!search && 
+        <form className={`form form-size--${size} ${dark && 'dark'} ${shadow && 'shadow'} ${borderRadius && borderRadius} ${className && className} `} style={backgroundColor && { backgroundColor }}>
+            <h2 className="form-title">{title && title}</h2>
+            <p className="form-text">{text && text}</p>
+            <div className={`form-inputs-container form-variant--${variant}`}>
+                {children}
+            </div>
+            <div className={`form-footer form-button-position--${buttonPosition}`}>
+              {buttonComponent ? buttonComponent : <button className={`form-button form-button-size--${buttonSize} form-button-width--${buttonWidth} ${buttonRounded && 'rounded'}`}>{labelButton ? labelButton : 'Ok'}</button>}
+            </div>
+            {alert && <div className="form-alert ">{alert}</div>}
+        </form>
+    }
+
+    {search && 
+      <form className={`form form-size--${size} ${dark && 'dark'} ${shadow && 'shadow'} ${borderRadius && borderRadius} ${className && className} ${search && 'search'} `} style={backgroundColor && { backgroundColor }}>
+        <div className={`form-inputs-container form-variant--${variant}`}>
+            {children}
+        </div>
+        {buttonComponent ? buttonComponent : <button className={`form-button form-button-size--${buttonSize} form-button-width--${buttonWidth} ${buttonRounded && 'rounded'}`}>{labelButton ? labelButton : 'Search'}</button>}
+        {alert && <div className="form-alert">{alert}</div>}
+      </form>
+    }
+    
+    </>
   );
 }
 

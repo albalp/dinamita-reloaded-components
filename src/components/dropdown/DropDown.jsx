@@ -1,85 +1,57 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 
-import { useDetectOutsideClick } from './useDetectOutsideClick.js';
+import './dropdown.css';
 
-import { MdArrowDropDown } from 'react-icons/md'
+const Dropdown = ( {title, options, icon}  ) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState('');
 
-import './dropDown.css';
+  const toggling = () => setIsOpen(!isOpen);
 
-const DropDown = () => {
-  const dropdownRef = useRef(null);
-  const [isActive, setIsActive] = useState(false);
-  const onClick = () => {console.log('CLICKED') 
-    setIsActive(!isActive)};
-
-  const dropdownOptions = [
-    {
-      label: "The Color Red",
-      value: "red",
-    },
-    {
-      label: "The Color Green",
-      value: "green",
-    },
-    {
-      label: "The Color Blue",
-      value: "blue",
-    },
-  ];
-  const [selected, setSelected] = useState(dropdownOptions[0])
-
-  const renderedOptions = dropdownOptions.map((option) => {
-    if (option.value === selected.value) {
-      return null
-    }
-    return (
-      <li
-        key={option.value}
-        className="item"
-        // on click change selection to current option
-        onClick={() => {
-          setSelected(option)
-          onClick()
-        }}
-      >
-        {option.label}
-      </li>
-    )
-  })
-  
-  /*useEffect(() => {
-    const pageClickEvent = (e) => {
-      console.log(e);
-      // If the active element exists and is clicked outside of
-      if (dropdownRef.current !== null && !dropdownRef.current.contains(e.target)) {
-          setIsActive(!isActive);
-      }
-    };
-
-    // If the item is active (ie open) then listen for clicks
-    if (isActive) {
-      window.addEventListener('click', pageClickEvent);
-    }
-
-    return () => {
-        window.removeEventListener('click', pageClickEvent);
-    }
-  
-  }, [isActive]);*/
+  const onOptionClicked = (value) => () => {
+    setSelectedOption(value);
+    setIsOpen(false);
+  };
 
   return (
-     <div className="menu-container">
-       <div className="label">Project:</div>
-       <button type="submit" onClick={onClick} className="menu-trigger">
-          <span>{selected.label}</span>
-          <MdArrowDropDown />
-       </button>
-       <ul ref={dropdownRef} className={`menu${isActive ? '-active' : '-inactive'}`} >
-         {renderedOptions}
+    <div >
+      <p>{title}</p>
+      <ul className={`dropdown ${isOpen ? 'active' : ''}`}>
+        <li onClick={toggling} className="select">
+          {options.length > 0 
+            ? <input 
+            type="text" 
+            className="input-option" 
+            placeholder={selectedOption}></input>
+            :<span>No options found</span>
+            }
+          {icon}
+        </li>
+        {isOpen && (
+          <ul className="dropdown-menu">
+            {options && options.length > 0 
+            ? options.map((option) =>(
+              <li key={option.id} onClick={onOptionClicked(option.name)}>
+                {option.name}
+              </li>
+            ))
+            : <span>No options found</span>
+            }
+          </ul>
+        )}
       </ul>
-     </div>
-
+    </div>
   )
 }
 
-export default DropDown
+export default Dropdown;
+
+Dropdown.propTypes = {
+  title: PropTypes.string.isRequired,
+  options: PropTypes.array, 
+}
+
+Dropdown.defaultProps = {
+  title: '',
+}

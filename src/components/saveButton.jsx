@@ -8,7 +8,11 @@ const SaveButton = ({ beforeSave, backgroundColor, size, label, borderRadius, ha
 
   return (
     <div>
-      <button onClick={handleClick} variant="contained" data-aos="zoom-in" role="button" className={[ 'storybook-button', `storybook-button--${size}`, `storybook-button--${variant}`, mode, radius].join(' ')} style={backgroundColor && { backgroundColor }} {...props}>
+      <button 
+      onClick={handleClick} 
+      variant="contained" 
+      data-aos="zoom-in" 
+      className={[ 'storybook-button', `storybook-button--${size}`, `storybook-button--${variant}`, mode, radius].join(' ')} style={backgroundColor && { backgroundColor }} {...props}>
         {icon && icon}
         {label}
       </button>

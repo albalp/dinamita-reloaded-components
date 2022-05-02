@@ -38,7 +38,7 @@ export default Checkbox;
 Checkbox.propTypes = {
     label: PropTypes.string,
     rounded: PropTypes.bool,
-    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    size: PropTypes.oneOf(['small', 'medium', 'large', 'default']),
     secondary: PropTypes.bool,
     tertiary: PropTypes.bool,
     onChange: PropTypes.func
@@ -47,7 +47,7 @@ Checkbox.propTypes = {
   Checkbox.defaultProps = {
     label: null,
     rounded: false,
-    size: 'medium',
+    size: 'small',
     secondary: false,
     tertiary: false,
     onChange: null

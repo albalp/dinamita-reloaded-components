@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom'
-import {render, fireEvent} from '@testing-library/react';
+import {render, fireEvent, screen} from '@testing-library/react';
 import Modals from '../modals';
 
 const Prueba = () => {
@@ -21,8 +21,14 @@ test('modal shows the children', () => {
 test('modal close with button', () => {
   // Arrange
   const handleClose = jest.fn()
+  //render
+  render(
+  <div>
+    <Modals />
+  </div>
+  );
   // Act
-  fireEvent.click(getByText(/Cerrar/i))
+  fireEvent.click(screen.getByRole("button",{name: 'Click to open modal'}))
 
   // Assert
   expect(handleClose).toHaveBeenCalledTimes(1)

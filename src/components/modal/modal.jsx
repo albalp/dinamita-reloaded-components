@@ -4,6 +4,7 @@ import SaveButton from '../../components/saveButton';
 import CloseIcon from '@mui/icons-material/Close';
 import "../modal/css/grid.css";
 
+
 //destructuración-manda datos
 const Modal = ({ children, isOpen, closeModal, size, backgroundColor, borderRadius, modeLoD, ...props }) => {
     //Para que no se cierre cuando se de click dentro del modal
@@ -16,7 +17,7 @@ const Modal = ({ children, isOpen, closeModal, size, backgroundColor, borderRadi
     <div onClick={closeModal} className={`modal ${isOpen && "is-open"}`} >
       <div onClick={handleModalContainerClick}
       className={['modal-container',`storybook-modal--${size}`, mode, radius].join(' ')} style={backgroundColor && { backgroundColor }} {...props}>
-        <SaveButton onClick={closeModal} className="modal-close" label="Cerrar"  icon={<CloseIcon/>}  />
+        <SaveButton onClick={closeModal} className="modal-close" aria-label="Cerrar"  icon={<CloseIcon/>}  />
         <div className="column">
         {children}
           <div className="row"></div>

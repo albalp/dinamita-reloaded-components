@@ -13,18 +13,14 @@ const Modal = ({ children, isOpen, closeModal, size, backgroundColor, borderRadi
 
   return (
       //clase dinamica
-      //
-    <div onClick={closeModal} className={`modal ${isOpen && "is-open"}`}>
-      <div 
-      className={['modal-container',`storybook-modal--${size}`, mode, radius].join(' ')} style={backgroundColor && { backgroundColor }} {...props}
-      onClick={handleModalContainerClick}>
-        <SaveButton className="modal-close" onClick={closeModal} icon={<CloseIcon/>}  />
+    <div onClick={closeModal} className={`modal ${isOpen && "is-open"}`} >
+      <div onClick={handleModalContainerClick}
+      className={['modal-container',`storybook-modal--${size}`, mode, radius].join(' ')} style={backgroundColor && { backgroundColor }} {...props}>
+        <SaveButton onClick={closeModal} className="modal-close"  icon={<CloseIcon/>}  />
         <div className="column">
         {children}
-          <div className="row">
-          </div>
-        </div>
-            
+          <div className="row"></div>
+        </div> 
       </div>
     </div>
   );

@@ -15,20 +15,21 @@
     display: flex;
 }
 
-.modal.is-open {
-    display: flex;
-}
 
 .modal-close {
     position: absolute;
     top: 1rem;
     right: 1rem;
 }
+  
+.is-open {
+    display: flex;
+}
 
 .modal-container {
     position: relative;
     padding: 1rem;
-    padding-top: 3rem;
+    padding-top: 4rem;
     background-color: white;
     max-width: 800px;
     max-height: 400px;

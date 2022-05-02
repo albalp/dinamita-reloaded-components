@@ -1,9 +1,11 @@
-import { useModal } from "./useModal";
+import { useModal } from "../modal/useModal";
 import Modal from "./modal";
+//import ModalPortal from "./ModalPortal";
 import SaveButton from '../../components/saveButton';
 
 const Modals = () => {
   const [isOpenModal, openModal, closeModal] = useModal(false);
+  //const [isOpenPortal, openModalPortal, closeModalPortal] = useModal(false);
 
   return (
     <div>

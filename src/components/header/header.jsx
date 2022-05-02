@@ -1,10 +1,11 @@
 import './header.css'
 import { PropTypes } from 'prop-types';
 const Header = ({borderRadius, backgroundColor, label, variant, ...props}) =>{
-    
+    const radius = borderRadius && 'storybook-header--border-radius';
+
     return(
         <div>
-            <header className={`header ${variant}`} style={backgroundColor && { backgroundColor }} {...props} >
+            <header className={[`header ${variant}` , radius].join(' ')} style={backgroundColor && { backgroundColor }} {...props} >
                 {label}
             </header>
         </div>

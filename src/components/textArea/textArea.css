@@ -15,5 +15,5 @@ textArea{
 }
 .sb-background-white{ background-color: var(--white-color); color: var(--dark-color)}
 .sb-background-black{ background-color: var(--dark-color); color: var(--white-color)}
-.storybook-button--border-radius { border-radius: 2em }
+.storybook-textarea--border-radius { border-radius: 2em }
 

@@ -13,10 +13,7 @@ export const BorderAndPlaceholder = Template.bind({})
 
 BorderAndPlaceholder.args = {
   label : 'Con placeholder y borde',
-  variant : 'sb-border',
-  backgroundColor : 'sb-background-black',
   borderRadius : true,
-  border : 'green',
   placeholder : '',
 }
 

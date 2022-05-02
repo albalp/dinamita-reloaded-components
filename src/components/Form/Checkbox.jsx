@@ -50,5 +50,5 @@ Checkbox.propTypes = {
     size: 'medium',
     secondary: false,
     tertiary: false,
-    onChange: PropTypes.func
+    onChange: null
   };

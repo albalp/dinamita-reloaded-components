@@ -32,7 +32,11 @@
     /* Radius */
     --radius: 5px;
     --radius-48: 3rem;
+    --radius-24: 2rem;
     --radius-100: 100%;
+    --border-top-left-radius: 2em;
+    --border-top-right-radius: 2em;
+    --border-solid: 1px solid grey;
 
     /* Shadows */
     --shadow: 0px 0px 5px 0px rgba(204,204,204,0.38);

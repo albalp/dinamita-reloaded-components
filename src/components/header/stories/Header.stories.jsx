@@ -10,6 +10,7 @@ const Template = (args) => <Header {...args} />;
 
 export const BorderAll = Template.bind({})
 
+//he only variant to the sb is the border
 BorderAll.args = {
   label : 'Border header',
   borderRadius: true,

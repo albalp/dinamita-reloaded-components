@@ -1,6 +1,6 @@
 import './textArea.css';
 import { PropTypes } from 'prop-types';
-
+//Declaring our component with his props.
 const TextArea = ({placeholder, borderRadius, ...props}) =>{
     const radius = borderRadius && 'storybook-textarea--border-radius';
 
@@ -15,7 +15,7 @@ const TextArea = ({placeholder, borderRadius, ...props}) =>{
     );
 }
 export default TextArea;
-
+//The props that can be use are border radius or placeholder
 TextArea.propTypes = {
     borderRadius: PropTypes.bool,
     placeholder : PropTypes.string.isRequired,

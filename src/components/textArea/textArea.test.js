@@ -5,7 +5,7 @@
         it('Renders the label', () =>{
             const view = render(< TextArea />)
             screen.getByText('Comments')
-            console.log(view)
+            // console.log(view)
         });
 
 

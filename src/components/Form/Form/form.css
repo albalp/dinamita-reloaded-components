@@ -1,0 +1,233 @@
+/* Global Styles */
+@import '../../../css/global_styles.css';
+
+/* Form 
+------------------------------*/
+.form {
+    width: 100%;
+    padding: 20px;
+    border-radius: var(--radius);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+/* Form Title 
+------------------------------*/
+.form-title { 
+    font-size: var(--fs-25);
+    padding: 5px 0;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Form Text 
+------------------------------*/
+.form-text { 
+    font-size: var(--fs-13);
+    line-height: 25px;
+}
+
+/* Form Input Container 
+------------------------------*/
+.form-inputs-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Form Footer 
+------------------------------*/
+.form-footer { 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+ }
+
+/* Form Button 
+------------------------------*/
+.form-button {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--white-color);
+    font-weight: 700;
+    border-radius: var(--radius);
+    background-color: var(--primary-color);
+    transition: var(--transition);
+    cursor: pointer;
+    font-size: var(--fs-13);
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.form-button:hover { background-color: var(--primary-color-hover); }
+
+/* Form Legend alert
+------------------------------*/
+.form-alert {
+    width: 100%;
+    border-radius: var(--radius);
+    color: var(--white-color);
+    background-color: var(--danger-color);
+    font-size: var(--fs-13);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    padding: 0 20px;
+    height: 0;
+}
+
+.form-alert.activated {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    padding: 10px 20px;
+    height: auto;
+    transition: var(--transition);
+}
+
+/* Variants 
+-------------------------------
+------------------------------*/
+
+/* Form Size 
+------------------------------*/
+.form-size--small {
+    max-width: 400px;
+}
+
+.form-size--small .form-title { font-size: var(--fs-20); }
+
+
+.form-size--medium {
+    max-width: 600px;
+}
+
+.form-size--large {
+    max-width: 800px;
+}
+
+/* Form Shadow 
+------------------------------*/
+
+.form.shadow { box-shadow: var(--shadow); }
+
+/* Form Dark 
+------------------------------*/
+
+.form.dark {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+
+.form.dark .input-content-control {
+    background-color: var(--dark-gray-color);
+    color: var(--white-color);
+    border-color: transparent;
+}
+
+.form.dark .input-content-control::placeholder { color: var(--dark-gray-color); }
+
+.form.dark .input-content-control::placeholder { color: var(--dark-letter-color); }
+
+/* Form Grid
+------------------------------*/
+.form-variant--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5px;
+}
+
+.form-size--small .form-variant--grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+
+.form-size--large .form-variant--grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); } 
+
+/* Form flex
+------------------------------*/
+.form-variant--flex {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Form Button Size
+------------------------------*/
+.form-button-size--small { 
+    font-size: var(--fs-12);
+    height: 35px;
+}
+
+.form-button-size--medium { 
+    font-size: var(--fs-13);
+    height: 40px;
+}
+
+.form-button-size--large { 
+    font-size: var(--fs-14);
+    height: 50px;
+}
+
+/* Form Button Width
+------------------------------*/
+.form-button-width--small { 
+    font-size: var(--fs-12);
+    width: 80px;
+    justify-content: center;
+}
+
+.form-button-width--medium { 
+    font-size: var(--fs-13);
+    width: 100px;
+    justify-content: center;
+}
+
+.form-button-width--large { 
+    font-size: var(--fs-14);
+    width: 200px;
+    justify-content: center;
+}
+
+.form-button-width--allWidth { 
+    font-size: var(--fs-14);
+    width: 100%;
+    justify-content: center;
+}
+
+/* Form Button Position
+------------------------------*/
+.form-button-position--left { justify-content: flex-start; }
+
+.form-button-position--center { justify-content: center; }
+
+.form-button-position--right { justify-content: flex-end; }
+
+
+/* Form Button Rounded
+------------------------------*/
+.form-button.rounded { border-radius: var(--radius-48); }
+
+/* Form Search
+------------------------------*/
+.form.search {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.form.search .form-inputs-container { width: 100%; }

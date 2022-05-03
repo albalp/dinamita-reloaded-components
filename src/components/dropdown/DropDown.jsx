@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import data from '../../api/mocks.json'
 
-import './dropdown.css';
+import './dropDown.css';
 
 const Dropdown = ( {title, options, icon}  ) => {
   // Initial state for the option list

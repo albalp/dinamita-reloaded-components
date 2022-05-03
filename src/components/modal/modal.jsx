@@ -1,6 +1,6 @@
 import "../modal/css/modal.css";
 import PropTypes from 'prop-types';
-import SaveButton from '../../components/saveButton';
+import SaveButton from '../../components/SaveButton';
 import CloseIcon from '@mui/icons-material/Close';
 import "../modal/css/grid.css";
 

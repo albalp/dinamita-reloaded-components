@@ -1,0 +1,39 @@
+/* Global Styles */
+@import '../../css/global_styles.css';
+
+.menu-container{
+    position: relative;
+    /*display: flex;
+    min-width: 14em;
+    min-height: 2.71428571em;
+    margin: 5rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(34, 36, 38, 0.15);*/
+    
+}
+
+.menu-inactive {
+    background: #ffffff;
+    border-radius: 8px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 300px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    /*opacity: 1;*/
+    visibility: hidden;
+    transform: translateY(-20px);
+  }
+
+.menu-active{
+    /*opacity: 1;*/
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  

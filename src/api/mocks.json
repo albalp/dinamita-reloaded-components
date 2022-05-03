@@ -1,0 +1,103 @@
+{
+    "project": {
+        "AccountName": "iTexico",
+        "ProjectAccountID": 0,
+        "ProjectId": 0,
+        "ProjectName": "Delivery",
+        "ProjectCategories": [
+            {
+                "CategoryName": "Available",
+                "CategoryID": 0
+            },
+            {
+                "CategoryName": "Internal meeting (not project related)",
+                "CategoryID": 1
+            },
+            {
+                "CategoryName": "Resources Management",
+                "CategoryID": 2
+            },
+            {
+                "CategoryName": "Support to Account/Delivery Owners",
+                "CategoryID": 3
+            },
+            {
+                "CategoryName": "Support to Operations",
+                "CategoryID": 4
+            },
+            {
+                "CategoryName": "Support to Quality & Processes",
+                "CategoryID": 5
+            },
+            {
+                "CategoryName": "Support to Sales (New Opportunities)",
+                "CategoryID": 6
+            },
+            {
+                "CategoryName": "Support to Talent Acquisition (Interviews)",
+                "CategoryID": 7
+            }
+
+        ],
+        "ProjectColor": "red",
+        "ProjectStartDate": "2011-12-19T15:28:46.493Z",
+        "ProjectEndDate": "2011-12-19T15:28:46.493Z",
+        "ProjectIsActive": false
+    },
+    "activity": {
+        "AccountName": "iTexico",
+        "ActivityDate": "2011-12-19T15:28:46.493Z",
+        "ActivityID":0,
+        "CategoryName":"Available",
+        "Comments": "React redux",
+        "EmployeeID": 0,
+        "ProjectColor": "red",
+        "ProjectID": 0,
+        "ProjectName": "Delivery",
+        "StepID": 0,
+        "Task": "Header Nova",
+        "TypeID": 0,
+        "value": 0,
+        "activeInProject": false
+
+    },
+
+    "user": {
+        "Address": "Bahias 3 Bosques de Chapala",
+        "AvilableTravel": true,
+        "BloodType": "O+",
+        "ContactPhonNumber": "55555555",
+        "CountryCod": null,
+        "CountryName": "Mexico",
+        "DatePassportExpiration": "2011-12-19T15:28:46.493Z",
+        "DateVisaExpiration": "2011-12-19T15:28:46.493Z",
+        "EmergencyNamePerson": "string",
+        "EmergencyPhoneNumber": "string",
+        "EmployeeDetailID": 0,
+        "EmployeeID": 0,
+        "EmployeeName": "Juan",
+        "EmployeeTypeName": "string",
+        "GNPPolicyNumber": "string",
+        "GenderID": 0,
+        "GenderName": "Male",
+        "HasPassaport": true,
+        "HasVisa": false,
+        "IsMarried": false,
+        "LastName": "Perez",
+        "LocationName": "Remote",
+        "NumberChildren": null,
+        "OfficeLocationID": 0,
+        "PassportExpirationDate": "string",
+        "PassportNumber": "string",
+        "ReasonNoTravel": "string",
+        "RoutePhoto": "https://fotozambrano.com.co/wp-content/uploads/2019/07/CHA0211.jpg",
+        "SisNovaPolicyNumber": "string",
+        "SkypeForBusinessUser": "string",
+        "SkypeUser": "string",
+        "StartDate": "2011-12-19T15:28:46.493Z",
+        "StartDateString": "2011-12-19T15:28:46.493Z",
+        "VisaExpirationDate": "2011-12-19T15:28:46.493Z",
+        "VisaNumber": "string",
+        "VisaType": "string"
+    }
+}

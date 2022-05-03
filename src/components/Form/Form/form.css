@@ -1,5 +1,5 @@
 /* Global Styles */
-@import './global_styles.css';
+@import '../../../css/global_styles.css';
 
 /* Form 
 ------------------------------*/
@@ -70,7 +70,8 @@
 
 .form-button:hover { background-color: var(--primary-color-hover); }
 
-/* Form Legend alert*/
+/* Form Legend alert
+------------------------------*/
 .form-alert {
     width: 100%;
     border-radius: var(--radius);
@@ -96,10 +97,11 @@
     visibility: visible;
     padding: 10px 20px;
     height: auto;
+    transition: var(--transition);
 }
 
 /* Variants 
-------------------------------
+-------------------------------
 ------------------------------*/
 
 /* Form Size 
@@ -122,9 +124,7 @@
 /* Form Shadow 
 ------------------------------*/
 
-.form.shadow {
-    box-shadow: var(--shadow);
-}
+.form.shadow { box-shadow: var(--shadow); }
 
 /* Form Dark 
 ------------------------------*/
@@ -140,13 +140,9 @@
     border-color: transparent;
 }
 
-.form.dark .input-content-control::placeholder {
-    color: var(--dark-gray-color);
-}
+.form.dark .input-content-control::placeholder { color: var(--dark-gray-color); }
 
-.form.dark .input-content-control::placeholder {
-    color: var(--dark-letter-color);
-}
+.form.dark .input-content-control::placeholder { color: var(--dark-letter-color); }
 
 /* Form Grid
 ------------------------------*/
@@ -156,13 +152,9 @@
     gap: 5px;
 }
 
-.form-size--small .form-variant--grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-}
+.form-size--small .form-variant--grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
 
-.form-size--large .form-variant--grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-} 
+.form-size--large .form-variant--grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); } 
 
 /* Form flex
 ------------------------------*/
@@ -238,6 +230,4 @@
     padding: 10px;
 }
 
-.form.search .form-inputs-container {
-    width: 100%;
-}
+.form.search .form-inputs-container { width: 100%; }

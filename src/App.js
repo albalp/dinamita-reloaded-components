@@ -1,8 +1,8 @@
 import {useState} from 'react';
 import { BiUser } from "react-icons/bi";
-import Form from './components/Form/Form';
-import Input from './components/Form/Input';
-import Checkbox from './components/Form/Checkbox';
+import Form from './components/Form/Form/Form';
+import Input from './components/Form/Input/Input';
+import Checkbox from './components/Form/Checkbox/Checkbox';
 
 function App() {
 
@@ -38,7 +38,7 @@ function App() {
 
   return (
 
-    <Form  variant="flex">
+    <Form  variant="flex" alert="Ops, ocurred it an error" valid={true}>
       <Input name="name" onChange={inputsValidations} placeholder="Name" legend="Invalid name" value={initialForm.name.value} valid={initialForm.name.valid}/>
       <Input name="lastname" onChange={inputsValidations} placeholder="Lastname" legend="Invalid lastname" icon={<BiUser/>} value={initialForm.lastname.value} valid={initialForm.lastname.valid}/>
       <Input name="email" onChange={inputsValidations} type="email" label="Email address" legend="Invalid email" value={initialForm.email.value} valid={initialForm.email.valid}/>

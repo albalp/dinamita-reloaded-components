@@ -1,8 +1,9 @@
-import Form from '../components/Form/Form';
-import Input from '../components/Form/Input';
-import Button from '../components/SaveButton';
+import Form from './Form';
+import Input from '../Input/Input';
+import Button from '../../SaveButton';
 import { BiSearch } from "react-icons/bi";
 
+// Default export to create our storybook section
 export default {
     title: 'form/form',
     component: Form,
@@ -11,6 +12,7 @@ export default {
       },
 }
 
+// Form default variant
 export const FormDefault = (args) => {
     return(
         <Form {...args} size="small" title="Default">
@@ -21,6 +23,7 @@ export const FormDefault = (args) => {
     );
 }
 
+// Form variant grid
 export const FormGrid = (args) => {
     return(
         <Form {...args} size="small" title="Grid" variant="grid">
@@ -32,6 +35,7 @@ export const FormGrid = (args) => {
     );
 }
 
+// Form variant flex
 export const FormFlex = (args) => {
     return(
         <Form {...args} size="small" title="Flex" variant="flex">
@@ -43,6 +47,7 @@ export const FormFlex = (args) => {
     );
 }
 
+// Form variant size small
 export const FormSmall = (args) => {
     return(
         <Form {...args} size="small" title="Small">
@@ -54,6 +59,7 @@ export const FormSmall = (args) => {
     );
 }
 
+// Form variant size medium
 export const FormMedium = (args) => {
     return(
         <Form {...args} size="medium" title="Medium">
@@ -65,6 +71,7 @@ export const FormMedium = (args) => {
     );
 }
 
+// Form variant size large
 export const FormLarge = (args) => {
     return(
         <Form {...args} size="large" title="Large">
@@ -76,6 +83,7 @@ export const FormLarge = (args) => {
     );
 }
 
+// Form variant Dark
 export const FormDark = (args) => {
     return(
         <Form {...args} size="small" title="Dark" dark>
@@ -87,6 +95,7 @@ export const FormDark = (args) => {
     );
 }
 
+// Form variant button size small
 export const FormButtonSizeSmall = (args) => {
     return(
         <Form {...args} size="small" title="Button Small" buttonSize="small">
@@ -98,6 +107,7 @@ export const FormButtonSizeSmall = (args) => {
     );
 }
 
+// Form variant button size medium
 export const FormButtonSizeMedium = (args) => {
     return(
         <Form {...args} size="small" title="Button Medium" buttonSize="medium">
@@ -109,6 +119,7 @@ export const FormButtonSizeMedium = (args) => {
     );
 }
 
+// Form variant button size large
 export const FormButtonSizeLarge = (args) => {
     return(
         <Form {...args} size="small" title="Button Large" buttonSize="large">
@@ -120,6 +131,7 @@ export const FormButtonSizeLarge = (args) => {
     );
 }
 
+// Form variant button width small
 export const FormButtonWidthSmall = (args) => {
     return(
         <Form {...args} size="small" title="Button Small" buttonWidth="small">
@@ -131,6 +143,7 @@ export const FormButtonWidthSmall = (args) => {
     );
 }
 
+// Form variant button width medium
 export const FormButtonWidthMedium = (args) => {
     return(
         <Form {...args} size="small" title="Button Medium" buttonWidth="medium">
@@ -142,6 +155,19 @@ export const FormButtonWidthMedium = (args) => {
     );
 }
 
+// Form variant button width medium
+export const FormButtonWidthLarge = (args) => {
+    return(
+        <Form {...args} size="small" title="Button Large" buttonWidth="large">
+            <Input type="text" name="name" placeholder="Name"/>
+            <Input type="text" name="lastmame" placeholder="Lastname"/>
+            <Input type="number" name="Phone" placeholder="Phone"/>
+            <Input type="email" name="email" placeholder="Email address"/>
+        </Form>
+    );
+}
+
+// Form variant button position left
 export const FormLeftButton = (args) => {
     return(
         <Form {...args} size="small" title="Button Left" buttonPosition="left">
@@ -153,6 +179,7 @@ export const FormLeftButton = (args) => {
     );
 }
 
+// Form variant button position center
 export const FormCenterButton = (args) => {
     return(
         <Form {...args} size="small" title="Button Center" buttonPosition="center">
@@ -164,6 +191,7 @@ export const FormCenterButton = (args) => {
     );
 }
 
+// Form variant button position right
 export const FormRightButton = (args) => {
     return(
         <Form {...args} size="small" title="Button Right" buttonPosition="right">
@@ -174,6 +202,7 @@ export const FormRightButton = (args) => {
     );
 }
 
+// Form variant button with label
 export const FormLabelButton = (args) => {
     return(
         <Form {...args} size="small" title="Button Label" labelButton="Create">
@@ -184,6 +213,7 @@ export const FormLabelButton = (args) => {
     );
 }
 
+// Form variant with text
 export const FormText = (args) => {
     return(
         <Form {...args} size="small" title="Button Text" text="You can add a text in this part">
@@ -194,6 +224,7 @@ export const FormText = (args) => {
     );
 }
 
+// Form variant with component button
 export const FormButtonComponent = (args) => {
     return(
         <Form {...args} size="small" title="Button component" buttonComponent={<Button label="Hello"/>}>
@@ -204,6 +235,7 @@ export const FormButtonComponent = (args) => {
     );
 }
 
+// Form variant invalid input
 export const FormInvalidInput = (args) => {
     return(
         <Form {...args} size="small" title="Button component" buttonComponent={<Button label="Hello"/>}>
@@ -214,6 +246,18 @@ export const FormInvalidInput = (args) => {
     );
 }
 
+// Form variant invalid
+export const FormInvalid = (args) => {
+    return(
+        <Form {...args} size="small" title="Button component" alert="Oops, an error occurred" buttonComponent={<Button label="Hello"/>} valid={false}>
+            <Input type="text" name="lastmame" placeholder="Lastname" legend="Invalid lastname"/>
+            <Input type="number" name="Phone" placeholder="Phone"/>
+            <Input type="email" name="email" placeholder="Email address"/>
+        </Form>
+    );
+}
+
+// Form variant invalid input dark
 export const FormDarkInvalidInput = (args) => {
     return(
         <Form {...args} size="small" title="Button component" buttonComponent={<Button label="Hello" shadow={false}/>} dark>
@@ -224,6 +268,7 @@ export const FormDarkInvalidInput = (args) => {
     );
 }
 
+// Form variant search
 export const FormSearch = (args) => {
     return(
         <Form {...args} size="small" search variant="flex" buttonWidth="small">

@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
-import '../../css/checkbox.css';
+import './checkbox.css';
 
 const Checkbox = ({ label, rounded, size, secondary, tertiary, ...props }) => {
   return (
     
     <>
+        {/* If not exist the secondary and tertiary properties then render the checkbox default variant */}
         {!secondary && !tertiary &&
             <div className={`checkbox-container ${rounded && 'rounded'} checkbox-container-size--${size} `}>
                 <input id={label && label.toLowerCase()} className="checkbox-control" type="checkbox" {...props} />
@@ -13,6 +14,7 @@ const Checkbox = ({ label, rounded, size, secondary, tertiary, ...props }) => {
             </div>
         }
 
+        {/* If exist the secondary property and is not exist the tertiary property then render the checkbox secondary variant */}
         {!tertiary && secondary &&
             <div className={`checkbox-container ${rounded && 'rounded'} checkbox-container-size--${size} ${secondary && 'secondary'}`}>
                 <input id={label && label.toLowerCase()} className="checkbox-control" type="checkbox" {...props} />
@@ -21,6 +23,7 @@ const Checkbox = ({ label, rounded, size, secondary, tertiary, ...props }) => {
             </div>
         }
 
+        {/* If exist the tertiary property and is not exist the secondary property then render the checkbox tertiary variant */}
         {!secondary && tertiary &&
             <div className={`checkbox-container ${rounded && 'rounded'} checkbox-container-size--${size} ${tertiary && 'tertiary'} `}>
                 <input id={label && label.toLowerCase()} className="checkbox-control" type="checkbox" {...props} />
@@ -35,6 +38,7 @@ const Checkbox = ({ label, rounded, size, secondary, tertiary, ...props }) => {
 
 export default Checkbox;
 
+// Defining component properties
 Checkbox.propTypes = {
     label: PropTypes.string,
     rounded: PropTypes.bool,
@@ -44,6 +48,7 @@ Checkbox.propTypes = {
     onChange: PropTypes.func
   };
 
+  // Defining default properties of the Checkbox component
   Checkbox.defaultProps = {
     label: null,
     rounded: false,

@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/extend-expect';
 import {render, screen, fireEvent} from '@testing-library/react';
-import Form from '../components/Form/Form';
-import Checkbox from '../components/Form/Checkbox';
+import Form from '../components/Form/Form/Form';
+import Checkbox from '../components/Form/Checkbox/Checkbox';
 
 beforeEach(() => {
     render(

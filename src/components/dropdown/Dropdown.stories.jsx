@@ -6,12 +6,25 @@ export default {
     component: Dropdown,
 }
 
-//export const Primary = () => <Dropdown />
 const Template = (args) => <Dropdown {...args} />;
 
 export const Primary = Template.bind({});
     Primary.args = {
-        title:'Project'
+        title:'Frutas',
+        options: [
+          {
+            id:1, 
+            name: 'MANGO',
+          },
+          {
+            id:2, 
+            name: 'FRESA',
+          },
+          {
+            id:3, 
+            name: 'MANZANA',
+          }
+       ]
     };
 
 export const Large = Template.bind({});

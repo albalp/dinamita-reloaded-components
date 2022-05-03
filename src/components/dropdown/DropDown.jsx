@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import data from '../../api/mocks.json'
+
 import './dropdown.css';
 
 const Dropdown = ( {title, options, icon}  ) => {
   // Initial state for the option list
   const [isOpen, setIsOpen] = useState(false);
   // Initial state for the input
-  const [selectedOption, setSelectedOption] = useState(options.length > 0 ? options[0].name : 'No options found');
+  const [selectedOption, setSelectedOption] = useState(options && options.length > 0 ? options[0].name : 'No options found');
   // function what change the state of the list
   const toggling = () => setIsOpen(!isOpen);
   // function for change the value of the input and close the list
@@ -53,4 +55,5 @@ Dropdown.propTypes = {
 
 Dropdown.defaultProps = {
   title: '',
+  options: []
 }

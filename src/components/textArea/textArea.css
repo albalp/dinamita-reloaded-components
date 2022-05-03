@@ -1,0 +1,21 @@
+@import '../../css/global_styles.css';
+
+
+label{
+    display: flex;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+textArea{
+    display: flex;
+    margin: 1em;
+    border: var(--border-solid);
+    width: 98%;
+    padding: 1em;
+}
+
+/* Classes for the variants*/
+.sb-background-white{ background-color: var(--white-color); color: var(--dark-color)}
+.sb-background-black{ background-color: var(--dark-color); color: var(--white-color)}
+.storybook-textarea--border-radius { border-radius: var(--radius-24) }
+

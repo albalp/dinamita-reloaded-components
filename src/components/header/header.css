@@ -1,0 +1,17 @@
+@import '../../css/global_styles.css';
+
+.header{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    padding: 2em;
+}
+
+/* Classes for the variants*/
+ .sb-border{ border-radius: 5em;}
+ .sb-background-white{ background-color: var(--white-color); color: var(--dark-color)}
+ .sb-background-black{ background-color: var(--dark-color);}
+ .storybook-header--border-radius {   
+    border-top-left-radius: var(--border-top-left-radius);
+    border-top-right-radius: var(--border-top-right-radius);
+ }
+

@@ -36,7 +36,7 @@ SaveButton.defaultProps = {
   beforeSave: false,
   backgroundColor: null,
   size: 'medium',
-  variant: 'default',
+  variant: 'success',
   label: '',
   disabled: false,
   shadow: true,

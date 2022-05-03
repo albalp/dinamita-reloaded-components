@@ -1,10 +1,29 @@
+<<<<<<< HEAD
 import {useState} from 'react';
 import { BiUser } from "react-icons/bi";
 import Form from './components/Form/Form/Form';
 import Input from './components/Form/Input/Input';
 import Checkbox from './components/Form/Checkbox/Checkbox';
+=======
+import AOS from "aos";
+import SaveButton from './components/saveButton';
+>>>>>>> e10a4530df6ebccc244820c6bc7706b64b660ca8
+
+//import DropdownOpt from './components/dropdown/DropdownOpt';
+import Dropdown from './components/dropdown/Dropdown';
+import data from '../src/api/mocks.json';
+
+import { MdArrowDropDown } from 'react-icons/md'
+import AddTaskIcon from '@mui/icons-material/AddTask';
+
+import Header from './components/header/header';
+import TextArea from './components/textArea/textArea';
+
+import Modals from './components/modal/modals';
+
 
 function App() {
+<<<<<<< HEAD
 
   const initialValues = {
     name: {value: '', valid: null},
@@ -52,3 +71,35 @@ function App() {
 }
 
 export default App;
+=======
+  function Clicked(){
+    console.log("Clicked!");
+  }
+
+  const projectData = [
+     {
+       id:data.project.ProjectId, 
+       name:data.project.ProjectName,
+     }
+  ]
+  const categories = []
+  data.project.ProjectCategories.map(category => categories.push({id:category.CategoryID, name:category.CategoryName}))
+
+
+
+  return (
+    <div>
+      <Dropdown title="Project" icon={<MdArrowDropDown />} options={projectData}/>
+      <Dropdown title="Categories" icon={<MdArrowDropDown />} options={categories}/>
+      <Header variant="primary" />
+      <TextArea />
+      <SaveButton variant="success" label="Guardar" borderRadius icon={<AddTaskIcon/>} onClick={Clicked} />
+      <Modals />
+    </div>
+  );
+}
+
+export default App;
+
+AOS.init();
+>>>>>>> e10a4530df6ebccc244820c6bc7706b64b660ca8

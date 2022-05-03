@@ -1,0 +1,14 @@
+.column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.row{
+    grid-auto-rows: auto;
+}
+
+@media screen and (max-width: 360px) {
+    .column {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

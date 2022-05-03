@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/extend-expect';
 import {render, screen, fireEvent} from '@testing-library/react';
-import Input from '../components/Form/Input/Input';
-import Form from '../components/Form/Form/Form';
+import Input from './Input';
+import Form from '../Form/Form';
 
 beforeEach(() => {
     render(

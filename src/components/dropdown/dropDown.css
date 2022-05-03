@@ -1,77 +1,102 @@
 @import '../../css/global_styles.css';
 
 .dropdown {
-  width: 95%;
-  display: inline-block;
+  width: 100%;
+  display: block;
   background-color: #fff;
   font-size: 2vmin;
-  margin: 1vmin;
+  border: 1px solid rgb(204, 204, 204);
+  transition: var(--transition);
+  border-radius: var(--radius);
+  position: relative;
+  z-index: 99;
 }
 
+.dropdown:hover { border-color: rgb(180, 180, 180); }
+
+.dropdown.active { border-color: var(--primary-color); }
+
+.dropdown svg { font-size: 20px; }
+
  p {
-    margin: 0.5vmin;
+    padding: 10px 0;
 }
+
 .select {
+  width: 100%;
+  height: 36px;
   cursor: pointer;
-  display: block;
-  padding: 10px;
-  box-shadow: 0 0 2px rgb(204, 204, 204);
+  display: flex;
+  align-items: center;
+  gap: 5px;
   transition: all .5s ease;
   position: relative;
   text-align: left;
   font-size: 1vmin;
-}
-
-.select:hover{
-    outline: 1px solid rgba(34,36,38,.35);
+  padding-right: 10px;
 }
 
 .active{
-    border: 2px 2px 0 2px #96c8da;
-    outline: 1px solid #96c8da;
     transition: all 0.2s ease-in-out;
     border-radius: 2px 2px 0 0;
 }
 
 .active:hover {
-    border: 2px #96c8da;
     border-radius: 2px 2px 0 0;
-    background-color: #f8f8f8
 }
 
 .input-option {
-    width: 95%;
-    border: 0 2px 2px 2px #96c8da;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background: transparent;
 }
 
 .dropdown-menu {
-    margin: 1vmin;
-    padding: 0;
-    list-style: none;
-    position: absolute;
-    background-color: var(--white-color);
-    width: 95%;
-    left: 0;
-    margin-top: 1px;
-    box-shadow: var(--shadow-down);
-    outline: 1px solid #96c8da;
-    border-radius: 0 1px 2px 2px ;
-    overflow: hidden;
     max-height: 144px;
+    background-color: var(--white-color);
+    width: 100%;
+    margin-top: 1px;
+    border-radius: 0 1px 2px 2px ;
     overflow-y: auto;
-    z-index: 9
+    transition: var(--transition);
 }
 
 .dropdown-menu li {
-    padding: 1vmin;
-    border-bottom: 1px solid rgba(204,204,204,0.38);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 36px;
     transition: all .2s ease-in-out;
     cursor: pointer;
     font-size: 2vmin;
+    margin: 0;
+    padding: 0 12px;
 }  
+
+.dropdown-menu li:not(:last-child) { border-bottom: 1px solid rgb(239, 239, 239); }
+
 .dropdown-menu li:hover {
     background-color: #f2f2f2
 }
 .dropdown-menu li:active {
     background-color: #e2e2e2
 }
+
+.dropdown-menu::-webkit-scrollbar {
+    width: 2px;
+    border-radius: var(--radius);
+  }
+
+  .dropdown-menu::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  .dropdown-menu::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: var(--radius);
+  }
+  
+  .dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color-hover);
+  }

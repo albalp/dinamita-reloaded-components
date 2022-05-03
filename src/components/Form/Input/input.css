@@ -148,7 +148,7 @@
     position: absolute;
     left: 10px;
     padding: 0 10px;
-    top: 15px;
+    top: 0;
     transition: var(--transition);
 }
 
@@ -170,13 +170,13 @@
 
 /* Input Secondary Variant Size
 ------------------------------*/
-.input-content-size--small .input-control-variant--secondary ~ label { top: 10px; }
+.input-content-size--small .input-control-variant--secondary ~ label { top: -3px; }
 
 .input-content-size--small .input-control-variant--secondary:focus ~ label { transform: translateY(-110%); }
 
 .input-content-size--small .input-control-variant--secondary.activated ~ label { transform: translateY(-110%); }
 
-.input-content-size--large .input-control-variant--secondary ~ label { top: 20px; }
+.input-content-size--large .input-control-variant--secondary ~ label { top: 7px; }
 
 .input-content-size--large .input-control-variant--secondary:focus ~ label { transform: translateY(-180%); }
 

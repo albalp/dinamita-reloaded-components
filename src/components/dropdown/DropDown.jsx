@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 import './dropdown.css';
 
 const Dropdown = ( {title, options, icon}  ) => {
+  // Initial state for the option list
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState('');
-
+  // Initial state for the input
+  const [selectedOption, setSelectedOption] = useState(options.length > 0 ? options[0].name : 'No options found');
+  // function what change the state of the list
   const toggling = () => setIsOpen(!isOpen);
-
+  // function for change the value of the input and close the list
   const onOptionClicked = (value) => () => {
     setSelectedOption(value);
     setIsOpen(false);
@@ -17,17 +19,14 @@ const Dropdown = ( {title, options, icon}  ) => {
   return (
     <div >
       <p>{title}</p>
-      <ul className={`dropdown ${isOpen ? 'active' : ''}`}>
-        <li onClick={toggling} className="select">
-          {options.length > 0 
-            ? <input 
+      <div className={`dropdown ${isOpen ? 'active' : ''}`}>
+        <div onClick={toggling} className="select">
+            <input 
             type="text" 
             className="input-option" 
-            placeholder={selectedOption}></input>
-            :<span>No options found</span>
-            }
+            placeholder={selectedOption} />
           {icon}
-        </li>
+        </div>
         {isOpen && (
           <ul className="dropdown-menu">
             {options && options.length > 0 
@@ -40,7 +39,7 @@ const Dropdown = ( {title, options, icon}  ) => {
             }
           </ul>
         )}
-      </ul>
+      </div>
     </div>
   )
 }

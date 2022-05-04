@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom'
 import {render, fireEvent, screen} from '@testing-library/react';
-import Modals from '../modals';
+import Modals from '../components/modal/modals';
 
 // const Prueba = () => {
 

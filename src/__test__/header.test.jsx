@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom/extend-expect';
 import { render, screen, fireEvent } from '@testing-library/react';
-import Header from './header';
+import Header from '../components/header/header';
 import {prettyDOM} from '@testing-library/dom';
 // import { Primary } from './stories/Header.stories';
 

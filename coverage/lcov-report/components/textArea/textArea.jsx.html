@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for components/header/header.jsx</title>
+    <title>Code coverage report for components/textArea/textArea.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/header</a> header.jsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/textArea</a> textArea.jsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -32,7 +32,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
@@ -89,23 +89,13 @@
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
 <a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a>
-<a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L27'></a><a href='#L27'>27</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -117,52 +107,41 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import './header.css'
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import './textArea.css';
 import { PropTypes } from 'prop-types';
-import Button from '../SaveButton';
-import { BiX } from "react-icons/bi";
-//Component Header with the props that will be used
-const Header = ({borderRadius, backgroundColor, label, variant, closeModal, ...props}) =&gt;{
-    
-    const radius = borderRadius &amp;&amp; 'storybook-header--border-radius';
+//Declaring our component with his props.
+const TextArea = ({placeholder, borderRadius, ...props}) =&gt;{
+    const radius = borderRadius &amp;&amp; 'storybook-textarea--border-radius';
 &nbsp;
     return(
         &lt;div&gt;
-            &lt;header className={[`header ${variant}` , radius].join(' ')} style={backgroundColor &amp;&amp; { backgroundColor }} {...props} &gt;
-                {label}
-                &lt;Button className="header-button" icon={&lt;BiX/&gt;} shadow={false} onClick={closeModal} aria-label="header button" /&gt;
-            &lt;/header&gt;
+            &lt;label&gt;Comments&lt;/label&gt;
+                &lt;textarea  required="" rows="5" className={[radius]} placeholder= {placeholder}  {...props}&gt;
+                
+                &lt;/textarea&gt;
+&nbsp;
         &lt;/div&gt;
     );
 }
-export default Header;
-&nbsp;
-//Defining the propTypes
-Header.propTypes = {
+export default TextArea;
+//The props that can be use are border radius or placeholder
+TextArea.propTypes = {
     borderRadius: PropTypes.bool,
-    backgroundColor: PropTypes.string,
-    label: PropTypes.string,
-    variant : PropTypes.oneOf(['sb-background-white', 'sb-background-black', 'primary']),
+    placeholder : PropTypes.string.isRequired,
 };
 &nbsp;
-//In case don't put any prop to the rendering component, this is de default props that will be shown. 
-Header.defaultProps = {
-    backgroundColor: 'sb-background-black',
+TextArea.defaultProps = {
     borderRadius: true,
-    label: 'Hola, soy un header'
-};</pre></td></tr></table></pre>
+    placeholder: '',
+};  </pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->

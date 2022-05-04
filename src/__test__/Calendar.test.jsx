@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom/extend-expect';
-import Calendar from './Calendar';
+import Calendar from '../components/Calendar/Calendar';
 import {render, screen, fireEvent} from '@testing-library/react';
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];

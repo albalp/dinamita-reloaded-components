@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom/extend-expect';
 import {render, screen, fireEvent} from '@testing-library/react';
-import Form from './Form';
+import Form from '../components/Form/Form/Form';
 
 describe('<Form> - Rendering form component in the application', () => {
 

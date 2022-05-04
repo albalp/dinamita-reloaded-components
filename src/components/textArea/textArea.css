@@ -3,12 +3,10 @@
 
 label{
     display: flex;
-    margin-left: 1em;
-    margin-top: 1em;
+    padding: 10px 0;
 }
 textArea{
     display: flex;
-    margin: 1em;
     border: var(--border-solid);
     width: 98%;
     padding: 1em;

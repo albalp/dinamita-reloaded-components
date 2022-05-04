@@ -13,6 +13,7 @@ import AddTaskIcon from '@mui/icons-material/AddTask';
 import Header from './components/header/header';
 import TextArea from './components/textArea/textArea';
 import Modals from './components/modal/modals';
+import Integration from './components/Integration';
 
 function App() {
 
@@ -62,25 +63,26 @@ function App() {
 
   return (
 
-    <div>
-      <Dropdown title="Project" icon={<MdArrowDropDown />} options={projectData}/>
-      <Dropdown title="Categories" icon={<MdArrowDropDown />} options={categories}/>
-      <Header variant="primary" />
-      <TextArea />
-      <SaveButton variant="success" label="Guardar" borderRadius icon={<AddTaskIcon/>} onClick={Clicked} />
-      <Modals />
+    // <div>
+    //   <Dropdown title="Project" icon={<MdArrowDropDown />} options={projectData}/>
+    //   <Dropdown title="Categories" icon={<MdArrowDropDown />} options={categories}/>
+    //   <Header variant="primary" />
+    //   <TextArea />
+    //   <SaveButton variant="success" label="Guardar" borderRadius icon={<AddTaskIcon/>} onClick={Clicked} />
+    //   <Modals />
       
-      <Form  variant="flex" alert="Ops, ocurred it an error" valid={true}>
-        <Input name="name" onChange={inputsValidations} placeholder="Name" legend="Invalid name" value={initialForm.name.value} valid={initialForm.name.valid}/>
-        <Input name="lastname" onChange={inputsValidations} placeholder="Lastname" legend="Invalid lastname" icon={<BiUser/>} value={initialForm.lastname.value} valid={initialForm.lastname.valid}/>
-        <Input name="email" onChange={inputsValidations} type="email" label="Email address" legend="Invalid email" value={initialForm.email.value} valid={initialForm.email.valid}/>
-        <Input name="password" onChange={inputsValidations} type="password" legend="Invalid password" secondary secondaryPlaceholder="Password" value={initialForm.password.value} valid={initialForm.password.valid}/>
-        <Checkbox label="Male" value="male" secondary />
-        <Checkbox label="Female" value="female" />
-        <Checkbox label="Unknown" value="unknown"  tertiary/>
-        <Checkbox label="Other" value="other" rounded/>
-      </Form>
-    </div>
+    //   <Form  variant="flex" alert="Ops, ocurred it an error" valid={true}>
+    //     <Input name="name" onChange={inputsValidations} placeholder="Name" legend="Invalid name" value={initialForm.name.value} valid={initialForm.name.valid}/>
+    //     <Input name="lastname" onChange={inputsValidations} placeholder="Lastname" legend="Invalid lastname" icon={<BiUser/>} value={initialForm.lastname.value} valid={initialForm.lastname.valid}/>
+    //     <Input name="email" onChange={inputsValidations} type="email" label="Email address" legend="Invalid email" value={initialForm.email.value} valid={initialForm.email.valid}/>
+    //     <Input name="password" onChange={inputsValidations} type="password" legend="Invalid password" secondary secondaryPlaceholder="Password" value={initialForm.password.value} valid={initialForm.password.valid}/>
+    //     <Checkbox label="Male" value="male" secondary />
+    //     <Checkbox label="Female" value="female" />
+    //     <Checkbox label="Unknown" value="unknown"  tertiary/>
+    //     <Checkbox label="Other" value="other" rounded/>
+    //   </Form>
+    // </div>
+    <Integration/>
   );
 }
 

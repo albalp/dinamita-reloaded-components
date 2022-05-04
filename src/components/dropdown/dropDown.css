@@ -2,21 +2,25 @@
 
 .dropdown {
   width: 100%;
+  height: 40px;
   display: block;
   background-color: #fff;
   font-size: 2vmin;
   border: 1px solid rgb(204, 204, 204);
-  transition: var(--transition);
   border-radius: var(--radius);
   position: relative;
-  z-index: 99;
+  transition: var(--transition);
 }
 
-.dropdown:hover { border-color: rgb(180, 180, 180); }
-
-.dropdown.active { border-color: var(--primary-color); }
-
 .dropdown svg { font-size: 20px; }
+
+.dropdown:hover { border-color: rgb(180, 180, 180);}
+
+.dropdown.active { 
+  border-color: var(--primary-color); 
+  height: auto; 
+  border-radius: var(--radius);
+}
 
  p {
     padding: 10px 0;
@@ -29,20 +33,11 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  transition: all .5s ease;
+  transition: var(--transition);
   position: relative;
   text-align: left;
   font-size: 1vmin;
   padding-right: 10px;
-}
-
-.active{
-    transition: all 0.2s ease-in-out;
-    border-radius: 2px 2px 0 0;
-}
-
-.active:hover {
-    border-radius: 2px 2px 0 0;
 }
 
 .input-option {
@@ -60,6 +55,7 @@
     border-radius: 0 1px 2px 2px ;
     overflow-y: auto;
     transition: var(--transition);
+    animation: showOptions 0.2s ease;
 }
 
 .dropdown-menu li {

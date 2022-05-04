@@ -1,6 +1,6 @@
-*{
+/* *{
     margin: 2px;
-}
+} */
 .modal {
     position: fixed;
     z-index: 999;
@@ -12,6 +12,7 @@
     display: none;
     justify-content: center;
     align-items: center;
+    border-radius: var(--radius);
 }
 
 
@@ -27,10 +28,8 @@
 
 .modal-container {
     position: relative;
-    padding: 1rem;
-    padding-top: 4rem;
     background-color: white;
-    max-width: 800px;
+    width: 800px;
     max-height: 400px;
     overflow-y: auto;
     border-radius: 10px;
@@ -71,4 +70,24 @@
     max-height: auto;
     min-width: 1080px;
     max-width: 1080px;
+}
+
+/* Scrollbar */
+
+.modal-container::-webkit-scrollbar {
+    width: 2px;
+    border-radius: var(--radius);
+  }
+
+.modal-container::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+.modal-container::-webkit-scrollbar-thumb {
+background: var(--primary-color);
+border-radius: var(--radius);
+}
+
+.modal-container::-webkit-scrollbar-thumb:hover {
+background: var(--primary-color-hover);
 }

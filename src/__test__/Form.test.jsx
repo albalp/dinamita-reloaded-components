@@ -140,6 +140,7 @@ describe('<Form> - Testing the form with the search variant', () => {
 
     });
 
+    
     test('Should to have the className received like property', () => {
         
         render( <Form search className="search-movies"/> );

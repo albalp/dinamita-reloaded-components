@@ -5,6 +5,7 @@ import {prettyDOM} from '@testing-library/dom';
 import Input from '../components/Form/Input/Input';
 import Form from '../components/Form/Form/Form';
 
+
 describe('<Input> - Testing input component', () => {    
 
     test('Should to show the input component default', () => {

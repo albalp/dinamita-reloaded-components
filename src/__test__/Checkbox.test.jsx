@@ -12,7 +12,7 @@ beforeEach(() => {
             <Checkbox name="hamster" rounded label="Hamster" tertiary/>
         </Form>
     ); 
-});
+}); 
 
 describe('<Checkbox> - Testing render of the checkbox component', () => {
     
@@ -25,9 +25,9 @@ describe('<Checkbox> - Testing render of the checkbox component', () => {
         expect(checkboxSecondary).toBeInTheDocument();
         expect(checkboxTertiary).toBeInTheDocument();
     });
-
+ 
 });
-
+ 
 describe('<Checkbox> - Testing of checked event of the checkbox component', () => {
     
     test('Should be checked when the user does clicking the checkbox default variant', () => {

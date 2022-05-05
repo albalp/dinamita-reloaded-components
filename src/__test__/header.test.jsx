@@ -4,6 +4,7 @@ import Header from '../components/header/header';
 import {prettyDOM} from '@testing-library/dom';
 // import { Primary } from './stories/Header.stories';
 
+
 describe('<Header> - Testing of the render of the header component', () => {
 
     test('Should to be in the document the header', () => {

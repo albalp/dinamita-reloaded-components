@@ -68,7 +68,7 @@ const Integration = () => {
                 <Input name="ticket" onChange={inputsValidations} type="text" label="Ticket" legend="Invalid ticket" value={initialForm.ticket.value} valid={initialForm.ticket.valid}/>
                 <TextArea/>
                 <div className="form-footer">
-                  <Button variant="danger" label="Cancel" />
+                  <Button label="Cancel" />
                   <Button variant="primary" label="Create" />
                 </div>
             </form>

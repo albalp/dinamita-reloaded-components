@@ -11,7 +11,7 @@ const Header = ({borderRadius, backgroundColor, label, variant, closeModal, ...p
         <div>
             <header className={[`header ${variant}` , radius].join(' ')} style={backgroundColor && { backgroundColor }} {...props} >
                 {label}
-                <Button className="header-button" icon={<BiX/>} shadow={false} onClick={closeModal} />
+                <Button className="header-button" icon={<BiX/>} shadow={false} onClick={closeModal} aria-label="header button" />
             </header>
         </div>
     );

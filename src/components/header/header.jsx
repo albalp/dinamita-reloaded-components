@@ -1,7 +1,9 @@
 import './header.css'
 import { PropTypes } from 'prop-types';
+import Button from '../SaveButton';
+import { BiX } from "react-icons/bi";
 //Component Header with the props that will be used
-const Header = ({borderRadius, backgroundColor, label, variant, ...props}) =>{
+const Header = ({borderRadius, backgroundColor, label, variant, closeModal, ...props}) =>{
     
     const radius = borderRadius && 'storybook-header--border-radius';
 
@@ -9,6 +11,7 @@ const Header = ({borderRadius, backgroundColor, label, variant, ...props}) =>{
         <div>
             <header className={[`header ${variant}` , radius].join(' ')} style={backgroundColor && { backgroundColor }} {...props} >
                 {label}
+                <Button className="header-button" icon={<BiX/>} shadow={false} onClick={closeModal} />
             </header>
         </div>
     );

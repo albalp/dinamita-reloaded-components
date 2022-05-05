@@ -2,7 +2,7 @@
 
 .header{
     color: var(--white-color);
-    background-color: var(--primary-color);
+    background-color: var(--nova-color);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;

@@ -1,11 +1,11 @@
 import { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
-
+import { BiCaretDown } from "react-icons/bi";
 import { useDetectOutsideClick } from './useDetectOutsideClick';
 
 import './dropDown.css';
 
-const Dropdown = ( {title, options, icon, size, border}  ) => {
+const Dropdown = ( {title, options, icon, size, borderRadius, dark, light}  ) => {
   // Initial state for the option list
   const ref = useRef(null);
   const [isOpen, setIsOpen] = useDetectOutsideClick(ref ,false);
@@ -33,9 +33,9 @@ const Dropdown = ( {title, options, icon, size, border}  ) => {
   }
 
   return (
-    <div >
+    <div className={`dropdown-container ${dark && 'dark'} ${light && 'light'}`}>
       <p>{title}</p>
-      <div className={`dropdown-size--${size} dropdown ${isOpen ? 'active' : ''} ${border && 'border'}`}>
+      <div className={`dropdown-size--${size} dropdown ${isOpen ? 'active' : ''} ${borderRadius && 'borderRadius'}`}>
         <div onClick={toggling} className="select">
             <input 
             ref={ref}
@@ -48,7 +48,7 @@ const Dropdown = ( {title, options, icon, size, border}  ) => {
               setSelectedOption('');
               //onChange(null);
             }}/>
-          {icon}
+          {icon && icon}
         </div>
         {isOpen && (
           <ul className="dropdown-menu">
@@ -73,10 +73,30 @@ Dropdown.propTypes = {
   title: PropTypes.string.isRequired,
   options: PropTypes.array,
   size: PropTypes.oneOf(['small', 'medium', 'large', 'all']),
-  border: PropTypes.bool,
+  borderRadius: PropTypes.bool,
+  dark: PropTypes.bool,
+  light: PropTypes.bool,
+  icon: PropTypes.element
 }
 
 Dropdown.defaultProps = {
   title: '',
-  options: []
+  borderRadius: false,
+  dark: false,
+  light: false,
+  icon: <BiCaretDown/>,
+  options: [
+    {
+      id:'', 
+      name: '',
+    },
+    {
+      id:'', 
+      name: '',
+    },
+    {
+      id:'', 
+      name: '',
+    }
+ ]
 }

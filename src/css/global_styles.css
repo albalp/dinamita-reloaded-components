@@ -6,7 +6,7 @@
 :root {
 
     /* Colors */
-    --primary-color: rgb(30, 167, 253);
+    --primary-color: rgb(53,85,195);
     --primary-color-hover: rgb(29, 133, 197);
     --success-color: rgb(99, 222, 120);
     --success-color-hover: rgb(77, 163, 91);
@@ -19,6 +19,7 @@
     --white-color: rgb(255, 255, 255);
     --white-gray-color: rgb(245, 245, 245);
     --disabled-color: rgba(14, 14, 14, 0.16);
+    --nova-color: rgb(53,85,195);
     
     --primary-color-disabled: rgba(29, 133, 197, 0.531);
     --success-color-disabled: rgb(77, 163, 91, 0.531);

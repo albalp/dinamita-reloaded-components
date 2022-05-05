@@ -22,9 +22,14 @@
   border-radius: var(--radius);
 }
 
- p {
-    padding: 10px 0;
-}
+.dropdown-size--small{ width: 25%; }
+.dropdown-size--medium{ width: 50%; }
+.dropdown-size--large{ width: 75%; }
+.dropdown-size--all{ width: 100%; }
+
+.dropdown.border{border-radius: var(--radius);}
+
+ p { padding: 10px 0; }
 
 .select {
   width: 100%;
@@ -93,6 +98,6 @@
     border-radius: var(--radius);
   }
   
-  .dropdown-menu::-webkit-scrollbar-thumb:hover {
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
     background: var(--primary-color-hover);
   }

@@ -2,15 +2,16 @@ import '@testing-library/jest-dom/extend-expect';
 import {render, screen, fireEvent} from '@testing-library/react';
 import Form from '../components/Form/Form/Form';
 import Checkbox from '../components/Form/Checkbox/Checkbox';
+import {prettyDOM} from '@testing-library/dom';
 
 beforeEach(() => {
     render(
         <Form>
-            <Checkbox name="dog" label="Dog"/>
-            <Checkbox name="cat" label="Cat" secondary/>
-            <Checkbox name="hamster" label="Hamster" tertiary/>
+            <Checkbox name="dog" rounded label="Dog"/>
+            <Checkbox name="cat" rounded label="Cat" secondary/>
+            <Checkbox name="hamster" rounded label="Hamster" tertiary/>
         </Form>
-    );
+    ); 
 });
 
 describe('<Checkbox> - Testing render of the checkbox component', () => {
@@ -56,6 +57,22 @@ describe('<Checkbox> - Testing of checked event of the checkbox component', () =
         fireEvent.click(checkboxTertiary);
 
         expect(checkboxTertiary).toBeChecked();
+
+    });
+
+});
+
+describe('<Checkbox> - Testing of properties', () => {
+    
+    test('Should be rounded if have de rounded property', () => {
+
+        const checkbox = screen.getByLabelText(/Dog/i).parentNode;
+        const checkboxSecondary = screen.getByLabelText(/Cat/i).parentNode;
+        const checkboxTertiary = screen.getByLabelText(/Hamster/i).parentNode;
+
+        expect(checkbox).toHaveClass('rounded');
+        expect(checkboxSecondary).toHaveClass('rounded');
+        expect(checkboxTertiary).toHaveClass('rounded');
 
     });
 

@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for components/Form/Form/Form.jsx</title>
+    <title>Code coverage report for Form/Form/Form.jsx</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../../prettify.css" />
-    <link rel="stylesheet" href="../../../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../../sort-arrow-sprite.png);
+            background-image: url(../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">components/Form/Form</a> Form.jsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">Form/Form</a> Form.jsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -30,9 +30,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">39.58% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>48/48</span>
+                <span class='fraction'>19/48</span>
             </div>
         
             
@@ -143,12 +143,13 @@
 <a name='L78'></a><a href='#L78'>78</a>
 <a name='L79'></a><a href='#L79'>79</a>
 <a name='L80'></a><a href='#L80'>80</a>
-<a name='L81'></a><a href='#L81'>81</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">19x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -184,6 +185,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -232,22 +234,22 @@ const Form = ({ variant, title, size, buttonSize, buttonPosition, buttonWidth, b
     &lt;&gt;
     {/* If no exist the search property then render the form component default variant */}
       {!search &amp;&amp; 
-        &lt;form {...props} aria-label="form" className={`form form-size--${size} ${dark &amp;&amp; 'dark'} ${shadow &amp;&amp; 'shadow'} ${className &amp;&amp; className} `} style={backgroundColor &amp;&amp; { backgroundColor }}&gt;
+        &lt;form {...props} data-label="form" className={`form form-size--${size} ${dark &amp;&amp; 'dark'} ${shadow &amp;&amp; 'shadow'} ${className &amp;&amp; className} `} style={backgroundColor &amp;&amp; { backgroundColor }}&gt;
             &lt;h2 className="form-title"&gt;{title &amp;&amp; title}&lt;/h2&gt;
             &lt;p className="form-text"&gt;{text &amp;&amp; text}&lt;/p&gt;
             &lt;div className={`form-inputs-container form-variant--${variant}`}&gt;
                 {children}
             &lt;/div&gt;
             &lt;div className={`form-footer form-button-position--${buttonPosition}`}&gt;
-              {buttonComponent ? buttonComponent : &lt;button className={`form-button form-button-size--${buttonSize} form-button-width--${buttonWidth} ${buttonRounded &amp;&amp; 'rounded'}`}&gt;{labelButton ? labelButton : 'Ok'}&lt;/button&gt;}
+              {buttonComponent ? <span class="branch-0 cbranch-no" title="branch not covered" >buttonComponent </span>: &lt;button className={`form-button form-button-size--${buttonSize} form-button-width--${buttonWidth} ${buttonRounded &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'rounded'}</span>`}&gt;{labelButton ? <span class="branch-0 cbranch-no" title="branch not covered" >labelButton </span>: 'Ok'}&lt;/button&gt;}
             &lt;/div&gt;
-            {alert &amp;&amp; &lt;div className={`form-alert ${!valid &amp;&amp; valid !== null &amp;&amp; 'activated' }`}&gt;{alert}&lt;/div&gt;}
+            {alert &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;div className={`form-alert ${!valid &amp;&amp; valid !== null &amp;&amp; 'activated' }`}&gt;{alert}&lt;/div&gt;}</span>
         &lt;/form&gt;
     }
 &nbsp;
     {/* If exist the search property then render the form component search variant */}
     {search &amp;&amp; 
-      &lt;form {...props} aria-label="form search" className={`form form-size--${size} ${dark &amp;&amp; 'dark'} ${shadow &amp;&amp; 'shadow'} ${className &amp;&amp; className} ${search &amp;&amp; 'search'} `} style={backgroundColor &amp;&amp; { backgroundColor }}&gt;
+<span class="branch-1 cbranch-no" title="branch not covered" >      &lt;form {...props} data-label="form" className={`form form-size--${size} ${dark &amp;&amp; 'dark'} ${shadow &amp;&amp; 'shadow'} ${className &amp;&amp; className} ${search &amp;&amp; 'search'} `} style={backgroundColor &amp;&amp; { backgroundColor }}&gt;</span>
         &lt;div className={`form-inputs-container form-variant--${variant}`}&gt;
             {children}
         &lt;/div&gt;
@@ -280,6 +282,7 @@ Form.propTypes = {
     buttonRounded: PropTypes.bool,
     backgroundColor: PropTypes.string,
     text: PropTypes.string,
+    buttonComponent: PropTypes.string,
     onSubmit: PropTypes.func
   };
 &nbsp;
@@ -310,16 +313,16 @@ Form.propTypes = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu May 05 2022 11:47:05 GMT-0500 (hora de verano central)
+                at Thu May 05 2022 10:10:54 GMT-0500 (hora de verano central)
             </div>
-        <script src="../../../prettify.js"></script>
+        <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../../../sorter.js"></script>
-        <script src="../../../block-navigation.js"></script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
     </body>
 </html>
     

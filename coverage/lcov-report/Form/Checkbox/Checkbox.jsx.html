@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for Calendar.jsx</title>
+    <title>Code coverage report for Form/Checkbox/Checkbox.jsx</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="prettify.css" />
-    <link rel="stylesheet" href="base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(sort-arrow-sprite.png);
+            background-image: url(../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> Calendar.jsx</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">Form/Checkbox</a> Checkbox.jsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>15/18</span>
+                <span class='fraction'>31/31</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
@@ -121,19 +121,11 @@
 <a name='L56'></a><a href='#L56'>56</a>
 <a name='L57'></a><a href='#L57'>57</a>
 <a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L59'></a><a href='#L59'>59</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">63x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">15x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -162,8 +154,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -181,82 +171,89 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { BiChevronLeft, BiChevronRight, BiCalendar } from "react-icons/bi";
-import { useCalendar } from '../../hooks/useCalendar';
-import Days from './Days';
-import PropTypes from 'prop-types';
-import Button from '../SaveButton';
-import './calendar.css';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import PropTypes from 'prop-types';
+import './checkbox.css';
 &nbsp;
-const Calendar = function ({dark, shadow, backgroundColor, size, variant}) {
+const Checkbox = ({ label, rounded, size, secondary, tertiary, ...props }) =&gt; {
+  return (
+    
+    &lt;&gt;
+        {/* If not exist the secondary and tertiary properties then render the checkbox default variant */}
+        {!secondary &amp;&amp; !tertiary &amp;&amp;
+            &lt;div className={`checkbox-container ${rounded &amp;&amp; 'rounded'} checkbox-container-size--${size} `}&gt;
+                &lt;input id={label &amp;&amp; label.toLowerCase()} className="checkbox-control" type="checkbox" {...props} /&gt;
+                &lt;span className="checkbox-figure"&gt;&lt;/span&gt;
+                &lt;label className="checkbox-label" htmlFor={label &amp;&amp; label.toLowerCase()}&gt;{label}&lt;/label&gt;
+            &lt;/div&gt;
+        }
 &nbsp;
-    const { months, calendar, monthNumber, currentDate, daysMonth, daysPreviousMonth, prevMonth, nextMonth, selectDate, resetDate } = useCalendar();
+        {/* If exist the secondary property and is not exist the tertiary property then render the checkbox secondary variant */}
+        {!tertiary &amp;&amp; secondary &amp;&amp;
+            &lt;div className={`checkbox-container ${rounded &amp;&amp; 'rounded'} checkbox-container-size--${size} ${secondary &amp;&amp; 'secondary'}`}&gt;
+                &lt;input id={label &amp;&amp; label.toLowerCase()} className="checkbox-control" type="checkbox" {...props} /&gt;
+                &lt;label className="checkbox-label" htmlFor={label &amp;&amp; label.toLowerCase()}&gt;{label}&lt;/label&gt;
+                &lt;span className="checkbox-label-secondary"&gt;{label}&lt;/span&gt;
+            &lt;/div&gt;
+        }
 &nbsp;
-    return (
-        &lt;div className={`calendar ${shadow &amp;&amp; 'calendar--shadow'} ${dark &amp;&amp; 'calendar--dark'} calendar-size--${size}`} style={backgroundColor &amp;&amp; { backgroundColor }}&gt;
-            &lt;div className="calendar-header"&gt;
-                &lt;div className="calendar-header-date"&gt;
-                    &lt;h3 className="calendar-header-date-month"&gt;{months[monthNumber]}&lt;/h3&gt;
-                    &lt;p className="calendar-header-date-year"&gt;{calendar.year}&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;div className="calendar-header-actions"&gt;
-                    &lt;Button aria-label="button previous month" className="calendar-header-actions-action-prev" onClick={prevMonth} shadow={dark ? false : <span class="branch-1 cbranch-no" title="branch not covered" >true}</span> icon={&lt;BiChevronLeft/&gt;} size="small"  borderRadius/&gt;
-                    &lt;Button aria-label="button next month" className="calendar-header-actions-action-next" onClick={nextMonth} shadow={dark ? false : <span class="branch-1 cbranch-no" title="branch not covered" >true}</span> icon={&lt;BiChevronRight/&gt;} size="small" borderRadius/&gt;
-                &lt;/div&gt;
+        {/* If exist the tertiary property and is not exist the secondary property then render the checkbox tertiary variant */}
+        {!secondary &amp;&amp; tertiary &amp;&amp;
+            &lt;div className={`checkbox-container ${rounded &amp;&amp; 'rounded'} checkbox-container-size--${size} ${tertiary &amp;&amp; 'tertiary'} `}&gt;
+                &lt;input id={label &amp;&amp; label.toLowerCase()} className="checkbox-control" type="checkbox" {...props} /&gt;
+                &lt;label className="checkbox-label" htmlFor={label &amp;&amp; label.toLowerCase()}&gt;{label}&lt;/label&gt;
+                &lt;span className="checkbox-figure"&gt;&lt;/span&gt;
             &lt;/div&gt;
-            &lt;div className="calendar-week"&gt;
-                &lt;div className="calendar-week-day"&gt;Sund&lt;/div&gt;
-                &lt;div className="calendar-week-day"&gt;Mon&lt;/div&gt;
-                &lt;div className="calendar-week-day"&gt;Tues&lt;/div&gt;
-                &lt;div className="calendar-week-day"&gt;Wed&lt;/div&gt;
-                &lt;div className="calendar-week-day"&gt;Thurs&lt;/div&gt;
-                &lt;div className="calendar-week-day"&gt;Frid&lt;/div&gt;
-                &lt;div className="calendar-week-day"&gt;Sat&lt;/div&gt;
-            &lt;/div&gt;
-            &lt;Days calendar={calendar} daysMonth={daysMonth} daysPreviousMonth={daysPreviousMonth} selectDate={selectDate} variant={variant} currentDate={currentDate} monthNumber={monthNumber}/&gt;
-            &lt;div className="calendar-footer"&gt;
-                &lt;Button aria-label="button reset date" onClick={resetDate} shadow={dark ? false : <span class="branch-1 cbranch-no" title="branch not covered" >true}</span> label="Today" icon={&lt;BiCalendar/&gt;} size="small" borderRadius/&gt;    
-                &lt;span aria-label="legend warning date selected" className={`calendar-legend ${calendar.dateSelected &amp;&amp; (calendar.dateSelected.getDate() !== currentDate.getDate() || calendar.dateSelected.getMonth() !== currentDate.getMonth() || calendar.dateSelected.getFullYear() !== currentDate.getFullYear()) ? 'activated' : ''}`}&gt;You are selecting a date different to current&lt;/span&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    );
+        }
+    &lt;/&gt;
+&nbsp;
+  );
 }
 &nbsp;
-Calendar.propTypes = {
-    backgroundColor: PropTypes.string,
-    dark: PropTypes.bool,
-    shadow: PropTypes.bool,
-    weather: PropTypes.bool,
-    size: PropTypes.oneOf(['small', 'medium', 'large', 'default']),
-    variant: PropTypes.oneOf(['circle', 'square', 'default']),
-};
+export default Checkbox;
 &nbsp;
-Calendar.defaultProps = {
-    backgroundColor: null,
-    dark: false,
-    shadow: true,
-    weather: false,
-    size: 'default',
-    variant: 'default',
+// Defining component properties
+Checkbox.propTypes = {
+    label: PropTypes.string,
+    rounded: PropTypes.bool,
+    size: PropTypes.oneOf(['small', 'medium', 'large', 'default']),
+    secondary: PropTypes.bool,
+    tertiary: PropTypes.bool,
+    onChange: PropTypes.func
   };
 &nbsp;
-export default Calendar;</pre></td></tr></table></pre>
+  // Defining default properties of the Checkbox component
+  Checkbox.defaultProps = {
+    label: null,
+    rounded: false,
+    size: 'small',
+    secondary: false,
+    tertiary: false,
+    onChange: null
+  };</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu May 05 2022 08:58:04 GMT-0500 (hora de verano central)
+                at Thu May 05 2022 10:10:54 GMT-0500 (hora de verano central)
             </div>
-        <script src="prettify.js"></script>
+        <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="sorter.js"></script>
-        <script src="block-navigation.js"></script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
     </body>
 </html>
     

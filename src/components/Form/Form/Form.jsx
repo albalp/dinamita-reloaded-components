@@ -7,7 +7,7 @@ const Form = ({ variant, title, size, buttonSize, buttonPosition, buttonWidth, b
     <>
     {/* If no exist the search property then render the form component default variant */}
       {!search && 
-        <form {...props} data-label="form" className={`form form-size--${size} ${dark && 'dark'} ${shadow && 'shadow'} ${borderRadius && borderRadius} ${className && className} `} style={backgroundColor && { backgroundColor }}>
+        <form {...props} aria-label="form" className={`form form-size--${size} ${dark && 'dark'} ${shadow && 'shadow'} ${className && className} `} style={backgroundColor && { backgroundColor }}>
             <h2 className="form-title">{title && title}</h2>
             <p className="form-text">{text && text}</p>
             <div className={`form-inputs-container form-variant--${variant}`}>
@@ -22,7 +22,7 @@ const Form = ({ variant, title, size, buttonSize, buttonPosition, buttonWidth, b
 
     {/* If exist the search property then render the form component search variant */}
     {search && 
-      <form {...props} data-label="form" className={`form form-size--${size} ${dark && 'dark'} ${shadow && 'shadow'} ${borderRadius && borderRadius} ${className && className} ${search && 'search'} `} style={backgroundColor && { backgroundColor }}>
+      <form {...props} aria-label="form search" className={`form form-size--${size} ${dark && 'dark'} ${shadow && 'shadow'} ${className && className} ${search && 'search'} `} style={backgroundColor && { backgroundColor }}>
         <div className={`form-inputs-container form-variant--${variant}`}>
             {children}
         </div>
@@ -55,7 +55,6 @@ Form.propTypes = {
     buttonRounded: PropTypes.bool,
     backgroundColor: PropTypes.string,
     text: PropTypes.string,
-    buttonComponent: PropTypes.string,
     onSubmit: PropTypes.func
   };
 

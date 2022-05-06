@@ -1,7 +1,7 @@
 //hook
 import {useState} from 'react';
 
-export const useModal = (initialValue=false) => {
+export const useModal = (initialValue) => {
   const [isOpen, setIsOpen] = useState(initialValue);
 
   const openModal = () => setIsOpen(true);

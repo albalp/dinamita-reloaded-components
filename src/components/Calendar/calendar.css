@@ -271,6 +271,7 @@
     .calendar-size--default { 
         padding: 20px 10px;
         max-width: 300px;
+        margin: auto;
     }
 
     .calendar-size--large .calendar-month-day,

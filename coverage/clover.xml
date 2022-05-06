@@ -1,173 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1651535430075" clover="3.2.0">
-  <project timestamp="1651535430076" name="All files">
-    <metrics statements="126" coveredstatements="21" conditionals="159" coveredconditionals="92" methods="31" coveredmethods="5" elements="316" coveredelements="118" complexity="0" loc="126" ncloc="126" packages="5" files="9" classes="9"/>
-    <package name="src">
-      <metrics statements="8" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="App.js" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\App.js">
-        <metrics statements="8" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
+<coverage generated="1651784972282" clover="3.2.0">
+  <project timestamp="1651784972282" name="All files">
+    <metrics statements="43" coveredstatements="40" conditionals="175" coveredconditionals="150" methods="9" coveredmethods="8" elements="227" coveredelements="198" complexity="0" loc="43" ncloc="43" packages="8" files="8" classes="8"/>
+    <package name="components">
+      <metrics statements="8" coveredstatements="8" conditionals="10" coveredconditionals="8" methods="1" coveredmethods="1"/>
+      <file name="SaveButton.jsx" path="C:\Users\Diana\Documents\WebComponent\dinamita-reloaded-components\src\components\SaveButton.jsx">
+        <metrics statements="8" coveredstatements="8" conditionals="10" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="195" type="cond" truecount="1" falsecount="1"/>
+        <line num="7" count="195" type="cond" truecount="2" falsecount="0"/>
+        <line num="8" count="195" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="195" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="34" count="5" type="stmt"/>
+        <line num="46" count="5" type="stmt"/>
       </file>
     </package>
-    <package name="src.components.Calendar">
-      <metrics statements="21" coveredstatements="5" conditionals="18" coveredconditionals="13" methods="2" coveredmethods="1"/>
-      <file name="Calendar.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\components\Calendar\Calendar.jsx">
-        <metrics statements="5" coveredstatements="5" conditionals="18" coveredconditionals="13" methods="1" coveredmethods="1"/>
+    <package name="components.Calendar">
+      <metrics statements="5" coveredstatements="5" conditionals="18" coveredconditionals="15" methods="1" coveredmethods="1"/>
+      <file name="Calendar.jsx" path="C:\Users\Diana\Documents\WebComponent\dinamita-reloaded-components\src\components\Calendar\Calendar.jsx">
+        <metrics statements="5" coveredstatements="5" conditionals="18" coveredconditionals="15" methods="1" coveredmethods="1"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="10" count="59" type="stmt"/>
-        <line num="12" count="59" type="stmt"/>
+        <line num="10" count="63" type="stmt"/>
+        <line num="12" count="63" type="stmt"/>
         <line num="42" count="1" type="stmt"/>
         <line num="51" count="1" type="stmt"/>
       </file>
-      <file name="Calendar.stories.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\components\Calendar\Calendar.stories.jsx">
-        <metrics statements="16" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-      </file>
     </package>
-    <package name="src.components.Form.Checkbox">
-      <metrics statements="13" coveredstatements="4" conditionals="31" coveredconditionals="28" methods="2" coveredmethods="1"/>
-      <file name="Checkbox.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\components\Form\Checkbox\Checkbox.jsx">
-        <metrics statements="4" coveredstatements="4" conditionals="31" coveredconditionals="28" methods="1" coveredmethods="1"/>
+    <package name="components.Form.Checkbox">
+      <metrics statements="4" coveredstatements="4" conditionals="31" coveredconditionals="31" methods="1" coveredmethods="1"/>
+      <file name="Checkbox.jsx" path="C:\Users\Diana\Documents\WebComponent\dinamita-reloaded-components\src\components\Form\Checkbox\Checkbox.jsx">
+        <metrics statements="4" coveredstatements="4" conditionals="31" coveredconditionals="31" methods="1" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="12" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="47" count="1" type="stmt"/>
-      </file>
-      <file name="Checkbox.stories.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\components\Form\Checkbox\Checkbox.stories.jsx">
-        <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
+        <line num="5" count="15" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="src.components.Form.Form">
-      <metrics statements="46" coveredstatements="4" conditionals="46" coveredconditionals="16" methods="22" coveredmethods="1"/>
-      <file name="Form.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\components\Form\Form\Form.jsx">
-        <metrics statements="4" coveredstatements="4" conditionals="46" coveredconditionals="16" methods="1" coveredmethods="1"/>
+    <package name="components.Form.Form">
+      <metrics statements="4" coveredstatements="4" conditionals="48" coveredconditionals="48" methods="1" coveredmethods="1"/>
+      <file name="Form.jsx" path="C:\Users\Diana\Documents\WebComponent\dinamita-reloaded-components\src\components\Form\Form\Form.jsx">
+        <metrics statements="4" coveredstatements="4" conditionals="48" coveredconditionals="48" methods="1" coveredmethods="1"/>
         <line num="4" count="3" type="stmt"/>
-        <line num="6" count="14" type="stmt"/>
-        <line num="38" count="3" type="stmt"/>
-        <line num="58" count="3" type="stmt"/>
-      </file>
-      <file name="Form.stories.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\components\Form\Form\Form.stories.jsx">
-        <metrics statements="42" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="21" coveredmethods="0"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="68" count="0" type="stmt"/>
-        <line num="69" count="0" type="stmt"/>
-        <line num="79" count="0" type="stmt"/>
-        <line num="80" count="0" type="stmt"/>
-        <line num="90" count="0" type="stmt"/>
-        <line num="91" count="0" type="stmt"/>
-        <line num="101" count="0" type="stmt"/>
-        <line num="102" count="0" type="stmt"/>
-        <line num="112" count="0" type="stmt"/>
-        <line num="113" count="0" type="stmt"/>
-        <line num="123" count="0" type="stmt"/>
-        <line num="124" count="0" type="stmt"/>
-        <line num="134" count="0" type="stmt"/>
-        <line num="135" count="0" type="stmt"/>
-        <line num="145" count="0" type="stmt"/>
-        <line num="146" count="0" type="stmt"/>
-        <line num="156" count="0" type="stmt"/>
-        <line num="157" count="0" type="stmt"/>
-        <line num="167" count="0" type="stmt"/>
-        <line num="168" count="0" type="stmt"/>
-        <line num="177" count="0" type="stmt"/>
-        <line num="178" count="0" type="stmt"/>
-        <line num="187" count="0" type="stmt"/>
-        <line num="188" count="0" type="stmt"/>
-        <line num="197" count="0" type="stmt"/>
-        <line num="198" count="0" type="stmt"/>
-        <line num="207" count="0" type="stmt"/>
-        <line num="208" count="0" type="stmt"/>
-        <line num="217" count="0" type="stmt"/>
-        <line num="218" count="0" type="stmt"/>
-        <line num="227" count="0" type="stmt"/>
-        <line num="228" count="0" type="stmt"/>
+        <line num="6" count="21" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="62" count="3" type="stmt"/>
       </file>
     </package>
-    <package name="src.components.Form.Input">
-      <metrics statements="38" coveredstatements="8" conditionals="62" coveredconditionals="35" methods="3" coveredmethods="2"/>
-      <file name="Input.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\components\Form\Input\Input.jsx">
-        <metrics statements="9" coveredstatements="8" conditionals="62" coveredconditionals="35" methods="2" coveredmethods="2"/>
+    <package name="components.Form.Input">
+      <metrics statements="9" coveredstatements="8" conditionals="62" coveredconditionals="42" methods="2" coveredmethods="2"/>
+      <file name="Input.jsx" path="C:\Users\Diana\Documents\WebComponent\dinamita-reloaded-components\src\components\Form\Input\Input.jsx">
+        <metrics statements="9" coveredstatements="8" conditionals="62" coveredconditionals="42" methods="2" coveredmethods="2"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="6" count="25" type="stmt"/>
-        <line num="8" count="4" type="cond" truecount="1" falsecount="1"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="15" count="4" type="cond" truecount="1" falsecount="1"/>
-        <line num="18" count="25" type="stmt"/>
-        <line num="62" count="1" type="stmt"/>
-        <line num="75" count="1" type="stmt"/>
-      </file>
-      <file name="Input.stories.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\components\Form\Input\Input.stories.jsx">
-        <metrics statements="29" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
+        <line num="8" count="15" type="stmt"/>
+        <line num="11" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="12" count="4" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="65" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
-        <line num="71" count="0" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
-        <line num="77" count="0" type="stmt"/>
-        <line num="82" count="0" type="stmt"/>
-        <line num="83" count="0" type="stmt"/>
-        <line num="88" count="0" type="stmt"/>
-        <line num="89" count="0" type="stmt"/>
+        <line num="20" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="23" count="15" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="85" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.header">
+      <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <file name="header.jsx" path="C:\Users\Diana\Documents\WebComponent\dinamita-reloaded-components\src\components\header\header.jsx">
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="8" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.modal">
+      <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="modals.jsx" path="C:\Users\Diana\Documents\WebComponent\dinamita-reloaded-components\src\components\modal\modals.jsx">
+        <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.textArea">
+      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="textArea.jsx" path="C:\Users\Diana\Documents\WebComponent\dinamita-reloaded-components\src\components\textArea\textArea.jsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
       </file>
     </package>
   </project>

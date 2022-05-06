@@ -1,5 +1,6 @@
 import React from 'react';
 import Dropdown from './DropDown';
+import { BiCaretDown, BiArchiveIn } from "react-icons/bi";
 
 export default {
     title: 'InputForm/Dropdown',
@@ -8,22 +9,36 @@ export default {
 
 const Template = (args) => <Dropdown {...args} />;
 
+export const DropdownIcon = Template.bind({});
+DropdownIcon.args = {
+  icon: <BiCaretDown/>,
+  options: [
+    {
+      id:'', 
+      name: '',
+    },
+  ]
+}
+
 export const Primary = Template.bind({});
     Primary.args = {
         title:'Frutas',
-        size: 'all',
+        size: 'medium',
+        icon: <BiArchiveIn/>,
+        borderRadius: true,
+        backgroundColor: '',
         options: [
           {
             id:1, 
-            name: 'MANGO',
+            name: 'Mango',
           },
           {
             id:2, 
-            name: 'FRESA',
+            name: 'Fresa',
           },
           {
             id:3, 
-            name: 'MANZANA',
+            name: 'Manzana',
           }
        ]
     };
@@ -31,24 +46,34 @@ export const Primary = Template.bind({});
 export const Large = Template.bind({});
     Large.args = {
       size: 'large',
-      title: 'Large'
+      options: [
+        {
+          id:'', 
+          name: '',
+        }
+      ]
     };
     
 export const Medium = Template.bind({});
     Medium.args = {
       size: 'medium',
-      title: 'Medium'
+      options: [
+        {
+          id:'', 
+          name: '',
+        },
+      ]
     };
     
 export const Small = Template.bind({});
     Small.args = {
       size: 'small',
-      title: 'Small'
+      options: [
+        {
+          id:'', 
+          name: '',
+        },
+      ]
     };
 
-export const BorderRadius = Template.bind({});
-    BorderRadius.args = {
-      size: 'large',
-      title: 'with border radius',
-      border: true,
-    }
+    

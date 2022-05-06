@@ -1,5 +1,6 @@
     import { render, screen } from '@testing-library/react';
-    import TextArea from './textArea';
+    import TextArea from '../components/textArea/textArea';
+    
     //Testing the label of the textarea
     describe('TextArea rendering', () =>{
         it('Renders the label', () =>{

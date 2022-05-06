@@ -2,7 +2,7 @@ import '@testing-library/jest-dom/extend-expect';
 import {render, screen, fireEvent} from '@testing-library/react';
 import Form from '../components/Form/Form/Form';
 import Button from '../components/SaveButton';
-import {prettyDOM} from '@testing-library/dom';
+import {prettyDOM} from '@testing-library/dom'; 
 
 describe('<Form> - Rendering form component in the application', () => {
 

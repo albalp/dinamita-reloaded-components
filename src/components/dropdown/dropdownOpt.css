@@ -11,6 +11,13 @@
     border: 1px solid rgba(34, 36, 38, 0.15);*/
     
 }
+.menu-trigger {
+    background-color: yellow;
+}
+
+.menu-trigger input {
+    width: 96%;
+}
 
 .menu-inactive {
     background: #ffffff;
@@ -20,15 +27,19 @@
     right: 0;
     width: 300px;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
-    /*opacity: 1;*/
+    opacity: 1;
     visibility: hidden;
     transform: translateY(-20px);
   }
 
 .menu-active{
-    /*opacity: 1;*/
+    opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    position: absolute;
+    z-index: 9;
+    background: red;
+    width: 100%;
 }
 
 .menu ul {

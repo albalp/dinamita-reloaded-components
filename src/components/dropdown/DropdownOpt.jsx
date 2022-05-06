@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 
-import { useDetectOutsideClick } from './useDetectOutsideClick.js';
+//import { useDetectOutsideClick } from './useDetectOutsideClick.js';
 
 import { MdArrowDropDown } from 'react-icons/md'
 
@@ -9,8 +9,10 @@ import './dropdownOpt.css';
 const DropdownOpt = () => {
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
-  const onClick = () => {console.log('CLICKED') 
-    setIsActive(!isActive)};
+  const onClick = (value) => { 
+    setIsActive(!isActive)
+    setSelected(value)
+  };
 
   const dropdownOptions = [
     {
@@ -26,7 +28,7 @@ const DropdownOpt = () => {
       value: "blue",
     },
   ];
-  const [selected, setSelected] = useState(dropdownOptions[0])
+  const [selected, setSelected] = useState(dropdownOptions[0].label)
 
   const renderedOptions = dropdownOptions.map((option) => {
     if (option.value === selected.value) {
@@ -37,9 +39,9 @@ const DropdownOpt = () => {
         key={option.value}
         className="item"
         // on click change selection to current option
-        onClick={() => {
+        onClick={(option) => {
           setSelected(option)
-          onClick()
+          onClick(option.label)
         }}
       >
         {option.label}
@@ -47,7 +49,7 @@ const DropdownOpt = () => {
     )
   })
   
-  /*useEffect(() => {
+  useEffect(() => {
     const pageClickEvent = (e) => {
       console.log(e);
       // If the active element exists and is clicked outside of
@@ -65,15 +67,20 @@ const DropdownOpt = () => {
         window.removeEventListener('click', pageClickEvent);
     }
   
-  }, [isActive]);*/
+  }, [isActive]);
 
   return (
      <div className="menu-container">
-       <div className="label">Project:</div>
-       <button type="submit" onClick={onClick} className="menu-trigger">
-          <span>{selected.label}</span>
-          <MdArrowDropDown />
-       </button>
+       <span className="label">Project:</span>
+       <div className="menu-trigger">
+       <input 
+       type="text" 
+       placeholder={selected.label}
+       onClick={onClick} 
+       >
+       </input>
+       <MdArrowDropDown />
+       </div>
        <ul ref={dropdownRef} className={`menu${isActive ? '-active' : '-inactive'}`} >
          {renderedOptions}
       </ul>

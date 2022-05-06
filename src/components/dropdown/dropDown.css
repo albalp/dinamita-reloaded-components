@@ -1,7 +1,6 @@
 @import '../../css/global_styles.css';
 
 .dropdown {
-  width: 100%;
   display: block;
   background-color: #fff;
   font-size: 2vmin;

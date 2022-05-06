@@ -5,7 +5,7 @@ import Input from './components/Form/Input/Input';
 import Checkbox from './components/Form/Checkbox/Checkbox';
 import AOS from "aos";
 import SaveButton from './components/SaveButton';
-//import DropdownOpt from './components/dropdown/DropdownOpt';
+import DropdownOpt from './components/dropdown/DropdownOpt';
 import Dropdown from './components/dropdown/DropDown';
 import data from '../src/api/mocks.json';
 import { MdArrowDropDown } from 'react-icons/md'
@@ -65,6 +65,7 @@ function App() {
     <div>
       <Dropdown title="Project" icon={<MdArrowDropDown />} options={projectData}/>
       <Dropdown title="Categories" icon={<MdArrowDropDown />} options={categories}/>
+      <DropdownOpt />
       <Header variant="primary" />
       <TextArea />
       <SaveButton variant="success" label="Guardar" borderRadius icon={<AddTaskIcon/>} onClick={Clicked} />

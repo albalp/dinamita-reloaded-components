@@ -1,39 +1,99 @@
-import ReactDOM from 'react-dom'
 import {render, fireEvent, screen} from '@testing-library/react';
-import Modals from '../components/modal/modals';
+import '@testing-library/jest-dom/extend-expect';
+import Modal from '../components/modal/modal';
+import Button from '../components/SaveButton';
+import useModal from '../components/modal/useModal';
+import {prettyDOM} from '@testing-library/dom';
 
- 
-// const Prueba = () => {
+test('Should to render the modal component', () => {
 
-//   return ReactDOM.createPortal(
-//     <Modals />
-//   )
-// }
+    render(<Modal title="Modal"/>);
 
-// test('modal shows the children', () => {
-//   // Act
-//   const {getByText} = render(
-//     <Modals />,
-//   )
-//   // Assert
-//   expect(getByText('Calendar')).toBeTruthy()
-// })
+    const modal = screen.getByText(/Modal/i).parentNode.parentNode.parentNode;
 
-// test('modal close with button', () => {
-//   // Arrange
-//   const handleClose = jest.fn()
-//   //render
-//   render(
-//   <div>
-//     <Modals />
-//   </div>
-//   );
-//   // Act
-//   fireEvent.click(screen.getByRole("button",{name: 'Click to open modal'}))
+    expect(modal).toBeInTheDocument();
 
-//   // Assert
-//   expect(handleClose).toHaveBeenCalledTimes(1)
-// })
-test('No hay nada aquí', () => {
+});
+
+test('Should to have the border radius class when receive the borderRadius property', () => {
+
+    render(<Modal title="Modal" borderRadius/>);
+
+    const modal = screen.getByText(/Modal/i).parentNode.parentNode;
+
+    expect(modal).toBeInTheDocument();
+    expect(modal).toHaveClass('storybook-modal--border-radius');
+
+});
+
+test('Should to have the modal dark class when receive the modeDark property', () => {
+
+    render(<Modal title="Modal" modeDark/>);
+
+    const modal = screen.getByText(/Modal/i).parentNode.parentNode;
+
+    expect(modal).toBeInTheDocument();
+    expect(modal).toHaveClass('storybook-modal--dark');
+
+});
+
+test('Should to have the modal light class when dont receive the modeDark property', () => {
+
+    render(<Modal title="Modal"/>);
+
+    const modal = screen.getByText(/Modal/i).parentNode.parentNode;
+
+    expect(modal).toBeInTheDocument();
+    expect(modal).toHaveClass('storybook-modal--light');
+
+});
+
+test('Should to have the background color received like property', () => {
+
+    render(<Modal title="Modal" backgroundColor="salmon"/>);
+
+    const modal = screen.getByText(/Modal/i).parentNode.parentNode;
+
+    expect(modal).toBeInTheDocument();
+    expect(modal).toHaveStyle('background-color: salmon');
+
+});
+
+test('Should to show the modal when do click on the button', () => {
+
+    let isOpen = false;
+    render(<Button label="Open modal" onClick={() => isOpen = true}/>);
+
+    const button = screen.getByRole('button', {name: /Open modal/i});
+    fireEvent.click(button);
+
+    render(<Modal title="Create Activity" isOpen={isOpen}/>);
+    const modal = screen.getByText(/Create Activity/i).parentNode.parentNode.parentNode;
+    
+    expect(modal).toHaveClass('is-open');
+
+});
+
+test('Should to hidde the modal when do click in the button close', () => {
+
+    let isOpen = true;
+    render(<Button label="Close modal" onClick={() => isOpen = false}/>);
+    
+    const button = screen.getByRole('button', {name: /Close modal/i});
+    fireEvent.click(button);
+
+    render(<Modal title="Create Activity" isOpen={isOpen}/>);
+    const modal = screen.getByText(/Create Activity/i).parentNode.parentNode.parentNode;
+
+    expect(modal).not.toHaveClass('is-open');
+
+});
+
+test('Should to prevent the event propagation', () => {
+
+    render(<Modal title="Create Activity"/>);
+    const modal = screen.getByText(/Create Activity/i).parentNode.parentNode;
+
+    fireEvent.click(modal);
 
 });

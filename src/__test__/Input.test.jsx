@@ -3,7 +3,6 @@ import {render, screen, fireEvent} from '@testing-library/react';
 import { BiUser } from "react-icons/bi";
 import {prettyDOM} from '@testing-library/dom';
 import Input from '../components/Form/Input/Input';
-import Form from '../components/Form/Form/Form';
 
 
 describe('<Input> - Testing input component', () => {    
@@ -104,7 +103,7 @@ describe('<Input> - Testing input component secondary variant', () => {
         expect(input).toHaveClass('activated');
     
     });
-
+ 
     test('Should to remove  the activated class when the input have not a value', () => {
 
 

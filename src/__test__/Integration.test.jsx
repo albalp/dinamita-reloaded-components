@@ -284,6 +284,7 @@ describe('Integration test - Dropdown component', () => {
 
         fireEvent.click(dropdown);
         
+        
         const options = screen.queryByRole('group', {name: 'group-options-project'});
         fireEvent.change(input, {target: {value: 'Del'}});
 

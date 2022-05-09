@@ -22,6 +22,7 @@ describe('Testing of useModal hook', () => {
             result.current.closeModal();
          });
 
+         
         expect(result.current.isOpen).not.toBeTruthy();
     });
 

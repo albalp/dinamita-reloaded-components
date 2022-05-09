@@ -5,6 +5,7 @@ import {prettyDOM} from '@testing-library/dom';
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
  
+
 beforeEach(() => {
     render(<Calendar dark backgroundColor="salmon" />);
 }); 

@@ -11,6 +11,7 @@ describe('Test hook useCalendar', () => {
             result.current.getTotalDays(-1);
           });
 
+          
           expect(result.current.daysMonth.length).toBe(31);
 
     });

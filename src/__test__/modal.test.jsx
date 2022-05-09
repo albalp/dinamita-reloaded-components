@@ -2,7 +2,6 @@ import {render, fireEvent, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import Modal from '../components/modal/modal';
 import Button from '../components/SaveButton';
-import useModal from '../components/modal/useModal';
 import {prettyDOM} from '@testing-library/dom';
 
 test('Should to render the modal component', () => {
@@ -93,7 +92,8 @@ test('Should to prevent the event propagation', () => {
 
     render(<Modal title="Create Activity"/>);
     const modal = screen.getByText(/Create Activity/i).parentNode.parentNode;
+    
+    const isStopPropagation = fireEvent.click(modal);
+    expect(isStopPropagation).toBe(true);
 
-    fireEvent.click(modal);
-
-});
+}); 

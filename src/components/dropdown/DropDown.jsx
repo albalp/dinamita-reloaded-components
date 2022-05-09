@@ -36,7 +36,7 @@ const Dropdown = ( {title, options, icon, size, borderRadius, dark, light}  ) =>
     <div className={`dropdown-container ${dark && 'dark'} ${light && 'light'}`}>
       <p>{title}</p>
       <div className={`dropdown-size--${size} dropdown ${isOpen ? 'active' : ''} ${borderRadius && 'borderRadius'}`}>
-        <div onClick={toggling} className="select">
+        <div role="menu" aria-label={`dropdown-${title.toLowerCase()}`} onClick={toggling} className="select">
             <input 
             ref={ref}
             type="text" 
@@ -51,10 +51,10 @@ const Dropdown = ( {title, options, icon, size, borderRadius, dark, light}  ) =>
           {icon && icon}
         </div>
         {isOpen && (
-          <ul className="dropdown-menu">
+          <ul role="group" aria-label={`group-options-${title.toLowerCase()}`} className="dropdown-menu">
             {options && options.length > 0 
             ? filter(options).map((option) =>(
-              <li key={option.id} onClick={onOptionClicked(option.name)}>
+              <li role="menuitem" aria-label={`menuitem-${option.name.toLowerCase()}`} key={option.id} onClick={onOptionClicked(option.name)}>
                 {option.name}
               </li>
             ))

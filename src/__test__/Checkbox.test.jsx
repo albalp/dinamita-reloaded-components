@@ -12,7 +12,7 @@ beforeEach(() => {
             <Checkbox name="hamster" rounded label="Hamster" tertiary/>
         </Form>
     ); 
-}); 
+});   
 
 describe('<Checkbox> - Testing render of the checkbox component', () => {
     

@@ -7,8 +7,6 @@ import Modal from './modal/modal';
 import Button from './SaveButton';
 import Dropdown from './dropdown/DropDown';
 import data from '../api/mocks.json';
-import Form from './Form/Form/Form';
-import Header from './header/header';
 import { useModal } from './modal/useModal';
 
 const Integration = () => {
@@ -54,12 +52,11 @@ const Integration = () => {
         }
       }
 
-      const [isOpen, openModal, closeModal] = useModal();
+      const {isOpen, openModal, closeModal} = useModal();
      
   return (
     <div className="container">
-        {/* <Header label="Create Activity"/> */}
-        <Modal isOpen={isOpen} closeModal={closeModal}>
+        <Modal title="Create Activity" isOpen={isOpen} closeModal={closeModal}>
             <Calendar size="small"/>
             <form className="form-integration">
                 <Dropdown title="Project" icon={<MdArrowDropDown />} options={projectData}/>
@@ -74,7 +71,7 @@ const Integration = () => {
             </form>
         </Modal>
         <h2>Integration</h2>
-        <Button label="Create" onClick={openModal} />
+        <Button label="Add activity" onClick={openModal} />
     </div>
   )
 }

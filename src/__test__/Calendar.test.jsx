@@ -7,7 +7,7 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
  
 beforeEach(() => {
     render(<Calendar dark backgroundColor="salmon" />);
-});
+}); 
 
 describe('<Calendar/> - Render elements of component in the interface', () => {
 
@@ -99,18 +99,18 @@ describe('<Calendar> - Functionality', () => {
         const day = screen.getByText(10);
 
         fireEvent.click(day);
-
+ 
         const daySelected = screen.getByText(10);
 
         expect(daySelected).toHaveClass('calendar-month-day--selected');
-        
-    });
+         
+    }); 
 
     test('Should to decrement year when month is january and the user do click in the button previous month', () => {
 
         const buttonPrevious = screen.getByRole('button', {name: 'button previous month'});
         const month = screen.getByText(months[currentDate.getMonth()]);
-        const year = screen.getByText(/2022/);
+        const year = screen.getByText(currentDate.getFullYear());
         
         for(let i = currentDate.getMonth(); i >= 0; i--) {
             
@@ -126,7 +126,7 @@ describe('<Calendar> - Functionality', () => {
 
         const buttonNext = screen.getByRole('button', {name: 'button next month'});
         const month = screen.getByText(months[currentDate.getMonth()]);
-        const year = screen.getByText(/2022/);
+        const year = screen.getByText(currentDate.getFullYear());
         
         for(let i = currentDate.getMonth(); i <= 11; i++) {
             

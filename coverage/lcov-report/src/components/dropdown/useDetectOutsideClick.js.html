@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/Calendar/Days.jsx</title>
+    <title>Code coverage report for src/components/dropdown/useDetectOutsideClick.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/Calendar</a> Days.jsx</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/dropdown</a> useDetectOutsideClick.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">72.72% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/4</span>
+                <span class='fraction'>8/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">16.66% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>1/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">72.72% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/4</span>
+                <span class='fraction'>8/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -83,47 +83,62 @@
 <a name='L18'></a><a href='#L18'>18</a>
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { v4 as uuidv4 } from 'uuid';
-import Day from './Day';
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useState, useEffect } from 'react';
 &nbsp;
-const Days = <span class="fstat-no" title="function not covered" >({</span> calendar, daysPreviousMonth, daysMonth, selectDate, variant, currentDate, monthNumber }) =&gt; {
+export const useDetectOutsideClick = (el, initialState) =&gt; {
+  const [isActive, setIsActive] = useState(initialState);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
-    &lt;div className="calendar-month"&gt;
-        {
-            daysPreviousMonth.length !== 7 &amp;&amp; daysPreviousMonth.map(<span class="fstat-no" title="function not covered" >da</span>yPreviou =&gt; <span class="cstat-no" title="statement not covered" >&lt;div key={uuidv4()} onClick={selectDate} className={` calendar-month-day calendar-month-day--${variant} calendar-month-day--before`}&gt;{dayPreviou}&lt;/div&gt;)</span>
+  useEffect(() =&gt; {
+    const pageClickEvent = <span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+      // If the active element exists and is clicked outside of
+<span class="cstat-no" title="statement not covered" >      if (el.current !== null &amp;&amp; !el.current.contains(e.target)) {</span>
+<span class="cstat-no" title="statement not covered" >        setIsActive(!isActive);</span>
+      }
+    };
 &nbsp;
-        }
+    // If the item is active (ie open) then listen for clicks
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (isActive) {
+<span class="cstat-no" title="statement not covered" >      window.addEventListener('click', pageClickEvent);</span>
+    }
 &nbsp;
-        {
-          daysMonth.map( <span class="fstat-no" title="function not covered" >da</span>y =&gt; <span class="cstat-no" title="statement not covered" >&lt;Day key={uuidv4()} calendar={calendar} handleClick={selectDate} monthNumber={monthNumber} variant={variant} currentDate={currentDate} day={day}/&gt;)</span>
-        }
-    &lt;/div&gt;
-  )
-}
+    return () =&gt; {
+      window.removeEventListener('click', pageClickEvent);
+    }
 &nbsp;
-export default Days;
-&nbsp;</pre></td></tr></table></pre>
+  }, [isActive, el]);
+&nbsp;
+  return [isActive, setIsActive];
+}</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->

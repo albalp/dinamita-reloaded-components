@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">30% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/10</span>
+                <span class='fraction'>3/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">56.45% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>35/62</span>
+                <span class='fraction'>0/62</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.88% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/9</span>
+                <span class='fraction'>3/9</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -148,24 +148,43 @@
 <a name='L83'></a><a href='#L83'>83</a>
 <a name='L84'></a><a href='#L84'>84</a>
 <a name='L85'></a><a href='#L85'>85</a>
-<a name='L86'></a><a href='#L86'>86</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">25x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -210,6 +229,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -236,64 +256,73 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import PropTypes from 'prop-types';
 import './input.css';
 &nbsp;
-const Input = ({ icon, rounded, size, width, dark, light, secondary, secondaryPlaceholder, label, onChange, className, valid, legend, ...props }) =&gt; {
+const Input = <span class="fstat-no" title="function not covered" >({</span> icon, rounded, size, width, dark, light, secondary, secondaryPlaceholder, label, onChange, className, valid, legend, ...props }) =&gt; {
 &nbsp;
-  const handleChange = (e) =&gt; {
+  // Function to handle the value of the component when be the secondary variant
+  // Function to execute the function passed like property
+  const handleChange = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(e</span>) =&gt; {</span>
 &nbsp;
-    if(e.target.value !== '') {
-      e.target.classList.add('activated');
+    // If the element value is not empty then adding the activated class to placeholder animation
+<span class="cstat-no" title="statement not covered" >    if(e.target.value !== '') {</span>
+<span class="cstat-no" title="statement not covered" >      e.target.classList.add('activated');</span>
       
-    } else <span class="missing-if-branch" title="else path not taken" >E</span>{
+    } else {
+      // If the element value is empty then removing the activated class to placeholder animation
 <span class="cstat-no" title="statement not covered" >      e.target.classList.remove('activated');</span>
     }
 &nbsp;
-    <span class="missing-if-branch" title="if path not taken" >I</span>if(onChange) <span class="cstat-no" title="statement not covered" >onChange(e);</span>
+    // I exist the function onChange then execute it
+<span class="cstat-no" title="statement not covered" >    if(onChange) <span class="cstat-no" title="statement not covered" >onChange(e);</span></span>
   }
 &nbsp;
-  return (
+<span class="cstat-no" title="statement not covered" >  return (</span>
    &lt;&gt;
+   {/* If no exist the secondary and label properties then render the input component default variant */}
      {!secondary &amp;&amp; !label &amp;&amp;
-      &lt;div data-testid="input-default" className={`input-container input-container-width--${width} ${dark &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'dark'}</span> ${light &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'light'}</span>`}&gt;
+      &lt;div data-testid="input-default" className={`input-container input-container-width--${width} ${dark &amp;&amp; 'dark'} ${light &amp;&amp; 'light'}`}&gt;
           &lt;div className={`input-content input-content-size--${size} `}&gt;
-            &lt;input {...props} onChange={handleChange}  className={`input-control ${icon &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'input-control--icon'}</span> ${rounded &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'rounded'}</span>  ${className &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >className}</span>`} autoComplete="off"/&gt;
+            &lt;input {...props} onChange={handleChange}  className={`input-control ${icon &amp;&amp; 'input-control--icon'} ${rounded &amp;&amp; 'rounded'}  ${className &amp;&amp; className}`} autoComplete="off"/&gt;
             {icon}
           &lt;/div&gt;
           {legend &amp;&amp; 
-            &lt;span className={`input-container-legend ${rounded &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'rounded'}</span> ${!valid &amp;&amp; valid !== null &amp;&amp; 'activated' } `} &gt;{legend}&lt;/span&gt;
+            &lt;span className={`input-container-legend ${rounded &amp;&amp; 'rounded'} ${!valid &amp;&amp; valid !== null &amp;&amp; 'activated' } `} &gt;{legend}&lt;/span&gt;
           }
       &lt;/div&gt;
      }
     
+    {/* If exist the secondary property and is not exist the label property then render the input component secondary variant */}
     {secondary &amp;&amp; !label &amp;&amp;
-      &lt;div data-testid="input-secondary" className={`input-container input-container-width--${width} ${dark &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'dark'}</span> ${light &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'light'}</span>`}&gt;
+      &lt;div data-testid="input-secondary" className={`input-container input-container-width--${width} ${dark &amp;&amp; 'dark'} ${light &amp;&amp; 'light'}`}&gt;
         &lt;div className={`input-content input-content-size--${size} `}&gt;
-          &lt;input {...props} onChange={handleChange}  className={`input-control ${rounded &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'rounded'}</span> ${secondary &amp;&amp; 'input-control-variant--secondary'}`} autoComplete='off'/&gt;
+          &lt;input {...props} onChange={handleChange}  className={`input-control ${rounded &amp;&amp; 'rounded'} ${secondary &amp;&amp; 'input-control-variant--secondary'}`} autoComplete='off'/&gt;
           &lt;label htmlFor=""&gt;{secondaryPlaceholder}&lt;/label&gt;
         &lt;/div&gt;
         {legend &amp;&amp;
-<span class="branch-1 cbranch-no" title="branch not covered" >          &lt;span className={`input-container-legend ${rounded &amp;&amp; 'rounded'} ${!valid &amp;&amp; valid !== null &amp;&amp; 'activated' } `}&gt;{legend}&lt;/span&gt;</span>
+          &lt;span className={`input-container-legend ${rounded &amp;&amp; 'rounded'} ${!valid &amp;&amp; valid !== null &amp;&amp; 'activated' } `}&gt;{legend}&lt;/span&gt;
         }
       &lt;/div&gt;
     }
 &nbsp;
-  {label &amp;&amp; !secondary &amp;&amp;
-      &lt;div data-testid="input-label" className={`input-container input-container-width--${width} ${dark &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'dark'}</span> ${light &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'light'}</span> ${label &amp;&amp; 'input-control-variant--label'}`}&gt;
-        &lt;label htmlFor={label.toLowerCase()}&gt;{label}:&lt;/label&gt;
-          &lt;div className={`input-content input-content-size--${size} `}&gt;
-            &lt;input id={label.toLowerCase()} {...props} onChange={handleChange}  className={`input-control ${rounded &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'rounded'}</span> ${className &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >className}</span>`} autoComplete="off"/&gt;
-            {icon}
-          &lt;/div&gt;
-          {legend &amp;&amp; 
-<span class="branch-1 cbranch-no" title="branch not covered" >           &lt;span className={`input-container-legend ${rounded &amp;&amp; 'rounded'} ${!valid &amp;&amp; valid !== null &amp;&amp; 'activated' } `} &gt;{legend}&lt;/span&gt;</span>
-          }
-      &lt;/div&gt;
-     }
-   &lt;/&gt;
+    {/* If exist the label property and is not exist the secondary property then render the input component label variant */}
+    {label &amp;&amp; !secondary &amp;&amp;
+        &lt;div data-testid="input-label" className={`input-container input-container-width--${width} ${dark &amp;&amp; 'dark'} ${light &amp;&amp; 'light'} ${label &amp;&amp; 'input-control-variant--label'}`}&gt;
+          &lt;label htmlFor={label.toLowerCase()}&gt;{label}:&lt;/label&gt;
+            &lt;div className={`input-content input-content-size--${size} `}&gt;
+              &lt;input id={label.toLowerCase()} {...props} onChange={handleChange}  className={`input-control ${rounded &amp;&amp; 'rounded'} ${className &amp;&amp; className}`} autoComplete="off"/&gt;
+              {icon}
+            &lt;/div&gt;
+            {legend &amp;&amp; 
+            &lt;span className={`input-container-legend ${rounded &amp;&amp; 'rounded'} ${!valid &amp;&amp; valid !== null &amp;&amp; 'activated' } `} &gt;{legend}&lt;/span&gt;
+            }
+        &lt;/div&gt;
+      }
+    &lt;/&gt;
   )
 }
 &nbsp;
 export default Input;
 &nbsp;
+// Defining component properties
 Input.propTypes = {
   rounded: PropTypes.bool,
   width: PropTypes.oneOf(['small', 'medium', 'large', 'all']),
@@ -307,6 +336,7 @@ Input.propTypes = {
   onChange: PropTypes.func
 };
 &nbsp;
+// Defining default properties of the Input component
 Input.defaultProps = {
   rounded: false,
   width: 'all',
@@ -325,7 +355,7 @@ Input.defaultProps = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon May 02 2022 18:50:29 GMT-0500 (hora de verano central)
+                at Mon May 09 2022 11:26:52 GMT-0500 (Central Daylight Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

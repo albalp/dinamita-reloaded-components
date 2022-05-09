@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90.32% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>28/31</span>
+                <span class='fraction'>0/31</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/4</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -116,11 +116,20 @@
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a>
 <a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -154,6 +163,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -172,28 +182,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import PropTypes from 'prop-types';
 import './checkbox.css';
 &nbsp;
-const Checkbox = ({ label, rounded, size, secondary, tertiary, ...props }) =&gt; {
-  return (
+const Checkbox = <span class="fstat-no" title="function not covered" >({</span> label, rounded, size, secondary, tertiary, ...props }) =&gt; {
+<span class="cstat-no" title="statement not covered" >  return (</span>
     
     &lt;&gt;
+        {/* If not exist the secondary and tertiary properties then render the checkbox default variant */}
         {!secondary &amp;&amp; !tertiary &amp;&amp;
-            &lt;div className={`checkbox-container ${rounded &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'rounded'}</span> checkbox-container-size--${size} `}&gt;
+            &lt;div className={`checkbox-container ${rounded &amp;&amp; 'rounded'} checkbox-container-size--${size} `}&gt;
                 &lt;input id={label &amp;&amp; label.toLowerCase()} className="checkbox-control" type="checkbox" {...props} /&gt;
                 &lt;span className="checkbox-figure"&gt;&lt;/span&gt;
                 &lt;label className="checkbox-label" htmlFor={label &amp;&amp; label.toLowerCase()}&gt;{label}&lt;/label&gt;
             &lt;/div&gt;
         }
 &nbsp;
+        {/* If exist the secondary property and is not exist the tertiary property then render the checkbox secondary variant */}
         {!tertiary &amp;&amp; secondary &amp;&amp;
-            &lt;div className={`checkbox-container ${rounded &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'rounded'}</span> checkbox-container-size--${size} ${secondary &amp;&amp; 'secondary'}`}&gt;
+            &lt;div className={`checkbox-container ${rounded &amp;&amp; 'rounded'} checkbox-container-size--${size} ${secondary &amp;&amp; 'secondary'}`}&gt;
                 &lt;input id={label &amp;&amp; label.toLowerCase()} className="checkbox-control" type="checkbox" {...props} /&gt;
                 &lt;label className="checkbox-label" htmlFor={label &amp;&amp; label.toLowerCase()}&gt;{label}&lt;/label&gt;
                 &lt;span className="checkbox-label-secondary"&gt;{label}&lt;/span&gt;
             &lt;/div&gt;
         }
 &nbsp;
+        {/* If exist the tertiary property and is not exist the secondary property then render the checkbox tertiary variant */}
         {!secondary &amp;&amp; tertiary &amp;&amp;
-            &lt;div className={`checkbox-container ${rounded &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'rounded'}</span> checkbox-container-size--${size} ${tertiary &amp;&amp; 'tertiary'} `}&gt;
+            &lt;div className={`checkbox-container ${rounded &amp;&amp; 'rounded'} checkbox-container-size--${size} ${tertiary &amp;&amp; 'tertiary'} `}&gt;
                 &lt;input id={label &amp;&amp; label.toLowerCase()} className="checkbox-control" type="checkbox" {...props} /&gt;
                 &lt;label className="checkbox-label" htmlFor={label &amp;&amp; label.toLowerCase()}&gt;{label}&lt;/label&gt;
                 &lt;span className="checkbox-figure"&gt;&lt;/span&gt;
@@ -206,6 +219,7 @@ const Checkbox = ({ label, rounded, size, secondary, tertiary, ...props }) =&gt;
 &nbsp;
 export default Checkbox;
 &nbsp;
+// Defining component properties
 Checkbox.propTypes = {
     label: PropTypes.string,
     rounded: PropTypes.bool,
@@ -215,6 +229,7 @@ Checkbox.propTypes = {
     onChange: PropTypes.func
   };
 &nbsp;
+  // Defining default properties of the Checkbox component
   Checkbox.defaultProps = {
     label: null,
     rounded: false,
@@ -229,7 +244,7 @@ Checkbox.propTypes = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon May 02 2022 18:50:29 GMT-0500 (hora de verano central)
+                at Mon May 09 2022 11:26:52 GMT-0500 (Central Daylight Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

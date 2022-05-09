@@ -2,7 +2,6 @@ import { BiChevronLeft, BiChevronRight, BiCalendar } from "react-icons/bi";
 import { useCalendar } from '../../hooks/useCalendar';
 import Days from './Days';
 import PropTypes from 'prop-types';
-import Button from '../SaveButton';
 import './calendar.css';
 
 const Calendar = function ({dark, shadow, backgroundColor, size, variant}) {

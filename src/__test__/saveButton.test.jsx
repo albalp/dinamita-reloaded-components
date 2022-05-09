@@ -23,6 +23,7 @@ describe("Button tests", () => {
         
         fireEvent.click(button);
 
+        
         expect(mockHandler).toHaveBeenCalledTimes(1);
 
     })
@@ -55,7 +56,7 @@ describe("Button tests", () => {
 
         expect(button).toHaveStyle('background-color: salmon');
 
-    });
+    }); 
 
     test('Should to render the icon when receive the icon property', () => {
 
@@ -67,4 +68,4 @@ describe("Button tests", () => {
         expect(icon).toBeInTheDocument();
  
     });
-});
+});  

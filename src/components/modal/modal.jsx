@@ -7,18 +7,17 @@ import Header from '../header/header';
 
 
 //destructuración-manda datos
-const Modal = ({ children, isOpen, closeModal, size, backgroundColor, borderRadius, modeLoD, ...props }) => {
+const Modal = ({ children, isOpen, closeModal, size, backgroundColor, borderRadius, modeDark, title, ...props }) => {
     //Para que no se cierre cuando se de click dentro del modal
   const handleModalContainerClick = (e) => e.stopPropagation();
   const radius = borderRadius && 'storybook-modal--border-radius';
-  const mode = modeLoD ? 'storybook-modal--light' : 'storybook-modal--dark';
+  const mode = modeDark ? 'storybook-modal--dark' : 'storybook-modal--light';
 
   return (
       //clase dinamica
     <div onClick={closeModal} className={`modal ${isOpen && "is-open"}`} >
-      <div onClick={handleModalContainerClick}
-      className={['modal-container',`storybook-modal--${size}`, mode, radius].join(' ')} style={backgroundColor && { backgroundColor }} {...props}>
-        <Header label="Create Activity" closeModal={closeModal}/>
+      <div onClick={handleModalContainerClick} className={['modal-container',`storybook-modal--${size}`, mode, radius].join(' ')} style={backgroundColor && { backgroundColor }} {...props}>
+        <Header label={title} closeModal={closeModal}/>
         <div className="grid">
           <div className="column">
             {children}
@@ -33,16 +32,18 @@ const Modal = ({ children, isOpen, closeModal, size, backgroundColor, borderRadi
 export default Modal;
 
 Modal.propTypes = {
+  title: PropTypes.string,
   borderRadius: PropTypes.bool,
   backgroundColor: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  modeLoD: PropTypes.bool,
+  modeDark: PropTypes.bool,
   isOpen: PropTypes.bool
 };
 
 Modal.defaultProps = {
+  title: 'Modal',
   borderRadius: false,
   backgroundColor: null,
-  modeLoD: true,
+  modeDark: false,
   isOpen: true
 };

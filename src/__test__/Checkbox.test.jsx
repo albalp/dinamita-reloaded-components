@@ -3,7 +3,8 @@ import {render, screen, fireEvent} from '@testing-library/react';
 import Form from '../components/Form/Form/Form';
 import Checkbox from '../components/Form/Checkbox/Checkbox';
 import {prettyDOM} from '@testing-library/dom';
- 
+  
+
 beforeEach(() => {
     render(
         <Form>
@@ -12,7 +13,7 @@ beforeEach(() => {
             <Checkbox name="hamster" rounded label="Hamster" tertiary/>
         </Form>
     ); 
-}); 
+});   
 
 describe('<Checkbox> - Testing render of the checkbox component', () => {
     

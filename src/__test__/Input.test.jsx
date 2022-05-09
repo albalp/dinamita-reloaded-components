@@ -3,7 +3,6 @@ import {render, screen, fireEvent} from '@testing-library/react';
 import { BiUser } from "react-icons/bi";
 import {prettyDOM} from '@testing-library/dom';
 import Input from '../components/Form/Input/Input';
-import Form from '../components/Form/Form/Form';
 
 
 describe('<Input> - Testing input component', () => {    
@@ -17,6 +16,7 @@ describe('<Input> - Testing input component', () => {
 
     });
 
+    
     test('Should to change the value of the input component', () => {
 
         render(<Input name="name" placeholder="Name"/>);
@@ -103,11 +103,10 @@ describe('<Input> - Testing input component secondary variant', () => {
 
         expect(input).toHaveClass('activated');
     
-    });
-
+    }); 
+ 
     test('Should to remove  the activated class when the input have not a value', () => {
-
-
+        
         render(<Input name="name" placeholder="Name" />);
 
         const input = screen.getByPlaceholderText(/Name/i);
@@ -329,7 +328,7 @@ describe('<Input> - Testing of properties in the input label variant', () => {
         expect(legend).toHaveClass('activated');
 
     });
-
+ 
     test('Should show the error legend rounded when receive the rounded property', () => {
 
         render(<Input name="password" label="Password" legend="Invalid password" rounded />);

@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks'
 import { useModal } from '../components/modal/useModal';
-
+ 
 describe('Testing of useModal hook', () => {
 
     test('Should to be true when the modal is open', () => {

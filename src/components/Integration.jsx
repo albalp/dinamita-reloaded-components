@@ -63,13 +63,9 @@ const Integration = () => {
                 <Dropdown title="Categories" icon={<MdArrowDropDown />} options={categories}/>
                 <Input name="hours" onChange={inputsValidations} type="number" label="Hours" legend="Invalid hours" value={initialForm.hours.value} valid={initialForm.hours.valid}/>
                 <Input name="ticket" onChange={inputsValidations} type="text" label="Ticket" legend="Invalid ticket" value={initialForm.ticket.value} valid={initialForm.ticket.valid}/>
-                <TextArea/>
+                <TextArea label="Comments" />
                 <div className="form-footer">
-<<<<<<< HEAD
-                  <Button variant="danger" label="Cancel" />
-=======
                   <Button label="Cancel" />
->>>>>>> 7ac77971189bd3a2d385489b293e302f52cba71c
                   <Button variant="primary" label="Create" />
                 </div>
             </form>

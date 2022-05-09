@@ -2,7 +2,7 @@ import '@testing-library/jest-dom/extend-expect';
 import {render, screen, fireEvent} from '@testing-library/react';
 import {prettyDOM} from '@testing-library/dom';
 import Integration from '../components/Integration';
-
+ 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 beforeEach(() => {

@@ -3,7 +3,7 @@ import {render, screen, fireEvent} from '@testing-library/react';
 import { BiUser } from "react-icons/bi";
 import {prettyDOM} from '@testing-library/dom';
 import Input from '../components/Form/Input/Input';
-
+ 
 
 describe('<Input> - Testing input component', () => {    
 

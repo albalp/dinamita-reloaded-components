@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">37.5% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.85% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -120,15 +120,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -145,7 +143,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -153,7 +152,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -168,18 +168,17 @@ import Header from '../header/header';
 &nbsp;
 &nbsp;
 //destructuración-manda datos
-const Modal = <span class="fstat-no" title="function not covered" >({</span> children, isOpen, closeModal, size, backgroundColor, borderRadius, modeLoD, title, ...props }) =&gt; {
+const Modal = ({ children, isOpen, closeModal, size, backgroundColor, borderRadius, modeDark, title, ...props }) =&gt; {
     //Para que no se cierre cuando se de click dentro del modal
-  const handleModalContainerClick = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(e</span>) =&gt; <span class="cstat-no" title="statement not covered" >e.stopPropagation();</span></span>
-  const radius = <span class="cstat-no" title="statement not covered" >borderRadius &amp;&amp; 'storybook-modal--border-radius';</span>
-  const mode = <span class="cstat-no" title="statement not covered" >modeDark ? 'storybook-modal--dark' : 'storybook-modal--light';</span>
+  const handleModalContainerClick = (e) =&gt; e.stopPropagation();
+  const radius = borderRadius &amp;&amp; 'storybook-modal--border-radius';
+  const mode = modeDark ? 'storybook-modal--dark' : 'storybook-modal--light';
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
       //clase dinamica
     &lt;div onClick={closeModal} className={`modal ${isOpen &amp;&amp; "is-open"}`} &gt;
-      &lt;div onClick={handleModalContainerClick}
-      className={['modal-container',`storybook-modal--${size}`, mode, radius].join(' ')} style={backgroundColor &amp;&amp; { backgroundColor }} {...props}&gt;
-        &lt;Header label={title &amp;&amp; title || ''} closeModal={closeModal}/&gt;
+      &lt;div onClick={handleModalContainerClick} className={['modal-container',`storybook-modal--${size}`, mode, radius].join(' ')} style={backgroundColor &amp;&amp; { backgroundColor }} {...props}&gt;
+        &lt;Header label={title} closeModal={closeModal}/&gt;
         &lt;div className="grid"&gt;
           &lt;div className="column"&gt;
             {children}
@@ -198,15 +197,16 @@ Modal.propTypes = {
   borderRadius: PropTypes.bool,
   backgroundColor: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  modeLoD: PropTypes.bool
+  modeDark: PropTypes.bool,
+  isOpen: PropTypes.bool
 };
 &nbsp;
 Modal.defaultProps = {
   title: 'Modal',
   borderRadius: false,
   backgroundColor: null,
-  modeLoD: true
-  
+  modeDark: false,
+  isOpen: true
 };</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -214,7 +214,7 @@ Modal.defaultProps = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon May 09 2022 12:55:06 GMT-0500 (hora de verano central)
+                at Mon May 09 2022 17:37:36 GMT-0500 (hora de verano central)
             </div>
         <script src="../../../prettify.js"></script>
         <script>

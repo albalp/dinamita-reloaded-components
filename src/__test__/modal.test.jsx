@@ -3,7 +3,7 @@ import '@testing-library/jest-dom/extend-expect';
 import Modal from '../components/modal/modal';
 import Button from '../components/SaveButton';
 import {prettyDOM} from '@testing-library/dom';
-
+ 
 test('Should to render the modal component', () => {
 
     render(<Modal title="Modal"/>);

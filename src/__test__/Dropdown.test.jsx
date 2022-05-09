@@ -1,10 +1,10 @@
 import "@testing-library/jest-dom/extend-expect";
-import { render, screen, within } from "@testing-library/react";
+import { render, screen, within, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Dropdown from "../components/dropdown/DropDown";
 import { MdArrowDropDown } from "react-icons/md";
-
-
+import {prettyDOM} from '@testing-library/dom';
+ 
 const options = [
   {
     id: 1,
@@ -16,60 +16,72 @@ const options = [
     name: "Fresa",
   },
 ];
-// describe("Dropdown", () => {
-//   it("should render the dropdown", () => {
-//     expect(render(<Dropdown />)).toMatchSnapshot();
-//   });
+describe("Dropdown", () => {
+  it("should render the dropdown", () => {
+    expect(render(<Dropdown />)).toMatchSnapshot();
+  });
 
-//   it("should render the dropdown with title and options and icon", () => {
-//     render(
-//       <Dropdown title="Frutas" options={options} icon={<MdArrowDropDown />} />
-//     );
+  it("should render the dropdown with title and options and icon", () => {
+    render(
+      <Dropdown title="Frutas" options={options} icon={<MdArrowDropDown />} />
+    );
 
-//     const title = screen.getByText(/Frutas/i);
+    const title = screen.getByText(/Frutas/i);
 
-//     const inputValue = screen.getByDisplayValue(/Mango/i);
+    const inputValue = screen.getByDisplayValue(/Mango/i);
 
-//     expect(title).toBeInTheDocument();
+    expect(title).toBeInTheDocument();
 
-//     expect(inputValue).toBeInTheDocument();
-//   });
+    expect(inputValue).toBeInTheDocument();
+  });
+
+  test('Should to show "No options" message', () => {
+    render(
+      <Dropdown title="Frutas" options={[]} icon={<MdArrowDropDown />} />
+    );
+
+    const dropdown = screen.getByRole('menu', {name: 'dropdown-frutas'});
+
+    fireEvent.click(dropdown);
+
+    const options = screen.queryByRole('group', {name: 'group-options-frutas'});
+    const message = screen.getByText(/No options found/i);
+
+    expect(message).toBeInTheDocument();
+  })
   
-//   it("Should called the click", async () => {
-//     const handleClick = jest.fn();
 
-//     render(<Dropdown title="Frutas" options={options} onClick={handleClick} />);
+})
 
-//     const input = screen.getByDisplayValue(/Mango/i);
+describe('Dropdown clicks should work', () => {
+  it("The dropdown should be clicked and need show options", async() => {
 
-//     expect(input).toBeInTheDocument();
+      render( <Dropdown title="Frutas" options={options} />);
+  
+      const input = screen.getByPlaceholderText(/Mango/i);
+      userEvent.click(input);
+      fireEvent.change(input, {target: {value: 'Fresa'}});
+  
+      expect(input).toHaveValue('Fresa');
+      
+  });
+})
 
-//     userEvent.click(input);
+describe('Dropdown should be render mode dark or light', ()=> {
+  it('should be light dropdown', () => {
+    render(<Dropdown title="Frutas" options={options} dark />)
 
-//     const option = await screen.findByText(/Fresa/i);
+    const dropdown = screen.getByText(/Frutas/i).parentNode;
 
-//     expect(option).toBeInTheDocument();
+    expect(dropdown).toHaveClass('dark');
 
-//     //userEvent.click(await screen.findByText(/Fresa/i));
+  })
+  it('should be dark dropdown', () => {
+    render(<Dropdown title="Frutas" options={options} light />)
 
-//     //expect(option).toBeInTheDocument();
-//   });
-// });
+    const dropdown = screen.getByText(/Frutas/i).parentNode;
 
-// test("The dropdown should be clicked and it must to test if it is open", () => {
+    expect(dropdown).toHaveClass('light');
 
-//     render( <Dropdown title="Frutas" options={options} onClick={() => open = true} />);
-
-//     let open = false;
-//     const input = screen.getByPlaceholderText(/Mango/i);
-//     userEvent.change(input, {target: {value: 'Sandia'}});
-
-//     expect(input).toHaveValue('Sandia');
-
-//     render( <Dropdown title="Frutas" isOpen={open}></Dropdown>);
-//     const li = screen.getByText(/Fresa/i).parentNode.parentNode.parentNode;
-
-//     expect(li).toHaveClass('active');
-
-// });
-// })
+  })
+})

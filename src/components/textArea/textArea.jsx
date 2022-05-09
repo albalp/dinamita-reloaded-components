@@ -6,11 +6,10 @@ const TextArea = ({placeholder, borderRadius, label, ...props}) =>{
 
     return(
         <div>
-            <label>
-                * Comments
-                {label}
+            <label htmlFor={label && label.toLowerCase()}>
+                {label && label}
             </label>
-                <textarea  required="" rows="5" className={[radius]} placeholder= {placeholder}  {...props}>
+                <textarea id={label && label.toLowerCase()}  required="" rows="5" className={[radius]}  {...props}>
                 
                 </textarea>
 

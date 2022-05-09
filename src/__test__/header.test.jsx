@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import Header from '../components/header/header';
 import {prettyDOM} from '@testing-library/dom';
  
- 
+  
 describe('<Header> - Testing of the render of the header component', () => {
 
     test('Should to be in the document the header', () => {

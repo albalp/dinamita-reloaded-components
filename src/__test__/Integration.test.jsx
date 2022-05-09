@@ -247,7 +247,7 @@ describe('Integration test - Dropdown component', () => {
         expect(options).not.toBeInTheDocument();
 
     });
-
+ 
     test('Should to select an option of the project dropdown and change the input value', () => {
 
         const dropdown = screen.getByRole('menu', {name: 'dropdown-project'});

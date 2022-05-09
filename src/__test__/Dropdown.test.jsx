@@ -66,7 +66,7 @@ describe('Dropdown clicks should work', () => {
       
   });
 })
-
+ 
 describe('Dropdown should be render mode dark or light', ()=> {
   it('should be light dropdown', () => {
     render(<Dropdown title="Frutas" options={options} dark />)

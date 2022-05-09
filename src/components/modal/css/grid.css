@@ -9,7 +9,7 @@
     grid-auto-rows: auto;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 430px) {
     .column {
         grid-template-columns: repeat(1, 1fr);
     }

@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for components/SaveButton.jsx</title>
+    <title>Code coverage report for modal/modal.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">components</a> SaveButton.jsx</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">modal</a> modal.jsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>7/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">70% </span>
+                <span class="strong">54.54% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>7/10</span>
+                <span class='fraction'>6/11</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>1/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -108,28 +108,10 @@
 <a name='L43'></a><a href='#L43'>43</a>
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
-<a name='L46'></a><a href='#L46'>46</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<<<<<<< HEAD
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">108x</span>
-<span class="cline-any cline-yes">108x</span>
-<span class="cline-any cline-yes">108x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">108x</span>
-=======
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
->>>>>>> b49f7414e2386f07778a0b1d7b95345e1cb6547c
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -139,6 +121,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -158,67 +153,68 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import PropTypes from 'prop-types';
-import AOS from "aos";
-import '../css/saveButton.css';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import "../modal/css/modal.css";
+import PropTypes from 'prop-types';
+import SaveButton from '../../components/SaveButton';
+import CloseIcon from '@mui/icons-material/Close';
+import "../modal/css/grid.css";
+import Header from '../header/header';
 &nbsp;
-const SaveButton = ({ beforeSave, backgroundColor, size, label, borderRadius, variant,  icon, shadow, className, ...props}) =&gt; {
-  const mode = beforeSave ? <span class="branch-0 cbranch-no" title="branch not covered" >'storybook-button--beforeSave' </span>: 'storybook-button--afterSave';
-  const radius = borderRadius &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'storybook-button--border-radius';</span>
-  const shadowButton = shadow &amp;&amp; 'storybook-button--shadow';
+&nbsp;
+//destructuración-manda datos
+const Modal = ({ children, isOpen, closeModal, size, backgroundColor, borderRadius, modeLoD, title, ...props }) =&gt; {
+    //Para que no se cierre cuando se de click dentro del modal
+  const handleModalContainerClick = <span class="fstat-no" title="function not covered" >(e</span>) =&gt; <span class="cstat-no" title="statement not covered" >e.stopPropagation();</span>
+  const radius = borderRadius &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >'storybook-modal--border-radius';</span>
+  const mode = modeLoD ? 'storybook-modal--light' : <span class="branch-1 cbranch-no" title="branch not covered" >'storybook-modal--dark';</span>
 &nbsp;
   return (
-    &lt;div&gt;
-      &lt;button data-aos="zoom-in" className={['storybook-button', `storybook-button--${size}`, `storybook-button--${variant}`, mode, radius, shadowButton,  className].join(' ')} style={backgroundColor &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >{ backgroundColor }}</span> {...props}&gt;
-        {icon &amp;&amp; icon}
-        {label}
-      &lt;/button&gt;
+      //clase dinamica
+    &lt;div onClick={closeModal} className={`modal ${isOpen &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >"is-open"}</span>`} &gt;
+      &lt;div onClick={handleModalContainerClick}
+      className={['modal-container',`storybook-modal--${size}`, mode, radius].join(' ')} style={backgroundColor &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >{ backgroundColor }}</span> {...props}&gt;
+        &lt;Header label={title &amp;&amp; title || <span class="branch-2 cbranch-no" title="branch not covered" >''}</span> closeModal={closeModal}/&gt;
+        &lt;div className="grid"&gt;
+          &lt;div className="column"&gt;
+            {children}
+            &lt;div className="row"&gt;&lt;/div&gt;
+          &lt;/div&gt;  
+        &lt;/div&gt; 
+      &lt;/div&gt;
     &lt;/div&gt;
   );
 };
 &nbsp;
-export default SaveButton;
+export default Modal;
 &nbsp;
-SaveButton.propTypes = {
-  beforeSave: PropTypes.bool,
+Modal.propTypes = {
+  title: PropTypes.string,
   borderRadius: PropTypes.bool,
   backgroundColor: PropTypes.string,
-  label: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  variant: PropTypes.oneOf(['primary', 'success', 'danger', 'default']),
-  disabled: PropTypes.bool,
-  shadow: PropTypes.bool,
-  onClick: PropTypes.func
+  modeLoD: PropTypes.bool
 };
 &nbsp;
-SaveButton.defaultProps = {
+Modal.defaultProps = {
+  title: 'Modal',
   borderRadius: false,
-  beforeSave: false,
   backgroundColor: null,
-  size: 'medium',
-  variant: 'default',
-  label: '',
-  disabled: false,
-  shadow: true,
-  onClick: undefined
-};
-&nbsp;
-AOS.init();</pre></td></tr></table></pre>
+  modeLoD: true
+  
+};</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-<<<<<<< HEAD
-                at Mon May 09 2022 09:45:08 GMT-0500 (hora de verano central)
-=======
-                at Fri May 06 2022 18:13:48 GMT-0500 (hora de verano central)
->>>>>>> b49f7414e2386f07778a0b1d7b95345e1cb6547c
+                at Fri May 06 2022 15:37:31 GMT-0500 (hora de verano central)
             </div>
         <script src="../prettify.js"></script>
         <script>

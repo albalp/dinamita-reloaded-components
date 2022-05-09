@@ -60,7 +60,7 @@ describe('<Checkbox> - Testing of checked event of the checkbox component', () =
 
     });
 
-});
+}); 
 
 describe('<Checkbox> - Testing of properties', () => {
     

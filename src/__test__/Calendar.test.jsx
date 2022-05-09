@@ -116,7 +116,7 @@ describe('<Calendar> - Functionality', () => {
             
             fireEvent.click(buttonPrevious);
         }
-
+ 
         expect(month).toHaveTextContent(/December/);
         expect(year).toHaveTextContent(currentDate.getFullYear() - 1);
         

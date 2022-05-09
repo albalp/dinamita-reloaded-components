@@ -13,7 +13,7 @@ describe('<Header> - Testing of the render of the header component', () => {
         expect(header).toBeInTheDocument();
 
     });
-   
+    
     test('Should do click on the button of the header component', () => {
 
         const mockHandler = jest.fn();

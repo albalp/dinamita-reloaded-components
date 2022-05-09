@@ -16,7 +16,7 @@ describe('<Form> - Rendering form component in the application', () => {
     });
  
 });
-
+ 
 describe('<Form> - Testing of the submit event', () => {
     
     test('Should to execute the onSubmit event', () => {

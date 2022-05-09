@@ -276,7 +276,7 @@ describe('Integration test - Dropdown component', () => {
         expect(input).toHaveValue('Resources Management');
 
     });
-    
+     
     test('Should to show the projects results of the filter', () => {
 
         const dropdown = screen.getByRole('menu', {name: 'dropdown-project'});

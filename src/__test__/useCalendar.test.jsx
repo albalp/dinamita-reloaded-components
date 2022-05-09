@@ -13,7 +13,7 @@ describe('Test hook useCalendar', () => {
 
           expect(result.current.daysMonth.length).toBe(31);
 
-    });
+    }); 
 
     test('Should to have 28 days when the year is leap', () => {
 

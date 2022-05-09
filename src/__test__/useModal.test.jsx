@@ -23,6 +23,6 @@ describe('Testing of useModal hook', () => {
          });
 
         expect(result.current.isOpen).not.toBeTruthy();
-    });
+    }); 
 
 });

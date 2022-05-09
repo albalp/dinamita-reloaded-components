@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {render, fireEvent, screen} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import Modal from '../components/modal/modal';
@@ -14,7 +13,7 @@ test('Should to render the modal component', () => {
     expect(modal).toBeInTheDocument();
 
 });
-
+ 
 test('Should to have the border radius class when receive the borderRadius property', () => {
 
     render(<Modal title="Modal" borderRadius/>);
@@ -70,49 +69,10 @@ test('Should to show the modal when do click on the button', () => {
     render(<Modal title="Create Activity" isOpen={isOpen}/>);
     const modal = screen.getByText(/Create Activity/i).parentNode.parentNode.parentNode;
     
-=======
-import ReactDOM from "react-dom";
-import "@testing-library/jest-dom/extend-expect";
-import { render, screen, fireEvent } from "@testing-library/react";
-import Modal from "../components/modal/modal";
-import Modals from "../components/modal/modals";
-import { useModal } from "../components/modal/useModal";
-import { prettyDOM } from "@testing-library/dom";
-import SaveButton from "../components/SaveButton";
-
-test("It must to be on the document", () => {
-  render(
-    <>
-      <SaveButton label="Click" />
-      <Modal title="Modal" />
-    </>
-  );
-
-  const modal = screen.getByText(/Modal/i).parentNode.parentNode;
-  const button = screen.getByRole("button", { name: /Click/i });
-
-  expect(button).toBeInTheDocument();
-  expect(modal).toBeInTheDocument();
-});
-
-test("The button should be clicked and it must to test if it is open", () => {
-
-    render( <SaveButton label="Open modal" onClick={() => open = true} />);
-
-    let open = false;
-    const button = screen.getByRole("button", { name: /Open modal/i });
-
-    fireEvent.click(button);
-
-    render( <Modal title="Modal Form" isOpen={open}></Modal>);
-    const modal = screen.getByText(/Modal Form/i).parentNode.parentNode.parentNode;
-
->>>>>>> b49f7414e2386f07778a0b1d7b95345e1cb6547c
     expect(modal).toHaveClass('is-open');
 
 });
 
-<<<<<<< HEAD
 test('Should to hidde the modal when do click in the button close', () => {
 
     let isOpen = true;
@@ -137,24 +97,3 @@ test('Should to prevent the event propagation', () => {
     expect(isStopPropagation).toBe(true);
 
 }); 
-=======
-test('Should to have the border radius class when receive the radius property', () => {
-
-    render( <Modal title="Modal Form" isOpen={true} borderRadius ></Modal>);
-    const modal = screen.getByText(/Modal Form/i).parentNode.parentNode;
-
-    expect(modal).toHaveClass('storybook-modal--border-radius');
-});
-
-test('propagacion', () => {
-    let open = false;
-    render( <Modal label="Modal" onClick={open} />);
-
-    const modal = screen.getByText(/Modal/i).parentNode.parentNode;
-    const clickEvent = new MouseEvent('click');
-    Object.assign(clickEvent, {stopPropagation: jest.fn()});
-
-    fireEvent.click(modal, clickEvent);
-    expect(clickEvent.stopPropagation).toHaveBeenCalledTimes(1);
-  })
->>>>>>> b49f7414e2386f07778a0b1d7b95345e1cb6547c

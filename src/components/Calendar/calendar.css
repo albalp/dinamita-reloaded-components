@@ -1,7 +1,7 @@
 /* Global Styled */
 @import '../../css/global_styles.css';
 
-/* Calendar
+/* Calendar 
 ---------------------------- */
 .calendar {
     width: 100%;
@@ -56,6 +56,17 @@
     font-size: var(--fs-16);
     cursor: pointer;
 }
+
+.calendar-button {
+    padding: 10px 20px;
+    border-radius: var(--radius-48);
+    background: var(--white-color);
+    color: var(--font-color);
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.calendar-button:hover { color: var(--primary-color); }
 
 /* Calendar Week
 --------------------------------- */
@@ -155,6 +166,10 @@
     gap: 10px;
 }
 
+.calendar-button-reset {
+    width: 100px;
+}
+
 /*------- VARIANTS -------*/
 
 /* Calendar Dark variant
@@ -172,6 +187,8 @@
 .calendar--dark button .calendar-header-actions-action { box-shadow: var(--shadow-down-dark); }
 
 .calendar--dark .calendar-week-day { color: var(--dark-letter-color); }
+
+.calendar--dark .calendar-button { box-shadow: none; }
 
  /* Calendar Shadow variant
  ---------------------------------*/

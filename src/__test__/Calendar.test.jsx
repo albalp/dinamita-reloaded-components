@@ -1,11 +1,13 @@
 import '@testing-library/jest-dom/extend-expect';
-import Calendar from './Calendar';
+import Calendar from '../components/Calendar/Calendar';
 import {render, screen, fireEvent} from '@testing-library/react';
+import {prettyDOM} from '@testing-library/dom';
+ 
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
+ 
 beforeEach(() => {
-    render(<Calendar/>);
+    render(<Calendar dark backgroundColor="salmon" />);
 });
 
 describe('<Calendar/> - Render elements of component in the interface', () => {
@@ -179,6 +181,26 @@ describe('<Calendar> - Functionality', () => {
 
         expect(dayNotSelected).not.toHaveClass('calendar-month-day--selected');
 
+    });
+
+});
+
+describe('<Calendar> - Testing of properties', () => {
+
+    const currentDate = new Date();
+
+    test('should to have the dark property', () => {
+
+        const calendar = screen.getByText(months[currentDate.getMonth()]).parentNode.parentNode.parentNode;
+
+        expect(calendar).toHaveClass('calendar--dark');
+    });
+
+    test('should to have the backgroundColor property', () => {
+
+        const calendar = screen.getByText(months[currentDate.getMonth()]).parentNode.parentNode.parentNode;
+
+        expect(calendar).toHaveStyle('background-color: salmon');
     });
 
 });

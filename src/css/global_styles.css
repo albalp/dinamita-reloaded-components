@@ -6,7 +6,7 @@
 :root {
 
     /* Colors */
-    --primary-color: rgb(30, 167, 253);
+    --primary-color: rgb(53,85,195);
     --primary-color-hover: rgb(29, 133, 197);
     --nova-color: rgb(53, 85, 195);
     --success-color: rgb(99, 222, 120);
@@ -21,6 +21,7 @@
     --black-color: rgb(255, 255, 255);
     --white-gray-color: rgb(245, 245, 245);
     --disabled-color: rgba(14, 14, 14, 0.16);
+    --nova-color: rgb(53,85,195);
     
     --primary-color-disabled: rgba(29, 133, 197, 0.531);
     --success-color-disabled: rgb(77, 163, 91, 0.531);
@@ -52,9 +53,12 @@
     --border-top-left-radius: 5px;
     --border-top-right-radius: 5px;
     --border-solid: 1px solid rgb(204, 204, 204);
+<<<<<<< HEAD
     --border-solid-grey: rgb(180, 180, 180);
     --border-bottom: 1px solid rgb(239, 239, 239);
     --border-top: 1px solid rgb(239, 239, 239);
+=======
+>>>>>>> 7ac77971189bd3a2d385489b293e302f52cba71c
 
     /* Shadows */
     --shadow: 0px 0px 5px 0px rgba(204,204,204,0.38);

@@ -17,8 +17,8 @@ const Calendar = function ({dark, shadow, backgroundColor, size, variant}) {
                     <p className="calendar-header-date-year">{calendar.year}</p>
                 </div>
                 <div className="calendar-header-actions">
-                    <Button aria-label="button previous month" className="calendar-header-actions-action-prev" onClick={prevMonth} shadow={dark ? false : true} icon={<BiChevronLeft/>} size="small"  borderRadius/>
-                    <Button aria-label="button next month" className="calendar-header-actions-action-next" onClick={nextMonth} shadow={dark ? false : true} icon={<BiChevronRight/>} size="small" borderRadius/>
+                    <button aria-label="button previous month" className="calendar-button calendar-header-actions-action-prev" onClick={prevMonth}><BiChevronLeft/></button>
+                    <button aria-label="button next month" className="calendar-button calendar-header-actions-action-next" onClick={nextMonth}><BiChevronRight/></button>
                 </div>
             </div>
             <div className="calendar-week">
@@ -32,7 +32,7 @@ const Calendar = function ({dark, shadow, backgroundColor, size, variant}) {
             </div>
             <Days calendar={calendar} daysMonth={daysMonth} daysPreviousMonth={daysPreviousMonth} selectDate={selectDate} variant={variant} currentDate={currentDate} monthNumber={monthNumber}/>
             <div className="calendar-footer">
-                <Button aria-label="button reset date" onClick={resetDate} shadow={dark ? false : true} label="Today" icon={<BiCalendar/>} size="small" borderRadius/>    
+                <button aria-label="button reset date" className="calendar-button calendar-button-reset" onClick={resetDate}><BiCalendar/> Today</button>    
                 <span aria-label="legend warning date selected" className={`calendar-legend ${calendar.dateSelected && (calendar.dateSelected.getDate() !== currentDate.getDate() || calendar.dateSelected.getMonth() !== currentDate.getMonth() || calendar.dateSelected.getFullYear() !== currentDate.getFullYear()) ? 'activated' : ''}`}>You are selecting a date different to current</span>
             </div>
         </div>

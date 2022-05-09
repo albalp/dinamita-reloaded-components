@@ -15,12 +15,15 @@ export default {
 // Form default variant
 export const FormDefault = (args) => {
     return(
-        <Form {...args} size="small" title="Default">
+        <Form {...args}>
             <Input type="text" name="name" placeholder="Name"/>
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
         </Form>
     );
+}
+FormDefault.args = {
+    title: 'default'
 }
 
 // Form variant grid

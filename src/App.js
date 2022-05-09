@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {useState} from 'react';
 import { BiUser } from "react-icons/bi";
 import Form from './components/Form/Form/Form';
@@ -13,55 +14,13 @@ import AddTaskIcon from '@mui/icons-material/AddTask';
 import Header from './components/header/header';
 import TextArea from './components/textArea/textArea';
 import Modals from './components/modal/modals';
+=======
+>>>>>>> 7ac77971189bd3a2d385489b293e302f52cba71c
 import Integration from './components/Integration';
 
 function App() {
-
-  function Clicked(){
-    console.log("Clicked!");
-  }
-
-  const projectData = [
-     {
-       id:data.project.ProjectId, 
-       name:data.project.ProjectName,
-     }
-  ]
-  
-  const categories = []
-  data.project.ProjectCategories.map(category => categories.push({id:category.CategoryID, name:category.CategoryName}))
-
-  const initialValues = {
-    name: {value: '', valid: null},
-    lastname: {value: '', valid: null},
-    email: {value: '', valid: null},
-    password: {value: '', valid: null},
-  }
-
-  const expressions = {
-    name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
-    lastname: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
-    password: /^.{4,12}$/,
-    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
-  }
-
-  const [initialForm, setInitialForm] = useState(initialValues);
-
-  const inputsValidations = (e) => {
-    if(expressions[e.target.name].test(e.target.value)) {
-      setInitialForm({
-        ...initialForm,
-        [e.target.name]: {value: e.target.value, valid: true} 
-      });
-    }else {
-      setInitialForm({
-        ...initialForm,
-        [e.target.name]: {value: e.target.value, valid: false} 
-      });
-    }
-  }
-
   return (
+<<<<<<< HEAD
 
     // <div>
     //   <Dropdown title="Project" icon={<MdArrowDropDown />} options={projectData}/>
@@ -82,10 +41,10 @@ function App() {
     //     <Checkbox label="Other" value="other" rounded/>
     //   </Form>
     // </div>
+=======
+>>>>>>> 7ac77971189bd3a2d385489b293e302f52cba71c
     <Integration/>
   );
 }
 
 export default App;
-
-AOS.init();

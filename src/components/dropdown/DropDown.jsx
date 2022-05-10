@@ -36,7 +36,7 @@ const Dropdown = ( {title, options, icon, size, borderRadius, dark, light}  ) =>
     <div className={`dropdown-container ${dark && 'dark'} ${light && 'light'}`}>
       <p>{title}</p>
       <div className={`dropdown-size--${size} dropdown ${isOpen ? 'active' : ''} ${borderRadius && 'borderRadius'}`}>
-        <div onClick={toggling} className="select">
+        <div role="menu" aria-label={`dropdown-${title.toLowerCase()}`} onClick={toggling} className="select">
             <input 
             ref={ref}
             type="text" 

@@ -174,7 +174,7 @@ describe('<Input> - Testing of properties in the input default variant ', () => 
 
 describe('<Input> - Testing of properties in the input secondary variant', () => {
 
-    test('Should to have the dark class when receive the ', () => {
+    test('Should to have the dark class when receive the', () => {
 
         render(<Input name="email" secondaryPlaceholder="Email address" secondary dark/>);
 

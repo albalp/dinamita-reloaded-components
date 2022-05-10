@@ -36,6 +36,7 @@
     border-radius: 10px;
     transition: var(--transition);
     animation: showUp 0.5s ease;
+    background: var(--primary-color);
 }
 
 /* Modal rounded variant */

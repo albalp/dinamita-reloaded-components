@@ -6,7 +6,7 @@ import {prettyDOM} from '@testing-library/dom';
 describe('<Header> - Testing of the render of the header component', () => {
 
     test('Should to be in the document the header', () => {
-
+ 
         render(<Header label="Create Activity"/>);
         const header = screen.getByText(/Create Activity/i);
 

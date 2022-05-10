@@ -41,7 +41,7 @@ describe('<Input> - Testing input component', () => {
     
     });
     
-});
+}); 
 
 describe('<Input> - Testing when the input is invalid', () => {
     

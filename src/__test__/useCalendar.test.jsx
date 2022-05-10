@@ -6,7 +6,7 @@ describe('Test hook useCalendar', () => {
     test('Should to have 31 days when the function getTotalDays receive -1', () => {
 
         const { result } = renderHook(() => useCalendar());
-
+ 
         act(() => {
             result.current.getTotalDays(-1);
           });

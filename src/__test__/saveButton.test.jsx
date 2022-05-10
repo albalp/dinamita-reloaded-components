@@ -54,7 +54,7 @@ describe("Button tests", () => {
         const button = screen.getByRole('button', {name: /Click me/i});
 
         expect(button).toHaveStyle('background-color: salmon');
-
+ 
     }); 
 
     test('Should to render the icon when receive the icon property', () => {

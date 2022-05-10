@@ -267,7 +267,7 @@ describe('Integration test - Dropdown component', () => {
 
         const dropdown = screen.getByRole('menu', {name: 'dropdown-categories'});
         const input = screen.getByPlaceholderText(/Available/i);
-
+ 
         fireEvent.click(dropdown);
 
         const option = screen.getByRole('menuitem', {name: 'menuitem-resources management'});

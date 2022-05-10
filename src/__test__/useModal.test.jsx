@@ -4,7 +4,7 @@ import { useModal } from '../components/modal/useModal';
 describe('Testing of useModal hook', () => {
 
     test('Should to be true when the modal is open', () => {
-
+ 
         const { result } = renderHook(() => useModal());
         
         act(() => {

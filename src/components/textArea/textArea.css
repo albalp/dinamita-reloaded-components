@@ -10,10 +10,11 @@ textArea{
     border: var(--border-solid);
     width: 98%;
     padding: 1em;
+    resize: none;
 }
 
 /* Classes for the variants*/
 .sb-background-white{ background-color: var(--white-color); color: var(--dark-color)}
 .sb-background-black{ background-color: var(--dark-color); color: var(--white-color)}
-.storybook-textarea--border-radius { border-radius: var(--radius-24) }
+.storybook-textarea--border-radius { border-radius: var(--radius) }
 

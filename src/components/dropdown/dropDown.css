@@ -9,6 +9,7 @@
   border: 1px solid rgb(204, 204, 204);
   position: relative;
   transition: var(--transition);
+  border-radius: var(--radius);
 }
 
 .dropdown svg { font-size: 20px; }
@@ -16,7 +17,7 @@
 .dropdown:hover { border-color: rgb(180, 180, 180);}
 
 .dropdown.active { 
-  border-color: var(--primary-color); 
+  /* border-color: var(--primary-color);  */
   height: auto; 
   border-radius: var(--radius);
 }
@@ -42,6 +43,7 @@
   text-align: left;
   font-size: 1vmin;
   padding-right: 10px;
+  position: relative;
 }
 
 .input-option {
@@ -52,14 +54,28 @@
 }
 
 .dropdown-menu {
-    max-height: 144px;
+    height: auto;
+    max-height: 100px;
     background-color: var(--white-color);
     width: 100%;
-    margin-top: 1px;
-    border-radius: 0 1px 2px 2px ;
-    overflow-y: auto;
-    transition: var(--transition);
+    top: 40px;
+    transition: 0.3s ease;
     animation: showOptions 0.2s ease;
+    position: absolute;
+    overflow: auto;
+    z-index: 1;
+    border-radius: var(--radius);
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: var(--shadow-dropdown-down);
+    border: 1px solid rgb(204, 204, 204);
+  }
+  
+  .dropdown-menu--activated {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
 }
 
 .dropdown-menu li {

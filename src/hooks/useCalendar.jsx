@@ -77,13 +77,21 @@ export const useCalendar = () => {
             break;
 
             case 10: fillArray(30);
+
+            case 1: {
+                if(monthLeap) {
+                    fillArray(29);
+                }else{
+                    fillArray(28)
+                }
+            }
             break;
 
-            case monthLeap === true: fillArray(29);
-            break;
+            // case monthLeap === true: fillArray(29);
+            // break;
 
-            case monthLeap === false: fillArray(28);
-            break;
+            // case monthLeap === false: fillArray(28);
+            // break;
 
             default: return;
         }

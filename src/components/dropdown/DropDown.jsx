@@ -50,8 +50,7 @@ const Dropdown = ( {title, options, icon, size, borderRadius, dark, light}  ) =>
             }}/>
           {icon && icon}
         </div>
-        {isOpen && (
-          <ul role="group" aria-label={`group-options-${title.toLowerCase()}`} className="dropdown-menu">
+        <ul role="group" aria-label={`group-options-${title.toLowerCase()}`} className={`dropdown-menu ${isOpen && 'dropdown-menu--activated'}`}>
             {options && options.length > 0 
             ? filter(options).map((option) =>(
               <li role="menuitem" aria-label={`menuitem-${option.name.toLowerCase()}`} key={option.id} onClick={onOptionClicked(option.name)}>
@@ -61,7 +60,7 @@ const Dropdown = ( {title, options, icon, size, borderRadius, dark, light}  ) =>
             : <span>No options found</span>
             }
           </ul>
-        )}
+    
       </div>
     </div>
   )

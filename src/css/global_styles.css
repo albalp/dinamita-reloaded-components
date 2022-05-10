@@ -53,12 +53,9 @@
     --border-top-left-radius: 5px;
     --border-top-right-radius: 5px;
     --border-solid: 1px solid rgb(204, 204, 204);
-<<<<<<< HEAD
     --border-solid-grey: rgb(180, 180, 180);
     --border-bottom: 1px solid rgb(239, 239, 239);
     --border-top: 1px solid rgb(239, 239, 239);
-=======
->>>>>>> 7ac77971189bd3a2d385489b293e302f52cba71c
 
     /* Shadows */
     --shadow: 0px 0px 5px 0px rgba(204,204,204,0.38);

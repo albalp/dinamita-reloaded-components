@@ -63,10 +63,11 @@ const Integration = () => {
                 <Dropdown title="Categories" icon={<MdArrowDropDown />} options={categories}/>
                 <Input name="hours" onChange={inputsValidations} type="number" label="Hours" legend="Invalid hours" value={initialForm.hours.value} valid={initialForm.hours.valid}/>
                 <Input name="ticket" onChange={inputsValidations} type="text" label="Ticket" legend="Invalid ticket" value={initialForm.ticket.value} valid={initialForm.ticket.valid}/>
-                <TextArea label="Comments" />
+                {/* {<TextArea label="*Comments" />   === "" ? <Button variant="primary"/> : <Button variant="disabled"/>} */}
+                <TextArea label="*Comments" />
                 <div className="form-footer">
                   <Button label="Cancel" />
-                  <Button variant="primary" label="Create" />
+                  <Button   label="Create" variant="primary" />
                 </div>
             </form>
         </Modal>

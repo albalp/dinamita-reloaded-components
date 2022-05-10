@@ -119,7 +119,7 @@ describe('<Calendar> - Functionality', () => {
  
         expect(month).toHaveTextContent(/December/);
         expect(year).toHaveTextContent(currentDate.getFullYear() - 1);
-        
+         
     });
 
     test('Should to increment year when month is december and the user do click in the button next month', () => {

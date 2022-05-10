@@ -23,7 +23,7 @@ describe('Test hook useCalendar', () => {
 
         act(() => {
            result.current.getTotalDays(monthLeap);
-        });
+        }); 
 
         expect(result.current.daysMonth.length).toBe(28);
 

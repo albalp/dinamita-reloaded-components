@@ -1,6 +1,6 @@
-/* *{
-    margin: 2px;
-} */
+/* Global Styles */
+@import '../../../css/global_styles.css';
+
 .modal {
     position: fixed;
     z-index: 999;
@@ -12,8 +12,8 @@
     display: none;
     justify-content: center;
     align-items: center;
-    border-radius: var(--radius);
     padding: 20px;
+    animation: show 0.5s ease;
 }
 
 
@@ -34,6 +34,8 @@
     max-height: 400px;
     overflow-y: auto;
     border-radius: 10px;
+    transition: var(--transition);
+    animation: showUp 0.5s ease;
 }
 
 /* Modal rounded variant */

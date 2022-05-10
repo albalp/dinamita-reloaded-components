@@ -13,11 +13,11 @@ export default {
 };
 
 const Template = (args) => {
-  const [isOpenModal, openModal, closeModal] = useModal(false);
+  const {isOpen, openModal, closeModal} = useModal(false);
   return (
     <div>
       <SaveButton label="Click" onClick={openModal} />
-      <Modal {...args}  isOpen={isOpenModal} closeModal={closeModal} />
+      <Modal {...args}  isOpen={isOpen} closeModal={closeModal} />
     </div>
   );
 }
@@ -29,7 +29,7 @@ ModalDefault.args = {
 
 export const LightOrDark = Template.bind({});
 LightOrDark.args = {
-  modeLoD: true
+  modeDark: true
 };
 
 export const Large = Template.bind({});

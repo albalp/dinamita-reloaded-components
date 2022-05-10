@@ -61,7 +61,7 @@ describe('<Checkbox> - Testing of checked event of the checkbox component', () =
     });
 
 }); 
-
+ 
 describe('<Checkbox> - Testing of properties', () => {
     
     test('Should be rounded if have de rounded property', () => {

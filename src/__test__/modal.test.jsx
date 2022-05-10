@@ -17,7 +17,7 @@ test('Should to render the modal component', () => {
 test('Should to have the border radius class when receive the borderRadius property', () => {
 
     render(<Modal title="Modal" borderRadius/>);
-
+ 
     const modal = screen.getByText(/Modal/i).parentNode.parentNode;
 
     expect(modal).toBeInTheDocument();

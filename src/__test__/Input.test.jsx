@@ -144,7 +144,7 @@ describe('<Input> - Testing input component label variant', () => {
     });
 
 });
- 
+  
 describe('<Input> - Testing of properties in the input default variant ', () => {
 
     test('Should to have the dark class when receive the dark property', () => {

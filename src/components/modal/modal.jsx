@@ -1,7 +1,5 @@
 import "../modal/css/modal.css";
 import PropTypes from 'prop-types';
-import SaveButton from '../../components/SaveButton';
-import CloseIcon from '@mui/icons-material/Close';
 import "../modal/css/grid.css";
 import Header from '../header/header';
 
@@ -45,5 +43,5 @@ Modal.defaultProps = {
   borderRadius: false,
   backgroundColor: null,
   modeDark: false,
-  isOpen: true
+  isOpen: false
 };

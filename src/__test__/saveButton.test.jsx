@@ -56,7 +56,7 @@ describe("Button tests", () => {
         expect(button).toHaveStyle('background-color: salmon');
  
     }); 
-
+ 
     test('Should to render the icon when receive the icon property', () => {
 
         render(<SaveButton label='Click me' icon={<BiCalendar/>} />);
@@ -66,5 +66,5 @@ describe("Button tests", () => {
 
         expect(icon).toBeInTheDocument();
  
-    });
+    }); 
 });    

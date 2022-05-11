@@ -15,32 +15,32 @@ describe('Test hook useCalendar', () => {
 
     }); 
 
-    test('Should to have 28 days when the year is leap', () => {
+    test('Should to have 28 days when the year is not leap', () => {
 
         const { result } = renderHook(() => useCalendar());
 
-        let monthLeap = true;
-
         act(() => {
-           result.current.getTotalDays(monthLeap);
+           result.current.getTotalDays(1);
         }); 
 
         expect(result.current.daysMonth.length).toBe(28);
-
+        expect(result.current.daysMonth.length).not.toBe(29);
+ 
     });
 
-    test('Should to have 29 days when the year is not leap', () => {
+    test('Should to have 29 days when the year is leap', () => {
 
         const { result } = renderHook(() => useCalendar());
 
-        let monthLeap = false;
-
         act(() => {
-            result.current.getTotalDays(monthLeap);
-        });
+            result.current.calendar.year = 2020;
+            result.current.getTotalDays(1);
+        }); 
 
         expect(result.current.daysMonth.length).toBe(29);
-
+        expect(result.current.daysMonth.length).not.toBe(28);
+ 
     });
+
 
 });

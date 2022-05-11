@@ -38,19 +38,19 @@ const Integration = () => {
         email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
       }
 
-      const inputsValidations = (e) => {
-        if(expressions[e.target.name].test(e.target.value)) {
-          setInitialForm({
-            ...initialForm,
-            [e.target.name]: {value: e.target.value, valid: true} 
-          });
-        }else {
-          setInitialForm({
-            ...initialForm,
-            [e.target.name]: {value: e.target.value, valid: false} 
-          });
-        }
-      }
+      // const inputsValidations = (e) => {
+      //   if(expressions[e.target.name].test(e.target.value)) {
+      //     setInitialForm({
+      //       ...initialForm,
+      //       [e.target.name]: {value: e.target.value, valid: true} 
+      //     });
+      //   }else {
+      //     setInitialForm({
+      //       ...initialForm,
+      //       [e.target.name]: {value: e.target.value, valid: false} 
+      //     });
+      //   }
+      // }
 
       const {isOpen, openModal, closeModal} = useModal();
      
@@ -61,8 +61,8 @@ const Integration = () => {
             <form className="form-integration">
                 <Dropdown title="Project" icon={<MdArrowDropDown />} options={projectData}/>
                 <Dropdown title="Categories" icon={<MdArrowDropDown />} options={categories}/>
-                <Input name="hours" onChange={inputsValidations} type="number" label="Hours" legend="Invalid hours" value={initialForm.hours.value} valid={initialForm.hours.valid}/>
-                <Input name="ticket" onChange={inputsValidations} type="text" label="Ticket" legend="Invalid ticket" value={initialForm.ticket.value} valid={initialForm.ticket.valid}/>
+                <Input name="hours"   type="number" label="Hours" legend="Invalid hours"  valid={initialForm.hours.valid}/>
+                <Input name="ticket"  type="text" label="Ticket" legend="Invalid ticket"  valid={initialForm.ticket.valid}/>
                 <TextArea/>
                 <div className="form-footer">
                   <Button label="Cancel" />

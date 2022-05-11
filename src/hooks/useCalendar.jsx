@@ -87,13 +87,7 @@ export const useCalendar = () => {
             }
             break;
 
-            // case monthLeap === true: fillArray(29);
-            // break;
-
-            // case monthLeap === false: fillArray(28);
-            // break;
-
-            default: return;
+            // default: return;
         }
 
         for(let i = startDay(); i >= 0; i--) {

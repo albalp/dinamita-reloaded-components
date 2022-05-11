@@ -96,23 +96,14 @@ describe('<Calendar> - Functionality', () => {
 
     test('Should to select a new date when do click in a day of the month', () => {
         
-        const day = screen.getByText(10);
-
-        if(day === currentDate.getDate()) {
-
-            day + 1;
-
-            if(day === 27) {
-                day - 1;
-            }
-        }
-
+        let dayValue = (currentDate.getDate() + 1 >= 28) ? 28 : currentDate.getDate() + 1;
+        const day = screen.getByText(dayValue);
+        
         fireEvent.click(day);
- 
-        const daySelected = screen.getByText(day);
 
-        // expect(daySelected).toHaveClass('calendar-month-day--selected');
-        console.log(prettyDOM(day));
+        let daySelected = screen.getByText(dayValue);
+
+        expect(daySelected).toHaveClass('calendar-month-day--selected');
          
     }); 
  

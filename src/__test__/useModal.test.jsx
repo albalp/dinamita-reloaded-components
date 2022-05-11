@@ -10,7 +10,7 @@ describe('Testing of useModal hook', () => {
         act(() => {
             result.current.openModal();
          });
-
+ 
         expect(result.current.isOpen).toBeTruthy();
     });
 
@@ -18,7 +18,7 @@ describe('Testing of useModal hook', () => {
 
         const { result } = renderHook(() => useModal());
         
-        act(() => {
+        act(() => { 
             result.current.closeModal();
          }); 
 

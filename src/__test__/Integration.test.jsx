@@ -17,7 +17,7 @@ describe('Integration test - Rendering components', () => {
 
         const modal = screen.getByText(/Create Activity/i).parentNode.parentNode.parentNode;
         const calendar = screen.getByText(currentDate.getFullYear()).parentNode.parentNode.parentNode;
-        const dropdownProjects = screen.getByText(/Project/i).parentNode;
+        const dropdownProjects = screen.getByRole('menu', { name: 'dropdown-project' });
         const dropdownCategories = screen.getByText(/Categories/i).parentNode;
         const inputHours = screen.getByLabelText(/Hours/i);
         const inputTicket = screen.getByLabelText(/Ticket/i);
@@ -203,7 +203,7 @@ describe('Integration test - Dropdown component', () => {
         const dropdown = screen.getByRole('menu', {name: 'dropdown-project'});
         fireEvent.click(dropdown);
         const options = screen.queryByRole('group', {name: 'group-options-project'});
-        const option = screen.getByText(/Delivery/i);
+        const option = screen.getByRole('menuitem', {name: 'menuitem-delivery'});
 
         expect(options).toBeInTheDocument();
         expect(option).toBeInTheDocument();
@@ -216,11 +216,11 @@ describe('Integration test - Dropdown component', () => {
         fireEvent.click(dropdown);
 
         const options = screen.queryByRole('group', {name: 'group-options-project'});
-        const option = screen.getByText(/Delivery/i);
+        const option = screen.getByRole('menuitem', {name: 'menuitem-delivery'});
 
         fireEvent.click(option);
 
-        expect(options).not.toBeInTheDocument();
+        expect(options).not.toHaveClass('dropdown-menu--activated');
 
     });
 
@@ -244,10 +244,10 @@ describe('Integration test - Dropdown component', () => {
 
         fireEvent.click(option);
 
-        expect(options).not.toBeInTheDocument();
+        expect(options).not.toHaveClass('dropdown-menu--activated');
 
     });
-
+ 
     test('Should to select an option of the project dropdown and change the input value', () => {
 
         const dropdown = screen.getByRole('menu', {name: 'dropdown-project'});
@@ -255,7 +255,7 @@ describe('Integration test - Dropdown component', () => {
         fireEvent.click(dropdown);
 
         const options = screen.queryByRole('group', {name: 'group-options-project'});
-        const option = screen.queryByText(/Delivery/i);
+        const option = screen.getByRole('menuitem', {name: 'menuitem-delivery'});
 
         fireEvent.click(option);
 
@@ -275,7 +275,7 @@ describe('Integration test - Dropdown component', () => {
 
         expect(input).toHaveValue('Resources Management');
 
-    });
+    }); 
       
     test('Should to show the projects results of the filter', () => {
 

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">78.57% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/14</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/3</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">76.92% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/13</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -182,14 +182,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -261,19 +261,19 @@ const Integration = () =&gt; {
         email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
       }
 &nbsp;
-      const inputsValidations = <span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
-<span class="cstat-no" title="statement not covered" >        if(expressions[e.target.name].test(e.target.value)) {</span>
-<span class="cstat-no" title="statement not covered" >          setInitialForm({</span>
-            ...initialForm,
-            [e.target.name]: {value: e.target.value, valid: true} 
-          });
-        }else {
-<span class="cstat-no" title="statement not covered" >          setInitialForm({</span>
-            ...initialForm,
-            [e.target.name]: {value: e.target.value, valid: false} 
-          });
-        }
-      }
+      // const inputsValidations = (e) =&gt; {
+      //   if(expressions[e.target.name].test(e.target.value)) {
+      //     setInitialForm({
+      //       ...initialForm,
+      //       [e.target.name]: {value: e.target.value, valid: true} 
+      //     });
+      //   }else {
+      //     setInitialForm({
+      //       ...initialForm,
+      //       [e.target.name]: {value: e.target.value, valid: false} 
+      //     });
+      //   }
+      // }
 &nbsp;
       const {isOpen, openModal, closeModal} = useModal();
      
@@ -284,8 +284,8 @@ const Integration = () =&gt; {
             &lt;form className="form-integration"&gt;
                 &lt;Dropdown title="Project" icon={&lt;MdArrowDropDown /&gt;} options={projectData}/&gt;
                 &lt;Dropdown title="Categories" icon={&lt;MdArrowDropDown /&gt;} options={categories}/&gt;
-                &lt;Input name="hours" onChange={inputsValidations} type="number" label="Hours" legend="Invalid hours" value={initialForm.hours.value} valid={initialForm.hours.valid}/&gt;
-                &lt;Input name="ticket" onChange={inputsValidations} type="text" label="Ticket" legend="Invalid ticket" value={initialForm.ticket.value} valid={initialForm.ticket.valid}/&gt;
+                &lt;Input name="hours"   type="number" label="Hours" legend="Invalid hours"  valid={initialForm.hours.valid}/&gt;
+                &lt;Input name="ticket"  type="text" label="Ticket" legend="Invalid ticket"  valid={initialForm.ticket.valid}/&gt;
                 &lt;TextArea/&gt;
                 &lt;div className="form-footer"&gt;
                   &lt;Button label="Cancel" /&gt;
@@ -307,7 +307,7 @@ export default Integration
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue May 10 2022 16:14:40 GMT-0500 (hora de verano central)
+                at Wed May 11 2022 10:25:52 GMT-0500 (hora de verano central)
             </div>
         <script src="../prettify.js"></script>
         <script>

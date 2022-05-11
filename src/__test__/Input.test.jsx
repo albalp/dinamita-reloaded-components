@@ -118,7 +118,7 @@ describe('<Input> - Testing input component secondary variant', () => {
     });
 
 });
-
+  
 describe('<Input> - Testing input component label variant', () => {
 
     test('Should to be in the document the input component label variant', () => {

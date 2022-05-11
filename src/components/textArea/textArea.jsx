@@ -1,13 +1,16 @@
 import './textArea.css';
 import { PropTypes } from 'prop-types';
 //Declaring our component with his props.
-const TextArea = ({placeholder, borderRadius, ...props}) =>{
+const TextArea = ({placeholder, borderRadius, label, variant, important, ...props}) =>{
     const radius = borderRadius && 'storybook-textarea--border-radius';
 
     return(
         <div>
-            <label>Comments</label>
-                <textarea  required="" rows="5" className={[radius]} placeholder= {placeholder}  {...props}>
+            <label htmlFor={label && label.toLowerCase()}>
+                {important && '* ' }
+                {label && label}
+            </label>
+                <textarea id={label && label.toLowerCase()}  required=" " rows="5" className={[radius]}  {...props}>
                 
                 </textarea>
 

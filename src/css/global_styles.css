@@ -8,6 +8,7 @@
     /* Colors */
     --primary-color: rgb(53,85,195);
     --primary-color-hover: rgb(29, 133, 197);
+    --nova-color: rgb(53, 85, 195);
     --success-color: rgb(99, 222, 120);
     --success-color-hover: rgb(77, 163, 91);
     --danger-color: rgb(237, 83, 83);
@@ -17,6 +18,7 @@
     --dark-letter-color: rgb(171, 171, 171);
     --dark-background-color: rgb(51, 51, 51);
     --white-color: rgb(255, 255, 255);
+    --black-color: rgb(255, 255, 255);
     --white-gray-color: rgb(245, 245, 245);
     --disabled-color: rgba(14, 14, 14, 0.16);
     --nova-color: rgb(53,85,195);
@@ -28,7 +30,7 @@
     
 
     /* Font */
-    --font:  'Raleway', sans-serif;
+    --font:  'Quicksand', sans-serif;
     --font-color: rgb(113, 113, 113);
     
     /* Sizes */
@@ -43,7 +45,7 @@
     --fs-25: 1.5625rem; /*25px*/
     --fs-30: 1.875rem; /*30px*/
 
-    /* Radius */
+    /* Radius and Borders */
     --radius: 8px;
     --radius-48: 3rem;
     --radius-24: 2rem;
@@ -51,6 +53,9 @@
     --border-top-left-radius: 5px;
     --border-top-right-radius: 5px;
     --border-solid: 1px solid rgb(204, 204, 204);
+    --border-solid-grey: rgb(180, 180, 180);
+    --border-bottom: 1px solid rgb(239, 239, 239);
+    --border-top: 1px solid rgb(239, 239, 239);
 
     /* Shadows */
     --shadow: 0px 0px 5px 0px rgba(204,204,204,0.38);

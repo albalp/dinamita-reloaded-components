@@ -8,7 +8,7 @@ label{
 textArea{
     display: flex;
     border: var(--border-solid);
-    width: 98%;
+    width: 100%;
     padding: 1em;
     resize: none;
 }

@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.75);
     display: none;
     justify-content: center;
@@ -15,7 +15,6 @@
     padding: 20px;
     animation: show 0.5s ease;
 }
-
 
 .modal-close {
     position: absolute;
@@ -25,13 +24,15 @@
   
 .is-open {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-container {
     position: relative;
     background-color: white;
     width: 800px;
-    max-height: 400px;
+    max-height: 80vh;
     overflow-y: auto;
     border-radius: 10px;
     transition: var(--transition);
@@ -41,7 +42,7 @@
 
 /* Modal rounded variant */
 .storybook-modal--border-radius {
-    border-radius: 0%;
+    border-radius: none;
 }
 
 /* Modal  variant */

@@ -31,6 +31,7 @@ const Integration = () => {
     
       const expressions = {
         name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+        comments: /^[a-zA-ZÀ-ÿ\s]{1,255}$/,
         ticket: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
         lastname: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
         password: /^.{4,12}$/,
@@ -38,19 +39,19 @@ const Integration = () => {
         email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
       }
 
-      // const inputsValidations = (e) => {
-      //   if(expressions[e.target.name].test(e.target.value)) {
-      //     setInitialForm({
-      //       ...initialForm,
-      //       [e.target.name]: {value: e.target.value, valid: true} 
-      //     });
-      //   }else {
-      //     setInitialForm({
-      //       ...initialForm,
-      //       [e.target.name]: {value: e.target.value, valid: false} 
-      //     });
-      //   }
-      // }
+      const inputsValidations = (e) => {
+        if(expressions[e.target.name].test(e.target.value)) {
+          setInitialForm({
+            ...initialForm,
+            [e.target.name]: {value: e.target.value, valid: true} 
+          });
+        }else {
+          setInitialForm({
+            ...initialForm,
+            [e.target.name]: {value: e.target.value, valid: false} 
+          });
+        }
+      }
 
       const {isOpen, openModal, closeModal} = useModal();
      
@@ -59,14 +60,19 @@ const Integration = () => {
         <Modal title="Create Activity" isOpen={isOpen} closeModal={closeModal}>
             <Calendar size="small"/>
             <form className="form-integration">
-                <Dropdown title="Project" icon={<MdArrowDropDown />} options={projectData}/>
-                <Dropdown title="Categories" icon={<MdArrowDropDown />} options={categories}/>
-                <Input name="hours"   type="number" label="Hours" legend="Invalid hours"  valid={initialForm.hours.valid}/>
-                <Input name="ticket"  type="text" label="Ticket" legend="Invalid ticket"  valid={initialForm.ticket.valid}/>
-                <TextArea/>
+                <Dropdown borderRadius title="Project" icon={<MdArrowDropDown />} options={projectData}/>
+                <Dropdown borderRadius title="Categories" icon={<MdArrowDropDown />} options={categories}/>
+                <Input onChange={inputsValidations} name="hours"  type="number" label="Hours" legend="Invalid hours"  valid={initialForm.hours.valid}/>
+                <Input onChange={inputsValidations} name="ticket" type="text" label="Ticket" legend="Invalid ticket"  valid={initialForm.ticket.valid}/>
+                <TextArea name="comments" onChange={inputsValidations} important label="Comments" value={initialForm.comments.value}/>
                 <div className="form-footer">
                   <Button label="Cancel" />
-                  <Button variant="primary" label="Create" />
+                  {initialForm.comments.value !== '' 
+
+                    ? <Button label="Create" variant="primary" />
+                    : <Button label="Create" variant="primary" disabled />
+                  
+                  }
                 </div>
             </form>
         </Modal>

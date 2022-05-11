@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -86,17 +86,17 @@
 <a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">139x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">178x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3266x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -106,17 +106,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { v4 as uuidv4 } from 'uuid';
 import Day from './Day';
 &nbsp;
-const Days = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >({</span> calendar, daysPreviousMonth, daysMonth, selectDate, variant, currentDate, monthNumber }) =&gt; {</span>
+const Days = ({ calendar, daysPreviousMonth, daysMonth, selectDate, variant, currentDate, monthNumber }) =&gt; {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;div className="calendar-month"&gt;
         {
-            daysPreviousMonth.length !== 7 &amp;&amp; daysPreviousMonth.map(<span class="fstat-no" title="function not covered" >da</span>yPreviou =&gt; <span class="cstat-no" title="statement not covered" >&lt;div key={uuidv4()} onClick={selectDate} className={` calendar-month-day calendar-month-day--${variant} calendar-month-day--before`}&gt;{dayPreviou}&lt;/div&gt;)</span>
+            daysPreviousMonth.length !== 7 &amp;&amp; daysPreviousMonth.map(dayPreviou =&gt; &lt;div key={uuidv4()} onClick={selectDate} className={` calendar-month-day calendar-month-day--${variant} calendar-month-day--before`}&gt;{dayPreviou}&lt;/div&gt;)
 &nbsp;
         }
 &nbsp;
         {
-          daysMonth.map( <span class="fstat-no" title="function not covered" >da</span>y =&gt; <span class="cstat-no" title="statement not covered" >&lt;Day key={uuidv4()} calendar={calendar} handleClick={selectDate} monthNumber={monthNumber} variant={variant} currentDate={currentDate} day={day}/&gt;)</span>
+          daysMonth.map( day =&gt; &lt;Day key={uuidv4()} calendar={calendar} handleClick={selectDate} monthNumber={monthNumber} variant={variant} currentDate={currentDate} day={day}/&gt;)
         }
     &lt;/div&gt;
   )
@@ -130,7 +130,7 @@ export default Days;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon May 02 2022 17:51:13 GMT-0500 (hora de verano central)
+                at Mon May 09 2022 17:37:36 GMT-0500 (hora de verano central)
             </div>
         <script src="../../../prettify.js"></script>
         <script>

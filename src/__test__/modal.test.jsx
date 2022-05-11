@@ -35,7 +35,7 @@ test('Should to have the modal dark class when receive the modeDark property', (
     expect(modal).toHaveClass('storybook-modal--dark');
 
 });
-
+ 
 test('Should to have the modal light class when dont receive the modeDark property', () => {
 
     render(<Modal title="Modal"/>);

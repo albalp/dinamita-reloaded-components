@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks'
 import { useModal } from '../components/modal/useModal';
-
+ 
 describe('Testing of useModal hook', () => {
 
     test('Should to be true when the modal is open', () => {
@@ -22,7 +22,8 @@ describe('Testing of useModal hook', () => {
             result.current.closeModal();
          }); 
 
+         
         expect(result.current.isOpen).not.toBeTruthy();
     }); 
 
-});
+}); 

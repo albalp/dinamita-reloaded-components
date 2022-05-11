@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652282752499" clover="3.2.0">
-  <project timestamp="1652282752499" name="All files">
-    <metrics statements="129" coveredstatements="129" conditionals="199" coveredconditionals="199" methods="25" coveredmethods="25" elements="353" coveredelements="353" complexity="0" loc="129" ncloc="129" packages="9" files="11" classes="11"/>
+<coverage generated="1652286094335" clover="3.2.0">
+  <project timestamp="1652286094336" name="All files">
+    <metrics statements="156" coveredstatements="153" conditionals="235" coveredconditionals="232" methods="35" coveredmethods="34" elements="426" coveredelements="419" complexity="0" loc="156" ncloc="156" packages="10" files="12" classes="12"/>
     <package name="components">
-      <metrics statements="16" coveredstatements="16" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="3"/>
+      <metrics statements="20" coveredstatements="17" conditionals="14" coveredconditionals="11" methods="4" coveredmethods="3"/>
       <file name="Integration.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\components\Integration.jsx">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="13" coveredstatements="10" conditionals="4" coveredconditionals="1" methods="3" coveredmethods="2"/>
         <line num="12" count="1" type="stmt"/>
         <line num="14" count="22" type="stmt"/>
         <line num="20" count="22" type="stmt"/>
@@ -13,8 +13,12 @@
         <line num="23" count="176" type="stmt"/>
         <line num="25" count="22" type="stmt"/>
         <line num="32" count="22" type="stmt"/>
-        <line num="55" count="22" type="stmt"/>
-        <line num="57" count="22" type="stmt"/>
+        <line num="42" count="22" type="stmt"/>
+        <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="56" count="22" type="stmt"/>
+        <line num="58" count="22" type="stmt"/>
       </file>
       <file name="SaveButton.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\components\SaveButton.jsx">
         <metrics statements="7" coveredstatements="7" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
@@ -73,6 +77,35 @@
         <line num="85" count="2" type="stmt"/>
       </file>
     </package>
+    <package name="components.dropdown">
+      <metrics statements="23" coveredstatements="23" conditionals="24" coveredconditionals="24" methods="9" coveredmethods="9"/>
+      <file name="DropDown.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\components\dropdown\DropDown.jsx">
+        <metrics statements="23" coveredstatements="23" conditionals="24" coveredconditionals="24" methods="9" coveredmethods="9"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="65" type="stmt"/>
+        <line num="11" count="65" type="stmt"/>
+        <line num="13" count="65" type="cond" truecount="4" falsecount="0"/>
+        <line num="14" count="65" type="stmt"/>
+        <line num="16" count="65" type="stmt"/>
+        <line num="18" count="259" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="24" count="65" type="stmt"/>
+        <line num="25" count="63" type="stmt"/>
+        <line num="26" count="260" type="stmt"/>
+        <line num="29" count="65" type="stmt"/>
+        <line num="30" count="65" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="63" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="35" count="65" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="56" count="259" type="stmt"/>
+        <line num="71" count="2" type="stmt"/>
+        <line num="81" count="2" type="stmt"/>
+      </file>
+    </package>
     <package name="components.header">
       <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <file name="header.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\components\header\header.jsx">
@@ -106,14 +139,14 @@
       </file>
     </package>
     <package name="components.textArea">
-      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <metrics statements="5" coveredstatements="5" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
       <file name="textArea.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\components\textArea\textArea.jsx">
-        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <metrics statements="5" coveredstatements="5" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="23" type="cond" truecount="2" falsecount="0"/>
         <line num="7" count="23" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="24" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
       </file>
     </package>
     <package name="hooks">

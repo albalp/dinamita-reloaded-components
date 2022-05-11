@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">78.57% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>10/10</span>
+                <span class='fraction'>11/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>1/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">76.92% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/9</span>
+                <span class='fraction'>10/13</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -142,7 +142,13 @@
 <a name='L77'></a><a href='#L77'>77</a>
 <a name='L78'></a><a href='#L78'>78</a>
 <a name='L79'></a><a href='#L79'>79</a>
-<a name='L80'></a><a href='#L80'>80</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -183,13 +189,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -199,6 +206,11 @@
 <span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -254,6 +266,7 @@ const Integration = () =&gt; {
     
       const expressions = {
         name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+        comments: /^[a-zA-ZÀ-ÿ\s]{1,255}$/,
         ticket: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
         lastname: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
         password: /^.{4,12}$/,
@@ -261,19 +274,19 @@ const Integration = () =&gt; {
         email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
       }
 &nbsp;
-      // const inputsValidations = (e) =&gt; {
-      //   if(expressions[e.target.name].test(e.target.value)) {
-      //     setInitialForm({
-      //       ...initialForm,
-      //       [e.target.name]: {value: e.target.value, valid: true} 
-      //     });
-      //   }else {
-      //     setInitialForm({
-      //       ...initialForm,
-      //       [e.target.name]: {value: e.target.value, valid: false} 
-      //     });
-      //   }
-      // }
+      const inputsValidations = <span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >        if(expressions[e.target.name].test(e.target.value)) {</span>
+<span class="cstat-no" title="statement not covered" >          setInitialForm({</span>
+            ...initialForm,
+            [e.target.name]: {value: e.target.value, valid: true} 
+          });
+        }else {
+<span class="cstat-no" title="statement not covered" >          setInitialForm({</span>
+            ...initialForm,
+            [e.target.name]: {value: e.target.value, valid: false} 
+          });
+        }
+      }
 &nbsp;
       const {isOpen, openModal, closeModal} = useModal();
      
@@ -282,14 +295,19 @@ const Integration = () =&gt; {
         &lt;Modal title="Create Activity" isOpen={isOpen} closeModal={closeModal}&gt;
             &lt;Calendar size="small"/&gt;
             &lt;form className="form-integration"&gt;
-                &lt;Dropdown title="Project" icon={&lt;MdArrowDropDown /&gt;} options={projectData}/&gt;
-                &lt;Dropdown title="Categories" icon={&lt;MdArrowDropDown /&gt;} options={categories}/&gt;
-                &lt;Input name="hours"   type="number" label="Hours" legend="Invalid hours"  valid={initialForm.hours.valid}/&gt;
-                &lt;Input name="ticket"  type="text" label="Ticket" legend="Invalid ticket"  valid={initialForm.ticket.valid}/&gt;
-                &lt;TextArea/&gt;
+                &lt;Dropdown borderRadius title="Project" icon={&lt;MdArrowDropDown /&gt;} options={projectData}/&gt;
+                &lt;Dropdown borderRadius title="Categories" icon={&lt;MdArrowDropDown /&gt;} options={categories}/&gt;
+                &lt;Input onChange={inputsValidations} name="hours"  type="number" label="Hours" legend="Invalid hours"  valid={initialForm.hours.valid}/&gt;
+                &lt;Input onChange={inputsValidations} name="ticket" type="text" label="Ticket" legend="Invalid ticket"  valid={initialForm.ticket.valid}/&gt;
+                &lt;TextArea name="comments" onChange={inputsValidations} important label="Comments" value={initialForm.comments.value}/&gt;
                 &lt;div className="form-footer"&gt;
                   &lt;Button label="Cancel" /&gt;
-                  &lt;Button variant="primary" label="Create" /&gt;
+                  {initialForm.comments.value !== '' 
+&nbsp;
+                    ? <span class="branch-0 cbranch-no" title="branch not covered" >&lt;Button label="Create" variant="primary" /&gt;</span>
+                    : &lt;Button label="Create" variant="primary" disabled /&gt;
+                  
+                  }
                 &lt;/div&gt;
             &lt;/form&gt;
         &lt;/Modal&gt;
@@ -307,7 +325,7 @@ export default Integration
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed May 11 2022 10:25:52 GMT-0500 (hora de verano central)
+                at Wed May 11 2022 11:21:34 GMT-0500 (hora de verano central)
             </div>
         <script src="../prettify.js"></script>
         <script>

@@ -6,7 +6,8 @@ const Days = ({ calendar, daysPreviousMonth, daysMonth, selectDate, setValue, va
   const handleClick = (e) => {
     selectDate(e);
     let newDate = new Date(calendar.year, monthNumber, parseInt(e.target.textContent));
-    setValue(newDate);
+    
+    if(setValue) setValue(newDate);
   }
   
   return (

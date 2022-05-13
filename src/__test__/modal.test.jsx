@@ -57,7 +57,7 @@ test('Should to have the background color received like property', () => {
     expect(modal).toHaveStyle('background-color: salmon');
 
 });
-
+ 
 test('Should to show the modal when do click on the button', () => {
 
     let isOpen = false;

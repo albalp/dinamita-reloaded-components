@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652474329638" clover="3.2.0">
-  <project timestamp="1652474329638" name="All files">
-    <metrics statements="167" coveredstatements="164" conditionals="242" coveredconditionals="239" methods="40" coveredmethods="39" elements="449" coveredelements="442" complexity="0" loc="167" ncloc="167" packages="10" files="13" classes="13"/>
+<coverage generated="1652474877946" clover="3.2.0">
+  <project timestamp="1652474877947" name="All files">
+    <metrics statements="167" coveredstatements="164" conditionals="244" coveredconditionals="241" methods="40" coveredmethods="39" elements="451" coveredelements="444" complexity="0" loc="167" ncloc="167" packages="10" files="13" classes="13"/>
     <package name="components">
       <metrics statements="22" coveredstatements="19" conditionals="14" coveredconditionals="11" methods="5" coveredmethods="4"/>
       <file name="Integration.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\components\Integration.jsx">
@@ -34,7 +34,7 @@
       </file>
     </package>
     <package name="components.Calendar">
-      <metrics statements="13" coveredstatements="13" conditionals="19" coveredconditionals="19" methods="5" coveredmethods="5"/>
+      <metrics statements="13" coveredstatements="13" conditionals="21" coveredconditionals="21" methods="5" coveredmethods="5"/>
       <file name="Calendar.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\components\Calendar\Calendar.jsx">
         <metrics statements="5" coveredstatements="5" conditionals="17" coveredconditionals="17" methods="1" coveredmethods="1"/>
         <line num="8" count="2" type="stmt"/>
@@ -44,15 +44,15 @@
         <line num="54" count="2" type="stmt"/>
       </file>
       <file name="Days.jsx" path="C:\Users\CAPI\Desktop\dinamita-reloaded-components\src\components\Calendar\Days.jsx">
-        <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+        <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
         <line num="4" count="2" type="stmt"/>
         <line num="6" count="141" type="stmt"/>
         <line num="7" count="10" type="stmt"/>
         <line num="8" count="10" type="stmt"/>
-        <line num="9" count="10" type="stmt"/>
-        <line num="12" count="141" type="stmt"/>
-        <line num="15" count="182" type="cond" truecount="2" falsecount="0"/>
-        <line num="20" count="3316" type="stmt"/>
+        <line num="10" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="141" type="stmt"/>
+        <line num="16" count="182" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="3316" type="stmt"/>
       </file>
     </package>
     <package name="components.Form.Checkbox">

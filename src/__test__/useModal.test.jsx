@@ -13,7 +13,7 @@ describe('Testing of useModal hook', () => {
  
         expect(result.current.isOpen).toBeTruthy();
     });
-
+  
     test('Should to be false when the modal is not open', () => {
 
         const { result } = renderHook(() => useModal());

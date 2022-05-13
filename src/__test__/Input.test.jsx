@@ -16,7 +16,7 @@ describe('<Input> - Testing input component', () => {
 
     });
 
-    
+     
     test('Should to change the value of the input component', () => {
 
         render(<Input name="name" placeholder="Name"/>);

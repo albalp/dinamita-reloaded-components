@@ -8,7 +8,7 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 beforeEach(() => {
     render(<Integration/>);
 });
-
+ 
 describe('Integration test - Rendering components', () => {
 
     const currentDate = new Date();

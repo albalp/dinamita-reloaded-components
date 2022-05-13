@@ -12,7 +12,7 @@ describe("Button tests", () => {
         const button = screen.getByRole('button', {name: 'Click me'});
 
         expect(button).toBeInTheDocument();
-
+ 
     }); 
 
     it('Should be called', () =>{

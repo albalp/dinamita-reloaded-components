@@ -33,7 +33,7 @@ describe('<Calendar/> - Render elements of component in the interface', () => {
         expect(sund).toBeInTheDocument();
         expect(day).toBeInTheDocument();
         expect(legend).toBeInTheDocument();
-        
+         
     });
 });
 

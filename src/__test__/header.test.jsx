@@ -28,6 +28,6 @@ describe('<Header> - Testing of the render of the header component', () => {
         expect(mockHandler).toHaveBeenCalledTimes(1);
         
     });
-
+ 
 });
   

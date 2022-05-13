@@ -58,7 +58,7 @@ const Integration = () => {
   return (
     <div className="container">
         <Modal title="Create Activity" isOpen={isOpen} closeModal={closeModal}>
-            <Calendar size="small"/>
+            <Calendar size="small" shadow={false} />
             <form className="form-integration">
                 <Dropdown borderRadius title="Project" icon={<MdArrowDropDown />} options={projectData}/>
                 <Dropdown borderRadius title="Categories" icon={<MdArrowDropDown />} options={categories}/>

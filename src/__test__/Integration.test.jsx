@@ -81,7 +81,7 @@ describe('Integration test - Calendar component', () => {
         expect(currentDay).toHaveClass('calendar-month-day--active');
 
     });
-
+ 
     test('Should to change to next month when do click in the button next', () => {
 
         const buttonNext = screen.getByRole('button', {name: 'button next month'});

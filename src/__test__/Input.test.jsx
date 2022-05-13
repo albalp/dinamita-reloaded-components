@@ -340,4 +340,4 @@ describe('<Input> - Testing of properties in the input label variant', () => {
 
     });
 
-});
+}); 

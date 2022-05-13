@@ -13,7 +13,7 @@ describe("Button tests", () => {
 
         expect(button).toBeInTheDocument();
 
-    });
+    }); 
 
     it('Should be called', () =>{
 

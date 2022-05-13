@@ -17,7 +17,7 @@ describe('Testing of useModal hook', () => {
     test('Should to be false when the modal is not open', () => {
 
         const { result } = renderHook(() => useModal());
-        
+         
         act(() => { 
             result.current.closeModal();
          }); 

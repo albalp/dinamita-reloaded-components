@@ -53,8 +53,8 @@ describe("Dropdown", () => {
   })
   
 
-})
-
+}) 
+ 
 describe('Dropdown clicks should work', () => {
   it("The dropdown should be clicked and need show options", async() => {
 

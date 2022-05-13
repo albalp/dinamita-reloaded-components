@@ -77,6 +77,7 @@ export const useCalendar = () => {
             break;
 
             case 10: fillArray(30);
+            break;
 
             case 1: {
                 if(monthLeap) {

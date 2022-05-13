@@ -182,7 +182,7 @@ describe('<Calendar> - Functionality', () => {
 
         expect(dayNotSelected).not.toHaveClass('calendar-month-day--selected');
 
-    });
+    }); 
 
 });
 

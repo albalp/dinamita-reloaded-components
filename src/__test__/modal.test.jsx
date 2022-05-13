@@ -97,3 +97,4 @@ test('Should to prevent the event propagation', () => {
     expect(isStopPropagation).toBe(true);
 
 }); 
+ 

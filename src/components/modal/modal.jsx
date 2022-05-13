@@ -19,7 +19,6 @@ const Modal = ({ children, isOpen, closeModal, size, backgroundColor, borderRadi
         <div className="grid">
           <div className="column">
             {children}
-            <div className="row"></div>
           </div>  
         </div> 
       </div>

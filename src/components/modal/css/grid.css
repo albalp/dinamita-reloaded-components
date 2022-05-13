@@ -1,8 +1,8 @@
 .column {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 10px 20px;
-    
+    padding: 20px;
 }
 
 .row{

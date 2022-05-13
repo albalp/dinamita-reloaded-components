@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState, useRef } from 'react';
 import { MdArrowDropDown } from 'react-icons/md'
 import Calendar from './Calendar/Calendar';
 import Input from './Form/Input/Input';
@@ -15,6 +15,7 @@ const Integration = () => {
         ticket: {value: '', valid: null},
         comments: {value: '', valid: null},
         hours: {value: 1, valid: null},
+        date: {value: '', valid: null}
       }
 
     const [initialForm, setInitialForm] = useState(initialValues);
@@ -54,16 +55,23 @@ const Integration = () => {
       }
 
       const {isOpen, openModal, closeModal} = useModal();
-     
+      
+      const handleDate = (date) => {
+        setInitialForm({
+          ...initialForm,
+          date: {value: date, valid: null}
+        });
+      }
+
   return (
     <div className="container">
         <Modal title="Create Activity" isOpen={isOpen} closeModal={closeModal}>
-            <Calendar size="small" shadow={false} />
+            <Calendar size="small" shadow={false} setValue={handleDate} />
             <form className="form-integration">
                 <Dropdown borderRadius title="Project" icon={<MdArrowDropDown />} options={projectData}/>
                 <Dropdown borderRadius title="Categories" icon={<MdArrowDropDown />} options={categories}/>
-                <Input onChange={inputsValidations} name="hours"  type="number" label="Hours" legend="Invalid hours"  valid={initialForm.hours.valid}/>
-                <Input onChange={inputsValidations} name="ticket" type="text" label="Ticket" legend="Invalid ticket"  valid={initialForm.ticket.valid}/>
+                <Input onChange={inputsValidations} name="hours"  type="number" label="Hours" legend="Invalid hours" value={initialForm.hours.value}  valid={initialForm.hours.valid}/>
+                <Input onChange={inputsValidations} name="ticket" type="text" label="Ticket" legend="Invalid ticket" value={initialForm.ticket.value}  valid={initialForm.ticket.valid}/>
                 <TextArea name="comments" onChange={inputsValidations} important label="Comments" value={initialForm.comments.value}/>
                 <div className="form-footer">
                   <Button label="Cancel" />

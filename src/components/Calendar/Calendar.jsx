@@ -4,9 +4,10 @@ import Days from './Days';
 import PropTypes from 'prop-types';
 import './calendar.css';
 
-const Calendar = function ({dark, shadow, backgroundColor, size, variant}) {
 
-    const { months, calendar, monthNumber, currentDate, daysMonth, daysPreviousMonth, prevMonth, nextMonth, selectDate, resetDate } = useCalendar();
+const Calendar = function ({dark, shadow, backgroundColor, size, variant, setValue}) {
+
+    const { months, calendar, monthNumber, currentDate, daysMonth, daysPreviousMonth, prevMonth, nextMonth, selectDate, resetDate} = useCalendar();
 
     return (
         <div className={`calendar ${shadow && 'calendar--shadow'} ${dark && 'calendar--dark'} calendar-size--${size}`} style={backgroundColor && { backgroundColor }}>
@@ -29,8 +30,11 @@ const Calendar = function ({dark, shadow, backgroundColor, size, variant}) {
                 <div className="calendar-week-day">Frid</div>
                 <div className="calendar-week-day">Sat</div>
             </div>
-            <Days calendar={calendar} daysMonth={daysMonth} daysPreviousMonth={daysPreviousMonth} selectDate={selectDate} variant={variant} currentDate={currentDate} monthNumber={monthNumber}/>
+            <Days calendar={calendar} daysMonth={daysMonth} daysPreviousMonth={daysPreviousMonth} selectDate={selectDate} setValue={setValue} variant={variant} currentDate={currentDate} monthNumber={monthNumber}/>
             <div className="calendar-footer">
+                {calendar.dateSelected && (calendar.dateSelected.getDate() !== currentDate.getDate() || calendar.dateSelected.getMonth() !== currentDate.getMonth() || calendar.dateSelected.getFullYear() !== currentDate.getFullYear()) &&
+                    <p className="calendar-date-selected">{ `${calendar.dateSelected.getDate()} ${months[calendar.dateSelected.getMonth()]} ${calendar.dateSelected.getFullYear()}` }</p>
+                }
                 <button aria-label="button reset date" className="calendar-button calendar-button-reset" onClick={resetDate}><BiCalendar/> Today</button>    
                 <span aria-label="legend warning date selected" className={`calendar-legend ${calendar.dateSelected && (calendar.dateSelected.getDate() !== currentDate.getDate() || calendar.dateSelected.getMonth() !== currentDate.getMonth() || calendar.dateSelected.getFullYear() !== currentDate.getFullYear()) ? 'activated' : ''}`}>You are selecting a date different to current</span>
             </div>

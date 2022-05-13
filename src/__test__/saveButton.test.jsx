@@ -23,7 +23,6 @@ describe("Button tests", () => {
         
         fireEvent.click(button);
 
-        
         expect(mockHandler).toHaveBeenCalledTimes(1);
 
     })

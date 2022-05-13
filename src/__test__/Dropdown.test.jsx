@@ -95,4 +95,4 @@ it('should have border radius', () => {
   const dropdown = screen.getByRole('menu', {name: 'dropdown-frutas'}).parentNode;
   expect(dropdown).toHaveClass('borderRadius');
   
-})
+}) 

@@ -55,7 +55,7 @@ describe('<Input> - Testing when the input is invalid', () => {
         expect(legend).toHaveClass('activated');
 
     });
-});
+}); 
 
 describe('<Input> - Testing input component secondary variant', () => {
 

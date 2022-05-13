@@ -13,7 +13,7 @@ beforeEach(() => {
         </Form>
     );  
 });    
- 
+  
 describe('<Checkbox> - Testing render of the checkbox component', () => {
     
     test('Should be in the document the checkbox default variant', () => {

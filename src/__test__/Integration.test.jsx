@@ -294,4 +294,4 @@ describe('Integration test - Dropdown component', () => {
 
     });
 
-});
+}); 

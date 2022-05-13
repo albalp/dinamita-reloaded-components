@@ -1,10 +1,10 @@
 import '@testing-library/jest-dom/extend-expect';
 import Calendar from '../components/Calendar/Calendar';
+import { renderHook, act } from '@testing-library/react-hooks'
 import {render, screen, fireEvent} from '@testing-library/react';
 import {prettyDOM} from '@testing-library/dom';
  
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  
 
 beforeEach(() => {
     render(<Calendar dark backgroundColor="salmon" />);
@@ -14,7 +14,7 @@ describe('<Calendar/> - Render elements of component in the interface', () => {
 
     const currentDate = new Date();
 
-    test('Are in the document calendar component', () => {
+    test('Should to be in the document calendar component', () => {
 
         const buttonPrevious = screen.getByRole('button', {name: 'button previous month'});
         const buttonNext = screen.getByRole('button', {name: 'button next month'});
@@ -184,7 +184,7 @@ describe('<Calendar> - Functionality', () => {
 
     }); 
 
-});
+}); 
 
 describe('<Calendar> - Testing of properties', () => {
 

@@ -171,6 +171,11 @@
     width: 100px;
 }
 
+.calendar-date-selected {
+    font-size: var(--fs-13);
+    color: var(--primary-color);
+}
+
 /*------- VARIANTS -------*/
 
 /* Calendar Dark variant

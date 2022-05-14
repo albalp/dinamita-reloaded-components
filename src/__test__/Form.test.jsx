@@ -14,7 +14,7 @@ describe('<Form> - Rendering form component in the application', () => {
 
         expect(form).toBeInTheDocument();
     });
-   
+    
 });  
    
 describe('<Form> - Testing of the submit event', () => {

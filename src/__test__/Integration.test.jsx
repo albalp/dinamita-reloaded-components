@@ -14,7 +14,7 @@ describe('Integration test - Rendering components', () => {
     const currentDate = new Date();
 
     test('Should to render all components in the application', () => {
-
+ 
         const modal = screen.getByText(/Create Activity/i).parentNode.parentNode.parentNode;
         const calendar = screen.getByText(currentDate.getFullYear()).parentNode.parentNode.parentNode;
         const dropdownProjects = screen.getByRole('menu', { name: 'dropdown-project' });

@@ -68,7 +68,7 @@ test('Should to show the modal when do click on the button', () => {
 
     render(<Modal title="Create Activity" isOpen={isOpen}/>);
     const modal = screen.getByText(/Create Activity/i).parentNode.parentNode.parentNode;
-    
+     
     expect(modal).toHaveClass('is-open');
 
 });

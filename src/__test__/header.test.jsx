@@ -30,4 +30,4 @@ describe('<Header> - Testing of the render of the header component', () => {
     });
  
 });
-  
+   

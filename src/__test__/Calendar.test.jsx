@@ -34,7 +34,7 @@ describe('<Calendar/> - Render elements of component in the interface', () => {
         expect(day).toBeInTheDocument();
         expect(legend).toBeInTheDocument();
          
-    });
+    }); 
 });
 
 describe('<Calendar> - Current date should be correct', () => {

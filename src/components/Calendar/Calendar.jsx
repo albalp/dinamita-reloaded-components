@@ -2,12 +2,18 @@ import { BiChevronLeft, BiChevronRight, BiCalendar } from "react-icons/bi";
 import { useCalendar } from '../../hooks/useCalendar';
 import Days from './Days';
 import PropTypes from 'prop-types';
-import Button from '../SaveButton';
 import './calendar.css';
 
-const Calendar = function ({dark, shadow, backgroundColor, size, variant}) {
 
-    const { months, calendar, monthNumber, currentDate, daysMonth, daysPreviousMonth, prevMonth, nextMonth, selectDate, resetDate } = useCalendar();
+const Calendar = function ({dark, shadow, backgroundColor, size, variant, setValue}) {
+
+    const { months, calendar, monthNumber, currentDate, daysMonth, daysPreviousMonth, prevMonth, nextMonth, selectDate, resetDate} = useCalendar();
+
+    const handleClickReset = () => {
+        resetDate();
+        let currentDate = new Date();
+        if(setValue) setValue(currentDate);
+    }
 
     return (
         <div className={`calendar ${shadow && 'calendar--shadow'} ${dark && 'calendar--dark'} calendar-size--${size}`} style={backgroundColor && { backgroundColor }}>
@@ -17,8 +23,8 @@ const Calendar = function ({dark, shadow, backgroundColor, size, variant}) {
                     <p className="calendar-header-date-year">{calendar.year}</p>
                 </div>
                 <div className="calendar-header-actions">
-                    <Button aria-label="button previous month" className="calendar-header-actions-action-prev" onClick={prevMonth} shadow={dark ? false : true} icon={<BiChevronLeft/>} size="small"  borderRadius/>
-                    <Button aria-label="button next month" className="calendar-header-actions-action-next" onClick={nextMonth} shadow={dark ? false : true} icon={<BiChevronRight/>} size="small" borderRadius/>
+                    <button aria-label="button previous month" className="calendar-button calendar-header-actions-action-prev" onClick={prevMonth}><BiChevronLeft/></button>
+                    <button aria-label="button next month" className="calendar-button calendar-header-actions-action-next" onClick={nextMonth}><BiChevronRight/></button>
                 </div>
             </div>
             <div className="calendar-week">
@@ -30,9 +36,12 @@ const Calendar = function ({dark, shadow, backgroundColor, size, variant}) {
                 <div className="calendar-week-day">Frid</div>
                 <div className="calendar-week-day">Sat</div>
             </div>
-            <Days calendar={calendar} daysMonth={daysMonth} daysPreviousMonth={daysPreviousMonth} selectDate={selectDate} variant={variant} currentDate={currentDate} monthNumber={monthNumber}/>
+            <Days calendar={calendar} daysMonth={daysMonth} daysPreviousMonth={daysPreviousMonth} selectDate={selectDate} setValue={setValue} variant={variant} currentDate={currentDate} monthNumber={monthNumber}/>
             <div className="calendar-footer">
-                <Button aria-label="button reset date" onClick={resetDate} shadow={dark ? false : true} label="Today" icon={<BiCalendar/>} size="small" borderRadius/>    
+                {calendar.dateSelected && (calendar.dateSelected.getDate() !== currentDate.getDate() || calendar.dateSelected.getMonth() !== currentDate.getMonth() || calendar.dateSelected.getFullYear() !== currentDate.getFullYear()) &&
+                    <p className="calendar-date-selected">{ `${calendar.dateSelected.getDate()} ${months[calendar.dateSelected.getMonth()]} ${calendar.dateSelected.getFullYear()}` }</p>
+                }
+                <button aria-label="button reset date" className="calendar-button calendar-button-reset" onClick={handleClickReset}><BiCalendar/> Today</button>    
                 <span aria-label="legend warning date selected" className={`calendar-legend ${calendar.dateSelected && (calendar.dateSelected.getDate() !== currentDate.getDate() || calendar.dateSelected.getMonth() !== currentDate.getMonth() || calendar.dateSelected.getFullYear() !== currentDate.getFullYear()) ? 'activated' : ''}`}>You are selecting a date different to current</span>
             </div>
         </div>

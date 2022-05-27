@@ -13,232 +13,168 @@ export default {
 }
 
 // Form default variant
-export const FormDefault = (args) => {
+const Template = (args) => {
     return(
-        <Form {...args} size="small" title="Default">
+        <Form {...args}>
             <Input type="text" name="name" placeholder="Name"/>
             <Input type="text" name="lastmame" placeholder="Lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
         </Form>
     );
+}
+export const FormDefault = Template.bind({});
+FormDefault.args = {
+    title: 'default'
 }
 
 // Form variant grid
-export const FormGrid = (args) => {
-    return(
-        <Form {...args} size="small" title="Grid" variant="grid">
-            <Input type="text" name="name" placeholder="Name"/>
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
+export const FormGrid = Template.bind({});
+FormGrid.args = {
+    title: 'Grid',
+    size: 'small',
+    variant: 'grid'
 }
 
 // Form variant flex
-export const FormFlex = (args) => {
-    return(
-        <Form {...args} size="small" title="Flex" variant="flex">
-            <Input type="text" name="name" placeholder="Name"/>
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
+export const FormFlex = Template.bind({});
+FormFlex.args = {
+    title: 'Flex',
+    size: 'small',
+    variant: 'flex'
 }
 
 // Form variant size small
-export const FormSmall = (args) => {
-    return(
-        <Form {...args} size="small" title="Small">
-            <Input type="text" name="name" placeholder="Name"/>
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
+export const FormSmall = Template.bind({});
+FormSmall.args = {
+    title: 'Small',
+    size: 'small'
 }
 
 // Form variant size medium
-export const FormMedium = (args) => {
-    return(
-        <Form {...args} size="medium" title="Medium">
-            <Input type="text" name="name" placeholder="Name"/>
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
+export const FormMedium = Template.bind({});
+FormMedium.args = {
+    title: 'Medium',
+    size: 'medium'
 }
 
+
 // Form variant size large
-export const FormLarge = (args) => {
-    return(
-        <Form {...args} size="large" title="Large">
-            <Input type="text" name="name" placeholder="Name"/>
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
+export const FormLarge = Template.bind({});
+FormLarge.args = {
+    title: 'Large',
+    size: 'large'
 }
 
 // Form variant Dark
-export const FormDark = (args) => {
-    return(
-        <Form {...args} size="small" title="Dark" dark>
-            <Input type="text" name="name" placeholder="Name" dark/>
-            <Input type="text" name="lastmame" placeholder="Lastname" dark/>
-            <Input type="number" name="Phone" placeholder="Phone" dark/>
-            <Input type="email" name="email" placeholder="Email address" dark/>
-        </Form>
-    );
+export const FormDark = Template.bind({});
+FormDark.args = {
+    title: 'Dark',
+    size: 'small',
+    dark: true
 }
 
+
 // Form variant button size small
-export const FormButtonSizeSmall = (args) => {
-    return(
-        <Form {...args} size="small" title="Button Small" buttonSize="small">
-            <Input type="text" name="name" placeholder="Name"/>
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
+export const FormButtonSizeSmall = Template.bind({});
+FormButtonSizeSmall.args = {
+    title: 'Button Small',
+    size: 'small',
+    buttonSize: 'small',
 }
 
 // Form variant button size medium
-export const FormButtonSizeMedium = (args) => {
-    return(
-        <Form {...args} size="small" title="Button Medium" buttonSize="medium">
-            <Input type="text" name="name" placeholder="Name"/>
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
+export const FormButtonSizeMedium = Template.bind({});
+FormButtonSizeMedium.args = {
+    title: 'Button Medium',
+    size: 'small',
+    buttonSize: 'medium',
 }
 
 // Form variant button size large
-export const FormButtonSizeLarge = (args) => {
-    return(
-        <Form {...args} size="small" title="Button Large" buttonSize="large">
-            <Input type="text" name="name" placeholder="Name"/>
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
+export const FormButtonSizeLarge = Template.bind({});
+FormButtonSizeLarge.args = {
+    title: 'Button Large',
+    size: 'small',
+    buttonSize: 'large',
 }
 
 // Form variant button width small
-export const FormButtonWidthSmall = (args) => {
-    return(
-        <Form {...args} size="small" title="Button Small" buttonWidth="small">
-            <Input type="text" name="name" placeholder="Name"/>
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
+export const FormButtonWidthSmall = Template.bind({});
+FormButtonWidthSmall.args = {
+    title: 'Button Width Small',
+    size: 'small',
+    buttonWidth: 'small',
+}
+
+
+// Form variant button width medium
+export const FormButtonWidthMedium = Template.bind({});
+FormButtonWidthMedium.args = {
+    title: 'Button Width Medium',
+    size: 'small',
+    buttonWidth: 'medium',
 }
 
 // Form variant button width medium
-export const FormButtonWidthMedium = (args) => {
-    return(
-        <Form {...args} size="small" title="Button Medium" buttonWidth="medium">
-            <Input type="text" name="name" placeholder="Name"/>
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
-}
-
-// Form variant button width medium
-export const FormButtonWidthLarge = (args) => {
-    return(
-        <Form {...args} size="small" title="Button Large" buttonWidth="large">
-            <Input type="text" name="name" placeholder="Name"/>
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
+export const FormButtonWidthLarge = Template.bind({});
+FormButtonWidthLarge.args = {
+    title: 'Button Width Large',
+    size: 'small',
+    buttonWidth: 'large',
 }
 
 // Form variant button position left
-export const FormLeftButton = (args) => {
-    return(
-        <Form {...args} size="small" title="Button Left" buttonPosition="left">
-            <Input type="text" name="name" placeholder="Name"/>
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
+export const FormLeftButton = Template.bind({});
+FormLeftButton.args = {
+    title: 'Button Left',
+    buttonPosition: 'left',
+    size: 'small'
 }
 
 // Form variant button position center
-export const FormCenterButton = (args) => {
-    return(
-        <Form {...args} size="small" title="Button Center" buttonPosition="center">
-            <Input type="text" name="name" placeholder="Name"/>
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
+export const FormCenterButton = Template.bind({});
+FormCenterButton.args = {
+    title: 'Button Center',
+    buttonPosition: 'center',
+    size: 'small'
 }
 
 // Form variant button position right
-export const FormRightButton = (args) => {
-    return(
-        <Form {...args} size="small" title="Button Right" buttonPosition="right">
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
+export const FormRightButton = Template.bind({});
+FormRightButton.args = {
+    title: 'Button Right',
+    buttonPosition: 'right',
+    size: 'small'
 }
 
 // Form variant button with label
-export const FormLabelButton = (args) => {
-    return(
-        <Form {...args} size="small" title="Button Label" labelButton="Create">
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
+export const FormLabelButton = Template.bind({});
+FormLabelButton.args = {
+    title: 'Button Label',
+    labelButton: 'Click me',
+    size: 'small'
 }
 
 // Form variant with text
-export const FormText = (args) => {
-    return(
-        <Form {...args} size="small" title="Button Text" text="You can add a text in this part">
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
+export const FormText = Template.bind({});
+FormText.args = {
+    title: 'Button Text',
+    text: 'You can add a text here.',
+    size: 'small'
 }
 
 // Form variant with component button
-export const FormButtonComponent = (args) => {
-    return(
-        <Form {...args} size="small" title="Button component" buttonComponent={<Button label="Hello"/>}>
-            <Input type="text" name="lastmame" placeholder="Lastname"/>
-            <Input type="number" name="Phone" placeholder="Phone"/>
-            <Input type="email" name="email" placeholder="Email address"/>
-        </Form>
-    );
+export const FormButtonComponent = Template.bind({});
+FormText.args = {
+    title: 'Button Button Component',
+    buttonComponent: <Button label="Hello"/>,
+    size: 'small'
 }
 
 // Form variant invalid input
 export const FormInvalidInput = (args) => {
     return(
-        <Form {...args} size="small" title="Button component" buttonComponent={<Button label="Hello"/>}>
+        <Form {...args}>
             <Input type="text" name="lastmame" placeholder="Lastname" legend="Invalid lastname" valid={false}/>
             <Input type="number" name="Phone" placeholder="Phone"/>
             <Input type="email" name="email" placeholder="Email address"/>
@@ -246,10 +182,15 @@ export const FormInvalidInput = (args) => {
     );
 }
 
+FormInvalidInput.args = {
+    title: 'Form Invalid Input',
+    size: 'small',
+}
+
 // Form variant invalid
 export const FormInvalid = (args) => {
     return(
-        <Form {...args} size="small" title="Button component" alert="Oops, an error occurred" buttonComponent={<Button label="Hello"/>} valid={false}>
+        <Form {...args}>
             <Input type="text" name="lastmame" placeholder="Lastname" legend="Invalid lastname"/>
             <Input type="number" name="Phone" placeholder="Phone"/>
             <Input type="email" name="email" placeholder="Email address"/>
@@ -257,10 +198,17 @@ export const FormInvalid = (args) => {
     );
 }
 
+FormInvalid.args = {
+    title: 'Form Invalid',
+    size: 'small',
+    alert: 'Oops, an error occurred',
+    valid: false
+}
+
 // Form variant invalid input dark
 export const FormDarkInvalidInput = (args) => {
     return(
-        <Form {...args} size="small" title="Button component" buttonComponent={<Button label="Hello" shadow={false}/>} dark>
+        <Form {...args}>
             <Input type="text" name="lastmame" placeholder="Lastname" legend="Invalid lastname" valid={false} dark/>
             <Input type="number" name="Phone" placeholder="Phone" dark/>
             <Input type="email" name="email" placeholder="Email address" dark/>
@@ -268,11 +216,40 @@ export const FormDarkInvalidInput = (args) => {
     );
 }
 
+FormDarkInvalidInput.args = {
+    title: 'Form Darl Invalid Input',
+    size: 'small',
+    dark: true
+}
+
 // Form variant search
 export const FormSearch = (args) => {
     return(
-        <Form {...args} size="small" search variant="flex" buttonWidth="small">
+        <Form {...args}>
             <Input type="text" name="search" placeholder="Search" icon={<BiSearch/>}/>
         </Form>
     );
+}
+
+FormSearch.args = {
+    size: 'small',
+    variante: 'flex',
+    buttonWidth: 'small'
+}
+
+// Form variant search
+export const FormSearchInvalid = (args) => {
+    return(
+        <Form {...args}>
+            <Input type="text" name="search" placeholder="Search" icon={<BiSearch/>}/>
+        </Form>
+    );
+}
+
+FormSearchInvalid.args = {
+    size: 'small',
+    variante: 'flex',
+    buttonWidth: 'small',
+    legend: 'No results',
+    valid: false
 }

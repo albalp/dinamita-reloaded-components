@@ -1,19 +1,20 @@
-*{
-    margin: 2px;
-}
+/* Global Styles */
+@import '../../../css/global_styles.css';
+
 .modal {
     position: fixed;
     z-index: 999;
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.75);
     display: none;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    animation: show 0.5s ease;
 }
-
 
 .modal-close {
     position: absolute;
@@ -23,22 +24,25 @@
   
 .is-open {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-container {
     position: relative;
-    padding: 1rem;
-    padding-top: 4rem;
     background-color: white;
-    max-width: 800px;
-    max-height: 400px;
+    width: 800px;
+    max-height: 80vh;
     overflow-y: auto;
     border-radius: 10px;
+    transition: var(--transition);
+    animation: showUp 0.5s ease;
+    background: var(--primary-color);
 }
 
 /* Modal rounded variant */
 .storybook-modal--border-radius {
-    border-radius: 0%;
+    border-radius: none;
 }
 
 /* Modal  variant */
@@ -55,20 +59,37 @@
 /* Modal small variant */
 .storybook-modal--small {
     max-height: auto;
-    min-width: 360px;
-    max-width: 360px;
+    max-width: 420px;
 }
 
 /* Modal medium variant */
 .storybook-modal--medium {
     max-height: auto;
-    min-width: 720px;
     max-width: 720px;
 }
 
 /* Modal large variant */
 .storybook-modal--large {
     max-height: auto;
-    min-width: 1080px;
     max-width: 1080px;
+}
+
+/* Scrollbar */
+
+.modal-container::-webkit-scrollbar {
+    width: 2px;
+    border-radius: var(--radius);
+  }
+
+.modal-container::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+.modal-container::-webkit-scrollbar-thumb {
+background: var(--primary-color);
+border-radius: var(--radius);
+}
+
+.modal-container::-webkit-scrollbar-thumb:hover {
+background: var(--primary-color-hover);
 }

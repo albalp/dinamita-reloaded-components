@@ -10,7 +10,7 @@ export const useCalendar = () => {
     const [daysPreviousMonth, setDaysPreviousMonth] = useState([]);
     const days = [];
     const daysPrevious = [];
-
+ 
     const [calendar, setCalendar] = useState({
         year: currentDate.getFullYear(),
         currentDay: currentDate.getDate(),
@@ -35,8 +35,6 @@ export const useCalendar = () => {
 
             setDaysMonth(days);
         }
-
-        
     }
 
     const getTotalDays = (month) => {
@@ -81,13 +79,16 @@ export const useCalendar = () => {
             case 10: fillArray(30);
             break;
 
-            case monthLeap === true: fillArray(29);
+            case 1: {
+                if(monthLeap) {
+                    fillArray(29);
+                }else{
+                    fillArray(28)
+                }
+            }
             break;
 
-            case monthLeap === false: fillArray(28);
-            break;
-
-            default: return;
+            // default: return;
         }
 
         for(let i = startDay(); i >= 0; i--) {
@@ -151,8 +152,6 @@ export const useCalendar = () => {
         }
     }
 
-    // console.log(calendar.dateSelected);
-
     return {
         months: months,
         calendar: calendar,
@@ -163,6 +162,8 @@ export const useCalendar = () => {
         prevMonth: prevMonth,
         nextMonth: nextMonth,
         resetDate: resetDate,
-        selectDate: selectDate
+        selectDate: selectDate,
+        isLeap: isLeap,
+        getTotalDays: getTotalDays
     }
 }

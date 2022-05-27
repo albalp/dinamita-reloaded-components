@@ -6,8 +6,9 @@
 :root {
 
     /* Colors */
-    --primary-color: rgb(30, 167, 253);
+    --primary-color: rgb(53,85,195);
     --primary-color-hover: rgb(29, 133, 197);
+    --nova-color: rgb(53, 85, 195);
     --success-color: rgb(99, 222, 120);
     --success-color-hover: rgb(77, 163, 91);
     --danger-color: rgb(237, 83, 83);
@@ -17,8 +18,10 @@
     --dark-letter-color: rgb(171, 171, 171);
     --dark-background-color: rgb(51, 51, 51);
     --white-color: rgb(255, 255, 255);
+    --black-color: rgb(255, 255, 255);
     --white-gray-color: rgb(245, 245, 245);
     --disabled-color: rgba(14, 14, 14, 0.16);
+    --nova-color: rgb(53,85,195);
     
     --primary-color-disabled: rgba(29, 133, 197, 0.531);
     --success-color-disabled: rgb(77, 163, 91, 0.531);
@@ -27,7 +30,7 @@
     
 
     /* Font */
-    --font:  'Raleway', sans-serif;
+    --font:  'Quicksand', sans-serif;
     --font-color: rgb(113, 113, 113);
     
     /* Sizes */
@@ -42,18 +45,22 @@
     --fs-25: 1.5625rem; /*25px*/
     --fs-30: 1.875rem; /*30px*/
 
-    /* Radius */
+    /* Radius and Borders */
     --radius: 8px;
     --radius-48: 3rem;
     --radius-24: 2rem;
     --radius-100: 100%;
-    --border-top-left-radius: 2em;
-    --border-top-right-radius: 2em;
-    --border-solid: 1px solid grey;
+    --border-top-left-radius: 5px;
+    --border-top-right-radius: 5px;
+    --border-solid: 1px solid rgb(204, 204, 204);
+    --border-solid-grey: rgb(180, 180, 180);
+    --border-bottom: 1px solid rgb(239, 239, 239);
+    --border-top: 1px solid rgb(239, 239, 239);
 
     /* Shadows */
     --shadow: 0px 0px 5px 0px rgba(204,204,204,0.38);
     --shadow-down: 0px 5px 5px 0px rgba(204,204,204,0.38);
+    --shadow-dropdown-down: 0px 0px 5px 0px rgba(161, 161, 161, 0.605);
     --shadow-up: 0px -5px 5px 0px rgba(204,204,204,0.38);
     --shadow-right: 5px 0px 5px 0px rgba(204,204,204,0.38);
     --shadow-left: -5px 0px 5px 0px rgba(204,204,204,0.38);
@@ -102,7 +109,38 @@ ul, li { list-style: none; }
 /* Animations */
 
 @keyframes show {
-    0% {opacity: 0; transform: scale(0);}
-    50% {opacity: 1; transform: scale(1.1);}
-    100% {opacity: 1; transform: scale(1);}
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes showUp {
+    
+    0% { 
+        opacity: 0;
+        transform: translateY(50px);
+     }
+
+     100% { 
+        opacity: 1;
+        transform: translateY(0);
+     }
+
+}
+
+.container { 
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-footer {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    padding: 10px 20px;
 }

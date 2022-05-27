@@ -2,8 +2,11 @@
 
 .header{
     color: var(--white-color);
-    background-color: var(--primary-color);
-    padding: 2em;
+    background-color: var(--nova-color);
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Classes for the variants*/
@@ -15,3 +18,6 @@
     border-top-right-radius: var(--border-top-right-radius);
  }
 
+.header-button {
+    padding: 5px 10px !important;
+}

@@ -23,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --watch",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
@@ -69,6 +69,7 @@
     "@storybook/testing-library": "^0.0.9",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.2",
+    "@testing-library/react-hooks": "^8.0.0",
     "@testing-library/user-event": "^14.1.0",
     "storybook-addon-material-ui": "^0.9.0-alpha.24",
     "webpack": "^5.72.0"

@@ -1,12 +1,12 @@
 //hook
 import {useState} from 'react';
 
-export const useModal = (initialValue=false) => {
+export const useModal = (initialValue) => {
   const [isOpen, setIsOpen] = useState(initialValue);
 
-  const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
+  const openModal = (e) => setIsOpen(true);
+  const closeModal = (e) => setIsOpen(false);
 
   //variable de estado, método que abre, método que cierra
-  return [isOpen, openModal, closeModal];
+  return {isOpen, openModal, closeModal}; 
 };

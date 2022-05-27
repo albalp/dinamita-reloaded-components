@@ -3,7 +3,7 @@ import Modal from "./modal";
 import SaveButton from '../../components/SaveButton';
 
 const Modals = () => {
-  const [isOpenModal, openModal, closeModal] = useModal(false);
+  const {isOpenModal, openModal, closeModal} = useModal(false);
 
   return (
     <div>

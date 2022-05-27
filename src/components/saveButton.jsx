@@ -12,7 +12,7 @@ const SaveButton = ({ beforeSave, backgroundColor, size, label, borderRadius, va
         {icon && icon}
         {label}
       </button>
-    </div>
+    </div> 
   );
 };
 

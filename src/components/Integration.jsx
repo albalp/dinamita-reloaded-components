@@ -1,10 +1,10 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { MdArrowDropDown } from 'react-icons/md'
 import Calendar from './Calendar/Calendar';
 import Input from './Form/Input/Input';
 import TextArea from './textArea/textArea';
 import Modal from './modal/modal';
-import Button from './SaveButton';
+import Button from './saveButton';
 import Dropdown from './dropdown/DropDown';
 import data from '../api/mocks.json';
 import { useModal } from './modal/useModal';
@@ -90,4 +90,4 @@ const Integration = () => {
   )
 }
 
-export default Integration
+export default Integration;

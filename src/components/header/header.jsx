@@ -1,6 +1,6 @@
 import './header.css'
 import { PropTypes } from 'prop-types';
-import Button from '../SaveButton';
+import Button from '../saveButton';
 import { BiX } from "react-icons/bi";
 //Component Header with the props that will be used
 const Header = ({borderRadius, backgroundColor, label, variant, closeModal, ...props}) =>{

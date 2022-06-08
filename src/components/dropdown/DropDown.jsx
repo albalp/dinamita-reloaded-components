@@ -40,7 +40,7 @@ const Dropdown = ( {title, options, icon, size, borderRadius, dark, light}  ) =>
             <input 
             ref={ref}
             type="text" 
-            className="input-option" 
+            className="input-option input-modal" 
             placeholder={selectedOption}
             value={displayValue()}
             onChange={e => {

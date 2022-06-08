@@ -10,9 +10,9 @@ const TextArea = ({placeholder, borderRadius, label, variant, important, ...prop
                 {important && '* ' }
                 {label && label}
             </label>
-                <textarea id={label && label.toLowerCase()}  required=" " rows="5" className={[radius]}  {...props}>
+                <textarea id={label && label.toLowerCase()}  required=" " rows="5" className={['textarea-modal', radius]}  {...props}>
                 
-                </textarea>
+                </textarea >
 
         </div>
     );

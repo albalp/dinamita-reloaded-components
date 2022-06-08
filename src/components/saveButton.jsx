@@ -8,11 +8,11 @@ const SaveButton = ({ beforeSave, backgroundColor, size, label, borderRadius, va
 
   return (
     <div>
-      <button className={['storybook-button', `storybook-button--${size}`, `storybook-button--${variant}`, mode, radius, shadowButton,  className].join(' ')} style={backgroundColor && { backgroundColor }} {...props}>
+      <button className={[ 'button-modal' ,'storybook-button', `storybook-button--${size}`, `storybook-button--${variant}`, mode, radius, shadowButton,  className].join(' ')} style={backgroundColor && { backgroundColor }} {...props}>
         {icon && icon}
         {label}
       </button>
-    </div> 
+    </div>
   );
 };
 

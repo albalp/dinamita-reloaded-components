@@ -8,8 +8,11 @@ import Button from './saveButton';
 import Dropdown from './dropdown/DropDown';
 import data from '../api/mocks.json';
 import { useModal } from './modal/useModal';
+import {Observable} from 'windowed-observable'
+
 
 const Integration = () => {
+
 
     const initialValues = {
         ticket: {value: '', valid: null},
@@ -62,10 +65,14 @@ const Integration = () => {
           date: {value: date, valid: null}
         });
       }
+      const observableTitle = new Observable('modal-title');
+
+      const titleHeader = observableTitle.subscribe(openModal);
+
 
   return (
     <div className="container">
-        <Modal title="Create Activity" isOpen={isOpen} closeModal={closeModal}>
+        <Modal title={titleHeader} isOpen={isOpen} closeModal={closeModal}>
             <Calendar size="small" shadow={false} setValue={handleDate} />
             <form className="form-integration">
                 <Dropdown borderRadius title="Project" icon={<MdArrowDropDown />} options={projectData}/>

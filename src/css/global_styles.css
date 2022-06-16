@@ -72,7 +72,7 @@
 
 /* Normalization styles */
 
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -82,7 +82,7 @@ body {
     font-family: var(--font);
     color: var(--font-color);
     font-size: var(--fs-15);
-}
+} 
 
 .button-modal,
 .input-modal,
@@ -102,7 +102,7 @@ body {
     background-color: red;
 }
 
-a { text-decoration: none; }
+/* a { text-decoration: none; } */
 
 /* Animations */
 

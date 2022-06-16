@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MdArrowDropDown } from 'react-icons/md'
 import Calendar from './Calendar/Calendar';
 import Input from './Form/Input/Input';
@@ -65,14 +65,23 @@ const Integration = () => {
           date: {value: date, valid: null}
         });
       }
+      // const observable = new Observable('modal-state');
       const observableTitle = new Observable('modal-title');
-
-      const titleHeader = observableTitle.subscribe(openModal);
+      const [title, setTitle] = useState('Create ')
+      useEffect(() => {
+        observableTitle.subscribe((message) => {
+          setTitle(message)
+       
+        });
+        // observable.subscribe((message) => {
+        //   setTittle(message)
+        // })
+      })
 
 
   return (
     <div className="container">
-        <Modal title={titleHeader} isOpen={isOpen} closeModal={closeModal}>
+        <Modal title={title} isOpen={isOpen} closeModal={closeModal}>
             <Calendar size="small" shadow={false} setValue={handleDate} />
             <form className="form-integration">
                 <Dropdown borderRadius title="Project" icon={<MdArrowDropDown />} options={projectData}/>

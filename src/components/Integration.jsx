@@ -97,8 +97,8 @@ const Integration = () => {
                 </div>
             </form>
         </Modal>
-        {/* <h2>Integration</h2>
-        <Button label="Add activity" onClick={openModal} /> */}
+         <h2>Integration</h2>
+        <Button label="Add activity" onClick={openModal} /> 
     </div>
   )
 }

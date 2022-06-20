@@ -65,7 +65,7 @@ const Integration = () => {
           date: {value: date, valid: null}
         });
       }
-      // const observable = new Observable('modal-state');
+      
       const observableTitle = new Observable('modal-title');
       const [title, setTitle] = useState('Create ')
       useEffect(() => {
@@ -73,9 +73,6 @@ const Integration = () => {
           setTitle(message)
        
         });
-        // observable.subscribe((message) => {
-        //   setTittle(message)
-        // })
       })
 
 
@@ -100,8 +97,8 @@ const Integration = () => {
                 </div>
             </form>
         </Modal>
-        <h2>Integration</h2>
-        <Button label="Add activity" onClick={openModal} />
+        {/* <h2>Integration</h2>
+        <Button label="Add activity" onClick={openModal} /> */}
     </div>
   )
 }

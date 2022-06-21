@@ -4,7 +4,7 @@ import Button from '../saveButton';
 import { BiX } from "react-icons/bi";
 //Component Header with the props that will be used
 const Header = ({borderRadius, backgroundColor, label, variant, closeModal, ...props}) =>{
-    
+   
     const radius = borderRadius && 'storybook-header--border-radius';
 
     return(

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MdArrowDropDown } from 'react-icons/md'
 import Calendar from './Calendar/Calendar';
 import Input from './Form/Input/Input';
@@ -8,9 +8,10 @@ import Button from './saveButton';
 import Dropdown from './dropdown/DropDown';
 import data from '../api/mocks.json';
 import { useModal } from './modal/useModal';
+import {Observable} from 'windowed-observable'
+
 
 const Integration = () => {
-
     const initialValues = {
         ticket: {value: '', valid: null},
         comments: {value: '', valid: null},
@@ -54,7 +55,7 @@ const Integration = () => {
         }
       }
 
-      const {isOpen, openModal, closeModal} = useModal();
+      const {isOpen, closeModal} = useModal();
       
       const handleDate = (date) => {
         setInitialForm({
@@ -62,10 +63,18 @@ const Integration = () => {
           date: {value: date, valid: null}
         });
       }
+      const observableTitle = new Observable('modal-title');
+      const [title, setTitle] = useState('Create')
+      useEffect(() => {
+        observableTitle.subscribe((message) => {
+          setTitle(message)
+       
+        });
+      });
 
   return (
     <div className="container">
-        <Modal title="Create Activity" isOpen={isOpen} closeModal={closeModal}>
+        <Modal title={title} isOpen={isOpen} closeModal={closeModal}>
             <Calendar size="small" shadow={false} setValue={handleDate} />
             <form className="form-integration">
                 <Dropdown borderRadius title="Project" icon={<MdArrowDropDown />} options={projectData}/>
@@ -84,8 +93,8 @@ const Integration = () => {
                 </div>
             </form>
         </Modal>
-        <h2>Integration</h2>
-        <Button label="Add activity" onClick={openModal} />
+        {/* <h2>Integration</h2>
+        <Button label="Add activity" onClick={openModal} /> */}
     </div>
   )
 }

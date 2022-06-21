@@ -12,8 +12,6 @@ import {Observable} from 'windowed-observable'
 
 
 const Integration = () => {
-
-
     const initialValues = {
         ticket: {value: '', valid: null},
         comments: {value: '', valid: null},
@@ -57,7 +55,7 @@ const Integration = () => {
         }
       }
 
-      const {isOpen, openModal, closeModal} = useModal();
+      const {isOpen, closeModal} = useModal();
       
       const handleDate = (date) => {
         setInitialForm({
@@ -65,19 +63,14 @@ const Integration = () => {
           date: {value: date, valid: null}
         });
       }
-      // const observable = new Observable('modal-state');
       const observableTitle = new Observable('modal-title');
-      const [title, setTitle] = useState('Create ')
+      const [title, setTitle] = useState('Create')
       useEffect(() => {
         observableTitle.subscribe((message) => {
           setTitle(message)
        
         });
-        // observable.subscribe((message) => {
-        //   setTittle(message)
-        // })
-      })
-
+      });
 
   return (
     <div className="container">
@@ -100,8 +93,8 @@ const Integration = () => {
                 </div>
             </form>
         </Modal>
-        <h2>Integration</h2>
-        <Button label="Add activity" onClick={openModal} />
+        {/* <h2>Integration</h2>
+        <Button label="Add activity" onClick={openModal} /> */}
     </div>
   )
 }

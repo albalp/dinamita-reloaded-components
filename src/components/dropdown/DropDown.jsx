@@ -5,12 +5,12 @@ import { useDetectOutsideClick } from './useDetectOutsideClick';
 
 import './dropDown.css';
 
-const Dropdown = ( {title, options, icon, size, borderRadius, dark, light}  ) => {
+const Dropdown = ( {title, options, icon, size, borderRadius, dark, light, id, name}  ) => {
   // Initial state for the option list
   const ref = useRef(null);
   const [isOpen, setIsOpen] = useDetectOutsideClick(ref ,false);
   // Initial state for the input
-  const [selectedOption, setSelectedOption] = useState(options && options.length > 0 ? options[0].name : 'No options found');
+  const [selectedOption, setSelectedOption] = useState(options && options.length > 0 ? options[0][name] : 'No options found');
   const [query, setQuery] = useState('');
   // function what change the state of the list
   const toggling = () => setIsOpen(!isOpen);
@@ -23,7 +23,7 @@ const Dropdown = ( {title, options, icon, size, borderRadius, dark, light}  ) =>
 
   const filter = (opts) => {
     return opts.filter(
-      (opt) => opt.name.toLowerCase().indexOf(query.toLowerCase()) > -1);
+      (opt) => opt[name].toLowerCase().indexOf(query.toLowerCase()) > -1);
   };
 
   const displayValue = () => {
@@ -53,8 +53,8 @@ const Dropdown = ( {title, options, icon, size, borderRadius, dark, light}  ) =>
         <ul role="group" aria-label={`group-options-${title.toLowerCase()}`} className={`dropdown-menu ${isOpen && 'dropdown-menu--activated'}`}>
             {options && options.length > 0 
             ? filter(options).map((option) =>(
-              <li role="menuitem" aria-label={`menuitem-${option.name.toLowerCase()}`} key={option.id} onClick={onOptionClicked(option.name)}>
-                {option.name}
+              <li role="menuitem" aria-label={`menuitem-${option[name].toLowerCase()}`} key={option[id]} onClick={onOptionClicked(option[name])}>
+                {option[name]}
               </li>
             ))
             : <span>No options found</span>
@@ -85,14 +85,6 @@ Dropdown.defaultProps = {
   light: false,
   icon: <BiCaretDown/>,
   options: [
-    {
-      id:'', 
-      name: '',
-    },
-    {
-      id:'', 
-      name: '',
-    },
     {
       id:'', 
       name: '',

@@ -16,11 +16,9 @@ const Modal = ({ children, isOpen, closeModal, size, backgroundColor, borderRadi
     <div onClick={closeModal} className={`modal ${isOpen && "is-open"}`} >
       <div onClick={handleModalContainerClick} className={['modal-container',`storybook-modal--${size}`, mode, radius].join(' ')} style={backgroundColor && { backgroundColor }} {...props}>
         <Header label={title} closeModal={closeModal}/>
-        <div className="grid">
           <div className="column">
             {children}
-          </div>  
-        </div> 
+          </div> 
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ const Input = ({ icon, rounded, size, width, dark, light, secondary, secondaryPl
      {!secondary && !label &&
       <div data-testid="input-default" className={`input-container input-container-width--${width} ${dark && 'dark'} ${light && 'light'}`}>
           <div className={`input-content input-content-size--${size} `}>
-            <input {...props} onChange={handleChange}  className={`input-control ${icon && 'input-control--icon'} ${rounded && 'rounded'}  ${className && className}`} autoComplete="off"/>
+            <input {...props} onChange={handleChange}  className={`input-control input-modal ${icon && 'input-control--icon'} ${rounded && 'rounded'}  ${className && className}`} autoComplete="off"/>
             {icon}
           </div>
           {legend && 
@@ -39,7 +39,7 @@ const Input = ({ icon, rounded, size, width, dark, light, secondary, secondaryPl
     {secondary && !label &&
       <div data-testid="input-secondary" className={`input-container input-container-width--${width} ${dark && 'dark'} ${light && 'light'}`}>
         <div className={`input-content input-content-size--${size} `}>
-          <input {...props} onChange={handleChange}  className={`input-control ${rounded && 'rounded'} ${secondary && 'input-control-variant--secondary'}`} autoComplete='off'/>
+          <input {...props} onChange={handleChange}  className={`input-control input-modal ${rounded && 'rounded'} ${secondary && 'input-control-variant--secondary'}`} autoComplete='off'/>
           <label htmlFor="">{secondaryPlaceholder}</label>
         </div>
         {legend &&
@@ -53,7 +53,7 @@ const Input = ({ icon, rounded, size, width, dark, light, secondary, secondaryPl
         <div data-testid="input-label" className={`input-container input-container-width--${width} ${dark && 'dark'} ${light && 'light'} ${label && 'input-control-variant--label'}`}>
           <label htmlFor={label.toLowerCase()}>{label}:</label>
             <div className={`input-content input-content-size--${size} `}>
-              <input id={label.toLowerCase()} {...props} onChange={handleChange}  className={`input-control ${rounded && 'rounded'} ${className && className}`} autoComplete="off"/>
+              <input id={label.toLowerCase()} {...props} onChange={handleChange}  className={`input-control input-modal ${rounded && 'rounded'} ${className && className}`} autoComplete="off"/>
               {icon}
             </div>
             {legend && 

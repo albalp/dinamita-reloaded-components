@@ -11,7 +11,7 @@ import { useModal } from './modal/useModal';
 import {Observable} from 'windowed-observable'
 
 
-const Integration = () => {
+const Integration = ({options, id, name}) => {
     const initialValues = {
         ticket: {value: '', valid: null},
         comments: {value: '', valid: null},
@@ -21,16 +21,6 @@ const Integration = () => {
 
     const [initialForm, setInitialForm] = useState(initialValues);
 
-    const categories = [];
-    data.project.ProjectCategories.map(category => categories.push({id:category.CategoryID, name:category.CategoryName}));
-
-    const projectData = [
-        {
-          id:data.project.ProjectId, 
-          name:data.project.ProjectName,
-        }
-     ];
-    
       const expressions = {
         name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
         comments: /^[a-zA-ZÀ-ÿ\s]{1,255}$/,
@@ -55,7 +45,7 @@ const Integration = () => {
         }
       }
 
-      const {isOpen, closeModal} = useModal();
+      const {isOpen, closeModal, openModal} = useModal();
       
       const handleDate = (date) => {
         setInitialForm({
@@ -64,7 +54,7 @@ const Integration = () => {
         });
       }
       const observableTitle = new Observable('modal-title');
-      const [title, setTitle] = useState('Create')
+      const [title, setTitle] = useState('')
       useEffect(() => {
         observableTitle.subscribe((message) => {
           setTitle(message)
@@ -73,17 +63,17 @@ const Integration = () => {
       });
 
   return (
-    <div className="container">
-        <Modal title={title} isOpen={isOpen} closeModal={closeModal}>
+    <div className="container-modal">
+        <Modal title={title} isOpen={isOpen} closeModal={closeModal} size='large'>
             <Calendar size="small" shadow={false} setValue={handleDate} />
             <form className="form-integration">
-                <Dropdown borderRadius title="Project" icon={<MdArrowDropDown />} options={projectData}/>
-                <Dropdown borderRadius title="Categories" icon={<MdArrowDropDown />} options={categories}/>
+                <Dropdown borderRadius title="Project" icon={<MdArrowDropDown />} options={[data.project]} id={"ProjectId"} name={"ProjectName"}/>
+                <Dropdown borderRadius title="Categories" icon={<MdArrowDropDown />} options={data.project.ProjectCategories} id={"CategoryID"} name={"CategoryName"}/>
                 <Input onChange={inputsValidations} name="hours"  type="number" label="Hours" legend="Invalid hours" value={initialForm.hours.value}  valid={initialForm.hours.valid}/>
                 <Input onChange={inputsValidations} name="ticket" type="text" label="Ticket" legend="Invalid ticket" value={initialForm.ticket.value}  valid={initialForm.ticket.valid}/>
                 <TextArea name="comments" onChange={inputsValidations} important label="Comments" value={initialForm.comments.value}/>
                 <div className="form-footer">
-                  <Button label="Cancel" />
+                  <Button type='button' label="Cancel" />
                   {initialForm.comments.value !== '' 
 
                     ? <Button label="Create" variant="primary" />
@@ -93,8 +83,8 @@ const Integration = () => {
                 </div>
             </form>
         </Modal>
-        {/* <h2>Integration</h2>
-        <Button label="Add activity" onClick={openModal} /> */}
+        <h2>Integration</h2>
+        <Button label="Add activity" onClick={openModal} />
     </div>
   )
 }

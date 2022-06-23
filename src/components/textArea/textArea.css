@@ -1,16 +1,20 @@
 @import '../../css/global_styles.css';
 
 
-label{
-    display: flex;
-    padding: 10px 0;
-}
-textArea{
+.textarea-modal{
     display: flex;
     border: var(--border-solid);
     width: 100%;
+    height: 70px;
     padding: 1em;
     resize: none;
+    outline: none;
+    border-radius: var(--radius);
+}
+
+.textarea-modal-container label {
+    font-size: var(--fs-13);
+    /* padding: 10px 0; */
 }
 
 /* Classes for the variants*/

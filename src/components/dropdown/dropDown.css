@@ -21,8 +21,12 @@
   border-radius: var(--radius);
 }
 
- p {
+.dropdown p {
     padding: 10px 0;
+}
+
+.dropdown-container  label {
+  font-size: var(--fs-13);
 }
 
 .select {
@@ -35,7 +39,8 @@
   transition: var(--transition);
   position: relative;
   text-align: left;
-  font-size: 1vmin;
+  /* font-size: 1vmin; */
+  font-size: var(--fs-13);
   padding-right: 10px;
   position: relative;
 }
@@ -45,6 +50,7 @@
     height: 100%;
     padding: 10px;
     background: transparent;
+    font-size: var(--fs-13);
 }
 
 .dropdown-menu {
@@ -79,7 +85,7 @@
     height: 36px;
     transition: all .2s ease-in-out;
     cursor: pointer;
-    font-size: 2vmin;
+    font-size: var(--fs-13);
     margin: 0;
     padding: 0 12px;
 }  

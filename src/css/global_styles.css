@@ -72,7 +72,7 @@
 
 /* Normalization styles */
 
- * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -102,8 +102,11 @@ body {
     background-color: red;
 }
 
-/* a { text-decoration: none; } */
+a { text-decoration: none; }
 
+.label-modal {
+    padding: 10px 0;
+}
 /* Animations */
 
 @keyframes show {
@@ -116,12 +119,12 @@ body {
     0% { 
         opacity: 0;
         transform: translateY(50px);
-     }
+    }
 
-     100% { 
+    100% { 
         opacity: 1;
         transform: translateY(0);
-     }
+    }
 
 }
 
@@ -138,10 +141,10 @@ body {
 .estilos-ul{ 
     list-style: none; 
 }
+
 .estilos-li{ 
     list-style: none; 
 }
-
 
 .form-footer {
     width: 100%;
@@ -149,4 +152,11 @@ body {
     gap: 10px;
     justify-content: flex-end;
     padding: 10px 20px;
+}
+
+.form-footer { 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }

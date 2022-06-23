@@ -55,7 +55,7 @@ const Integration = () => {
         }
       }
 
-      const {isOpen, closeModal} = useModal();
+      const {isOpen, closeModal, openModal} = useModal();
       
       const handleDate = (date) => {
         setInitialForm({
@@ -73,8 +73,8 @@ const Integration = () => {
       });
 
   return (
-    <div className="container">
-        <Modal title={title} isOpen={isOpen} closeModal={closeModal}>
+    <div className="container-modal">
+        <Modal title={title} isOpen={isOpen} closeModal={closeModal} size='large'>
             <Calendar size="small" shadow={false} setValue={handleDate} />
             <form className="form-integration">
                 <Dropdown borderRadius title="Project" icon={<MdArrowDropDown />} options={projectData}/>
@@ -83,7 +83,7 @@ const Integration = () => {
                 <Input onChange={inputsValidations} name="ticket" type="text" label="Ticket" legend="Invalid ticket" value={initialForm.ticket.value}  valid={initialForm.ticket.valid}/>
                 <TextArea name="comments" onChange={inputsValidations} important label="Comments" value={initialForm.comments.value}/>
                 <div className="form-footer">
-                  <Button label="Cancel" />
+                  <Button type='button' label="Cancel" />
                   {initialForm.comments.value !== '' 
 
                     ? <Button label="Create" variant="primary" />
@@ -93,8 +93,8 @@ const Integration = () => {
                 </div>
             </form>
         </Modal>
-        {/* <h2>Integration</h2>
-        <Button label="Add activity" onClick={openModal} /> */}
+        <h2>Integration</h2>
+        <Button label="Add activity" onClick={openModal} />
     </div>
   )
 }

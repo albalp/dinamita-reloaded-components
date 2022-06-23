@@ -34,7 +34,7 @@ const Dropdown = ( {title, options, icon, size, borderRadius, dark, light}  ) =>
 
   return (
     <div className={`dropdown-container ${dark && 'dark'} ${light && 'light'}`}>
-      <p>{title}</p>
+      <label className='label-modal' htmlFor={title.toLowerCase()}>{title}:</label>
       <div className={`dropdown-size--${size} dropdown ${isOpen ? 'active' : ''} ${borderRadius && 'borderRadius'}`}>
         <div role="menu" aria-label={`dropdown-${title.toLowerCase()}`} onClick={toggling} className="select">
             <input 

@@ -26,8 +26,8 @@
     background-color: var(--white-gray-color);
     padding: 10px 20px;
     transition: var(--transition);
-    color: var(--font-color);
-    font-size: var(--fs-14);
+    /* color: var(--font-color); */
+    font-size: var(--fs-13);
     letter-spacing: 1px;
 }
 

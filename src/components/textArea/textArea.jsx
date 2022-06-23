@@ -5,15 +5,12 @@ const TextArea = ({placeholder, borderRadius, label, variant, important, ...prop
     const radius = borderRadius && 'storybook-textarea--border-radius';
 
     return(
-        <div>
-            <label htmlFor={label && label.toLowerCase()}>
+        <div className='textarea-modal-container'>
+            <label className='label-modal' htmlFor={label && label.toLowerCase()}>
                 {important && '* ' }
                 {label && label}
             </label>
-                <textarea id={label && label.toLowerCase()}  required=" " rows="5" className={['textarea-modal', radius]}  {...props}>
-                
-                </textarea >
-
+            <textarea id={label && label.toLowerCase()}  required=" " rows="5" className={`textarea-modal ${radius}`}  {...props}/>
         </div>
     );
 }

@@ -6,12 +6,12 @@ import TextArea from './textArea/textArea';
 import Modal from './modal/modal';
 import Button from './saveButton';
 import Dropdown from './dropdown/DropDown';
-import data from '../api/mocks.json';
+// import data from '../api/mocks.json';
 import { useModal } from './modal/useModal';
 import {Observable} from 'windowed-observable'
 
 
-const Integration = ({options, id, name}) => {
+const Integration = () => {
     const initialValues = {
         ticket: {value: '', valid: null},
         comments: {value: '', valid: null},
@@ -54,11 +54,25 @@ const Integration = ({options, id, name}) => {
         });
       }
       const observableTitle = new Observable('modal-title');
-      const [title, setTitle] = useState('')
+      const [title, setTitle] = useState('');
+      
+      const observableProject = new Observable('data-projects');
+      const [projects, setProjects] = useState([]);
+      const [categories, setCategories] = useState([]);
+      
+      const onItemClicked = (projectId) => {
+        const foundProject = projects.find((project) => project.ProjectName === projectId)
+        if (foundProject) {
+            setCategories(foundProject.ProjectCategories);
+        }
+        }
+      
       useEffect(() => {
         observableTitle.subscribe((message) => {
-          setTitle(message)
-       
+          setTitle(message) 
+        });
+        observableProject.subscribe((dta) => {
+          setProjects(dta);
         });
       });
 
@@ -67,8 +81,8 @@ const Integration = ({options, id, name}) => {
         <Modal title={title} isOpen={isOpen} closeModal={closeModal} size='large'>
             <Calendar size="small" shadow={false} setValue={handleDate} />
             <form className="form-integration">
-                <Dropdown borderRadius title="Project" icon={<MdArrowDropDown />} options={[data.project]} id={"ProjectId"} name={"ProjectName"}/>
-                <Dropdown borderRadius title="Categories" icon={<MdArrowDropDown />} options={data.project.ProjectCategories} id={"CategoryID"} name={"CategoryName"}/>
+                <Dropdown borderRadius title="Project" icon={<MdArrowDropDown />} options={projects} id={"ProjectId"} name={"ProjectName"} onItemClicked={onItemClicked}/>
+                <Dropdown borderRadius title="Categories" icon={<MdArrowDropDown />} options={categories} id={"CategoryID"} name={"CategoryName"}/>
                 <Input onChange={inputsValidations} name="hours"  type="number" label="Hours" legend="Invalid hours" value={initialForm.hours.value}  valid={initialForm.hours.valid}/>
                 <Input onChange={inputsValidations} name="ticket" type="text" label="Ticket" legend="Invalid ticket" value={initialForm.ticket.value}  valid={initialForm.ticket.valid}/>
                 <TextArea name="comments" onChange={inputsValidations} important label="Comments" value={initialForm.comments.value}/>

@@ -5,8 +5,9 @@ import { useDetectOutsideClick } from './useDetectOutsideClick';
 
 import './dropDown.css';
 
-const Dropdown = ( {title, options, icon, size, borderRadius, dark, light, id, name}  ) => {
+const Dropdown = ( {title, options, icon, size, borderRadius, dark, light, id, name, onItemClicked}  ) => {
   // Initial state for the option list
+  // console.log('dropdown', options[0][name])
   const ref = useRef(null);
   const [isOpen, setIsOpen] = useDetectOutsideClick(ref ,false);
   // Initial state for the input
@@ -19,6 +20,7 @@ const Dropdown = ( {title, options, icon, size, borderRadius, dark, light, id, n
     setSelectedOption(value);
     setIsOpen(false);
     setQuery("");
+    onItemClicked(value)
   };
 
   const filter = (opts) => {
@@ -46,7 +48,6 @@ const Dropdown = ( {title, options, icon, size, borderRadius, dark, light, id, n
             onChange={e => {
               setQuery(e.target.value);
               setSelectedOption('');
-              //onChange(null);
             }}/>
           {icon && icon}
         </div>
@@ -75,7 +76,8 @@ Dropdown.propTypes = {
   borderRadius: PropTypes.bool,
   dark: PropTypes.bool,
   light: PropTypes.bool,
-  icon: PropTypes.element
+  icon: PropTypes.element,
+  onItemClicked: PropTypes.func,
 }
 
 Dropdown.defaultProps = {
@@ -84,10 +86,8 @@ Dropdown.defaultProps = {
   dark: false,
   light: false,
   icon: <BiCaretDown/>,
-  options: [
-    {
-      id:'', 
-      name: '',
-    }
- ]
+  options: [{
+    'id': '',
+    'name': '',
+  }]
 }

@@ -88,7 +88,7 @@ export const useCalendar = () => {
             }
             break;
 
-            // default: return;
+             default: ;
         }
 
         for(let i = startDay(); i >= 0; i--) {
